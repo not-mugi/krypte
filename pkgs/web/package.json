@@ -1,0 +1,21 @@
+{
+  "name": "@mugijs/web",
+  "version": "0.0.1",
+  "main": "./cjs/main.cjs",
+  "module": "./esm/main.mjs",
+  "types": "./lib/index.d.ts",
+  "keywords": [
+    "ui",
+    "web",
+    "mugi",
+    "react",
+    "components",
+    "library"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "author": "zwesithu@mugi-tech.com",
+  "license": "Apache-2.0",
+  "description": "mugi react components library for web"
+}
