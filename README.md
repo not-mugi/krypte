@@ -66,4 +66,5 @@ We welcome contributions to Krypte! If you have any ideas, suggestions, or bug r
 ## License
 
 Copyright [2025] [Mugi]
+
 This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
