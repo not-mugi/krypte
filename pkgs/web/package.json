@@ -1,0 +1,39 @@
+{
+  "name": "@mugijs/web",
+  "version": "0.0.1",
+  "main": "./cjs/main.cjs",
+  "module": "./esm/main.mjs",
+  "types": "./lib/main.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/main.d.mts",
+        "default": "./esm/main.mjs"
+      },
+      "require": {
+        "types": "./lib/main.d.ts",
+        "default": "./cjs/main.cjs"
+      }
+    },
+    "./styles.css": "./lib/main.css"
+  },
+  "repository": {
+    "url": "https://github.com/not-mugi/krypte.git",
+    "type": "git",
+    "directory": "pkgs/web"
+  },
+  "keywords": [
+    "ui",
+    "web",
+    "mugi",
+    "react",
+    "components",
+    "library"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "author": "zwesithu@mugi-tech.com",
+  "license": "Apache-2.0",
+  "description": "mugi react components library for web"
+}
