@@ -1,5 +1,6 @@
 import os from "os";
 import path from "path";
+import fs from "fs-extra";
 import { $ } from "zx";
 export async function generateDts(pkgPath: string) {
   let tsBuild = "tsconfig.build.json";

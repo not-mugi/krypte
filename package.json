@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "description": "mugi react components library",
   "main": "lib/main.ts",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "workspaces" : [
+    "pkgs/**/*"
+  ],
   "scripts": {
     "build": "tsx scripts/build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,10 +48,6 @@
     "typescript": "^5.7.2",
     "yargs": "^17.7.2",
     "zx": "^8.3.0"
-  },
-  "peerDependencies": {
-    "react": "^18.x || ^19.x",
-    "react-dom": "^18.x || ^19.x"
   },
   "dependencies": {}
 }

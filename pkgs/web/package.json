@@ -4,10 +4,15 @@
   "main": "./cjs/main.cjs",
   "module": "./esm/main.mjs",
   "types": "./lib/main.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "cjs"
+  ],
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/main.d.mts",
+        "types": "./lib/main.d.ts",
         "default": "./esm/main.mjs"
       },
       "require": {
@@ -35,5 +40,13 @@
   ],
   "author": "zwesithu@mugi-tech.com",
   "license": "Apache-2.0",
-  "description": "mugi react components library for web"
+  "description": "mugi react components library for web",
+  "peerDependencies": {
+    "react": "^18.x || ^19.x",
+    "react-dom": "^18.x || ^19.x"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
