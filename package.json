@@ -22,7 +22,7 @@
     "components",
     "library"
   ],
-  "author": "zwesithu@mugi-tech.com",
+  "author": "mugi-tech.com",
   "license": "Apache-2.0",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.0",

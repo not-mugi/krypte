@@ -48,7 +48,7 @@
   "sideEffects": [
     "*.css"
   ],
-  "author": "zwesithu@mugi-tech.com",
+  "author": "mugi-tech.com",
   "license": "Apache-2.0",
   "description": "mugi react components library for web",
   "peerDependencies": {
