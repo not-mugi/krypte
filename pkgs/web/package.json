@@ -20,6 +20,16 @@
         "default": "./cjs/main.cjs"
       }
     },
+    "./atoms" :{
+      "import": {
+        "types": "./lib/atoms/index.d.ts",
+        "default": "./esm/atoms/index.mjs"
+      },
+      "require": {
+        "types": "./lib/atoms/index.d.ts",
+        "default": "./cjs/atoms/index.cjs"
+      }
+    },
     "./styles.css": "./lib/main.css"
   },
   "repository": {

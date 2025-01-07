@@ -18,5 +18,6 @@
     "composite": true
   },
   "include": ["./src/**/*"],
-  "exclude": ["./lib", "./esm", "./cjs"]
+  "exclude": ["./lib", "./esm", "./cjs"],
+  "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 }
