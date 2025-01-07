@@ -7,4 +7,4 @@ Key objectives of Krypte include:
 - **Modular Architecture**: Encouraging the creation of reusable and scalable components.
 - **Enhanced Productivity**: Utilizing advanced build tools and configurations to optimize development workflows.
 
-Explore the repository to discover a wide range of features and tools designed to support your frontend development needs.
+Explore the repository to discover a wide range of features and tools designed to support our frontend development needs.
