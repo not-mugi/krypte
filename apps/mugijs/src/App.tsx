@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { ThemedText as Text, useTheme, ThemedBlock } from "../../../pkgs/web"
+import { ThemedText as Text, useTheme, ThemedBlock, Block } from "@mugijs/web"
 
 function App() {
 
@@ -13,8 +13,10 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-        <ThemedBlock scale="screen">
-        <Text className="text-8xl">Mugi Js</Text>
+        <ThemedBlock scale="screen" alignment="center">
+          <Block scale="xl" alignment="center">
+            <Text className="text-8xl">Mugi Js</Text>
+          </Block>
         </ThemedBlock>
     </div>
   )
