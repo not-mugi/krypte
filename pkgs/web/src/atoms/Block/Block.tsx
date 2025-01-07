@@ -1,72 +1,61 @@
 import { ReactNode } from "react";
 
 type BlockProps = {
-	[key: string]: any;
-	scale: "sm" | "md" | "lg" | "xl" | "full" | "screen" | "auto";
-    children: ReactNode;
+  [key: string]: any;
+  scale: "sm" | "md" | "lg" | "xl" | "2xl" | "full" | "screen" | "auto";
+  alignment: "center" | "left" | "right";
+  children: ReactNode;
 };
 
-export function Block({ children, scale, ...props }: BlockProps) {
-    let scaleClasses = "";
+export type BlockTailwindClasses =
+  | "border"
+  | "border-2"
+  | "border-4"
+  | "border-8"
+  | "border-16";
 
-    switch (scale) {
-        case "full":
-            scaleClasses = "w-full h-full";
-            break;
-        case "screen":
-            scaleClasses = "w-screen h-screen";
-            break;
-        case "auto":
-            scaleClasses = "w-auto h-auto";
-            break;
-        case "sm":
-            scaleClasses = "w-1/5 h-1/5";
-            break;
-        case "md":
-            scaleClasses = "w-1/2 h-1/2";
-            break;
-        case "lg":
-            scaleClasses = "w-3/5 h-3/5";
-            break;
-        case "xl":
-            scaleClasses = "w-4/5 h-4/5";
-            break;
-        default:
-    }
+const scaleClassesMap: Record<BlockProps["scale"], string> = {
+  full: "w-full h-full",
+  screen: "w-screen h-screen",
+  auto: "w-auto h-auto",
+  sm: "w-1/5 h-1/5",
+  md: "w-1/2 h-1/2",
+  lg: "w-3/5 h-3/5",
+  xl: "w-4/5 h-4/5",
+  "2xl": "w-11/12 h-4/5",
+};
 
-    props.className = `${props.className || ""} ${scaleClasses}`.trim();
-    return <div {...props}>{children}</div>;
+const alignClassesMap: Record<BlockProps["alignment"], string> = {
+  center: "flex justify-center items-center",
+  left: "flex justify-start items-center",
+  right: "flex justify-end items-center",
+};
+
+export function Block({
+  children,
+  alignment = "left",
+  scale = "md",
+  ...props
+}: BlockProps) {
+  const scaleClasses = scaleClassesMap[scale] || "";
+  const alignClasses = alignClassesMap[alignment] || "";
+  props.className = `${
+    props.className || ""
+  } ${scaleClasses} ${alignClasses}`.trim();
+  return <div {...props}>{children}</div>;
 }
 
-export function ThemedBlock({ children, scale, ...props }: BlockProps) {
-    let scaleClasses = "";
-    let themeClasses = "mugi:bg-straw dark:bg-gray-800";
-
-    switch (scale) {
-        case "full":
-            scaleClasses = "w-full h-full";
-            break;
-        case "screen":
-            scaleClasses = "w-screen h-screen";
-            break;
-        case "auto":
-            scaleClasses = "w-auto h-auto";
-            break;
-        case "sm":
-            scaleClasses = "w-1/5 h-1/5";
-            break;
-        case "md":
-            scaleClasses = "w-1/2 h-1/2";
-            break;
-        case "lg":
-            scaleClasses = "w-3/5 h-3/5";
-            break;
-        case "xl":
-            scaleClasses = "w-4/5 h-4/5";
-            break;
-        default:
-    }
-
-    props.className = `${props.className || ""} ${scaleClasses} ${themeClasses}`.trim();
-    return <div {...props}>{children}</div>;
+export function ThemedBlock({
+  children,
+  alignment = "left",
+  scale = "md",
+  ...props
+}: BlockProps) {
+  const scaleClasses = scaleClassesMap[scale] || "";
+  const alignClasses = alignClassesMap[alignment] || "";
+  const themeClasses = "mugi:bg-straw dark:bg-gray-800";
+  props.className = `${
+    props.className || ""
+  } ${scaleClasses} ${themeClasses} ${alignClasses}`.trim();
+  return <div {...props}>{children}</div>;
 }

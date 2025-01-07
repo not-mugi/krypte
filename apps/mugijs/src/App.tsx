@@ -1,25 +1,28 @@
-import { useEffect } from "react"
-import { ThemedText as Text, useTheme, ThemedBlock, Block } from "@mugijs/web"
+import { useEffect } from "react";
+import { ThemedText as Text, useTheme, ThemedBlock, Block } from "@mugijs/web";
 
 function App() {
-
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setTheme("mugi")
+    setTheme("mugi");
 
-    return () => setTheme("light")
-  }, [setTheme])
+    return () => setTheme("light");
+  }, [setTheme]);
 
   return (
     <div className={`App ${theme}`}>
-        <ThemedBlock scale="screen" alignment="center">
-          <Block scale="xl" alignment="center">
-            <Text className="text-8xl">Mugi Js</Text>
-          </Block>
-        </ThemedBlock>
+      <ThemedBlock scale="screen" alignment="center">
+        <Block
+          className="border-4 border-gray-200 rounded-xl"
+          scale="2xl"
+          alignment="center"
+        >
+          <Text className="text-8xl">Mugi Js</Text>
+        </Block>
+      </ThemedBlock>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
