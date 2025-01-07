@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mugijs/web": "./pkgs/web/",
+    "@mugijs/web": "./pkgs/web",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

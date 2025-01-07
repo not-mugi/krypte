@@ -14,7 +14,7 @@ function App() {
   return (
     <div className={`App ${theme}`}>
         <ThemedBlock scale="screen" alignment="center">
-          <Block scale="xl" alignment="center">
+          <Block className="border-4 border-gray-200" scale="xl" alignment="center">
             <Text className="text-8xl">Mugi Js</Text>
           </Block>
         </ThemedBlock>

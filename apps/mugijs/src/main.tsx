@@ -1,4 +1,4 @@
-import App from "./App.tsx";
+import App from "./App";
 import "@mugijs/web/styles.css";
 
 import { StrictMode } from "react";
