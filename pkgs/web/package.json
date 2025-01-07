@@ -20,7 +20,7 @@
         "default": "./cjs/main.cjs"
       }
     },
-    "./atoms" :{
+    "./atoms": {
       "import": {
         "types": "./lib/atoms/index.d.ts",
         "default": "./esm/atoms/index.mjs"
