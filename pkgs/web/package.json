@@ -4,15 +4,30 @@
   "main": "./cjs/main.cjs",
   "module": "./esm/main.mjs",
   "types": "./lib/main.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "cjs"
+  ],
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/main.d.mts",
+        "types": "./lib/main.d.ts",
         "default": "./esm/main.mjs"
       },
       "require": {
         "types": "./lib/main.d.ts",
         "default": "./cjs/main.cjs"
+      }
+    },
+    "./atoms" :{
+      "import": {
+        "types": "./lib/atoms/index.d.ts",
+        "default": "./esm/atoms/index.mjs"
+      },
+      "require": {
+        "types": "./lib/atoms/index.d.ts",
+        "default": "./cjs/atoms/index.cjs"
       }
     },
     "./styles.css": "./lib/main.css"
@@ -35,5 +50,13 @@
   ],
   "author": "zwesithu@mugi-tech.com",
   "license": "Apache-2.0",
-  "description": "mugi react components library for web"
+  "description": "mugi react components library for web",
+  "peerDependencies": {
+    "react": "^18.x || ^19.x",
+    "react-dom": "^18.x || ^19.x"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
