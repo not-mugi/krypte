@@ -1,39 +1,25 @@
 {
-    "include": [
-        "./scripts",
-        "./pkgs/*/src",
-        "./apps/*"
-    ],
-    "exclude": [
-        "./node_modules",
-        "./pkgs/*/node_modules",
-        "./pkgs/*/esm/**/*",
-        "./pkgs/*/cjs/**/*",
-        "./pkgs/*/lib/**/*",
-    ],
-    "compilerOptions": {
-        "types": [
-            "node"
-        ],
-        "target": "ES2015",
-        "lib": [
-            "DOM",
-            "ESNext"
-        ],
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "jsx": "react-jsx",
-        "strict": true,
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "noEmitOnError": true,
-        "allowJs": true,
-        "paths": {
-            "@web/*": [
-                "./pkgs/web/src/*"
-            ],
-        }
-    },
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+  "include": ["./scripts", "./pkgs/*/src", "./apps/*", "pkgs/*/core"],
+  "exclude": [
+    "./node_modules",
+    "./pkgs/*/node_modules",
+    "./pkgs/*/esm/**/*",
+    "./pkgs/*/cjs/**/*",
+    "./pkgs/*/lib/**/*"
+  ],
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "ES2015",
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "allowJs": true,
+    "noEmit": true
+  }
 }

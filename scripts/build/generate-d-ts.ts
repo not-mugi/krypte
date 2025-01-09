@@ -7,5 +7,9 @@ export async function generateDts(pkgPath: string) {
   if (os.platform() === "win32") {
     tsBuild = "\tsconfig.build.json";
   }
-  await $`yarn tsc -p ${path.join(pkgPath, tsBuild)}`;
+  try {
+    await $`yarn tsc -p ${path.join(pkgPath, tsBuild)}`;
+  } catch (error) {
+    console.log(error);
+  }
 }

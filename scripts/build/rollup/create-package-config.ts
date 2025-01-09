@@ -1,12 +1,12 @@
 import { globSync } from "glob";
 import { RollupOptions } from "rollup";
 import { EXTERNALS } from "./externals";
-import { getPath } from "../../others/path";
 import path, { extname, relative } from "path";
-import { generateScopedName } from "hash-css-selector";
 import esbuild from "rollup-plugin-esbuild";
 import postcss from "rollup-plugin-postcss";
 import nodeResolve from "@rollup/plugin-node-resolve";
+import { generateScopedName } from "hash-css-selector";
+import { getPath } from "../../others/path";
 
 export function createTwConfig(
   _pkg_name: string,
@@ -34,13 +34,14 @@ export function createSrcConfig(
   pkgPath: string
 ): RollupOptions {
   const pkgSrcPath = "pkgs/" + _pkg_name + "/src";
+  const tsconfig = getPath("tsconfig.json");
 
   const plugins = [
     nodeResolve({
       extensions: [".ts", ".tsx", ".js", ".jsx"],
     }),
     esbuild({
-      tsconfig: getPath("tsconfig.json"),
+      tsconfig,
     }),
   ];
 
