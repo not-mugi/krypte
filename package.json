@@ -2,13 +2,14 @@
   "name": "@mugijs/krypte",
   "version": "0.0.1",
   "private": true,
-  "description": "mugi react components library",
-  "main": "lib/main.ts",
+  "description": "mugijs workspace",
+  "packageManager": "yarn@1.22.0",
   "engines": {
+    "yarn": ">=1.22.0",
     "node": ">=20.9.0"
   },
   "workspaces": [
-    "pkgs/*",
+    "pkgs/**/*",
     "apps/*"
   ],
   "scripts": {
@@ -17,6 +18,10 @@
   },
   "keywords": [
     "mugijs",
+    "frontend",
+    "ui",
+    "ux",
+    "utility",
     "tailwindcss",
     "react",
     "components",
