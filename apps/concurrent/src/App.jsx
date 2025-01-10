@@ -7,11 +7,10 @@ const mFetch = (id, delay) =>
   );
 
 function App() {
-  const [progress, setProgress] = useState(0); // To track progress percentage
-  const [status, setStatus] = useState([]); // To keep track of API call statuses
-  const [isFetching, setLoading] = useState(false); // To control loading state
+  const [progress, setProgress] = useState(0);
+  const [status, setStatus] = useState([]);
+  const [isFetching, setLoading] = useState(false);
 
-  // Function to fetch APIs concurrently and track progress
   const fetchApis = async () => {
     const fetchs = [
       mFetch(1, 3000),
@@ -24,18 +23,15 @@ function App() {
     const totalCalls = fetchs.length;
     let completed = 0;
 
-    // Reset state before fetching APIs
     setProgress(0);
     setStatus([]);
     setLoading(true);
 
-    // Function to update progress
     const updateProgress = (completed, totalCalls) => {
       const newProgress = Math.floor((completed / totalCalls) * 100);
-      setProgress(newProgress); // Update progress state
+      setProgress(newProgress);
     };
 
-    // Track each promise as it resolves or rejects
     fetchs.forEach((apiCall) => {
       console.log(apiCall);
       apiCall
@@ -46,7 +42,7 @@ function App() {
           completed++;
           updateProgress(completed, totalCalls);
           if (completed === totalCalls) {
-            setLoading(false); // Set loading to false once all calls are done
+            setLoading(false);
           }
         });
     });
