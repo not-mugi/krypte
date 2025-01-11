@@ -23,7 +23,15 @@ yargs(hideBin(process.argv))
     alias: "p",
     type: "string",
     describe: "package name to build",
-    choices: ["all", "web", "ami-mugi"],
+    choices: [
+      "all",
+      "web",
+      "ami-mugi",
+      "core",
+      "core/react",
+      "core/tailwind",
+      "core/shared",
+    ],
     demandOption: true,
   })
   .parse();

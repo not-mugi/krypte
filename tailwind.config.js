@@ -2,11 +2,26 @@ import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pkgs/**/src/*.{ts,tsx}",
-    "./pkgs/**/src/**/*.{ts,tsx}",
-    "./pkgs/**/core/*.{ts,tsx}",
-    "./pkgs/**/core/**/*.{ts,tsx}",
+  content: ["./pkgs/**/src/*.{ts,tsx}", "./pkgs/core/tailwind/src/*.{ts,tsx}"],
+  safelist: [
+    {
+      pattern: /bg-(mugi|straw)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /bg-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /text-(mugi|straw)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /text-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
   ],
   darkMode: "class",
   theme: {

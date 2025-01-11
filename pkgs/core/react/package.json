@@ -1,17 +1,12 @@
 {
-  "name": "@mugijs/react-core",
-  "version": "0.0.1",
-  "main": "./cjs/lib.js",
-  "module": "./esm/lib.mjs",
-  "types": "./lib/lib.d.ts",
-  "license": "Apache-2.0",
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@mugijs/shared-core": "*"
-  }
+    "name": "@mugijs/react-core",
+    "version": "0.0.1",
+    "main": "./cjs/lib.js",
+    "module": "./esm/lib.mjs",
+    "types": "./lib/lib.d.ts",
+    "license": "Apache-2.0",
+    "peerDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    }
 }

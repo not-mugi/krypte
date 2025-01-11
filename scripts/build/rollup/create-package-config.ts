@@ -1,17 +1,14 @@
-import { globSync } from "glob";
-import { RollupOptions } from "rollup";
-import { EXTERNALS } from "./externals";
 import path, { extname, relative } from "path";
 import esbuild from "rollup-plugin-esbuild";
 import postcss from "rollup-plugin-postcss";
 import nodeResolve from "@rollup/plugin-node-resolve";
-import { generateScopedName } from "hash-css-selector";
+import { globSync } from "glob";
+import { RollupOptions } from "rollup";
+import { EXTERNALS } from "./externals";
 import { getPath } from "../../others/path";
+import { generateScopedName } from "hash-css-selector";
 
-export function createTwConfig(
-  _pkg_name: string,
-  pkgPath: string
-): RollupOptions {
+export function createTailwindConfig(pkgPath: string): RollupOptions {
   const plugins = [
     postcss({
       extract: true,
@@ -29,29 +26,22 @@ export function createTwConfig(
   };
 }
 
-export function createSrcConfig(
-  _pkg_name: string,
-  pkgPath: string
-): RollupOptions {
-  const pkgSrcPath = "pkgs/" + _pkg_name + "/src";
+// prettier-ignore
+export function createConfig( pkgName: string, pkgPath: string, rootDir = "src"): RollupOptions {
+  const input = "pkgs/" + pkgName + rootDir ? "/" + rootDir : "";
   const tsconfig = getPath("tsconfig.json");
 
   const plugins = [
-    nodeResolve({
-      extensions: [".ts", ".tsx", ".js", ".jsx"],
-    }),
-    esbuild({
-      tsconfig,
-    }),
+    nodeResolve({ extensions: [".ts", ".tsx", ".js", ".jsx"], }),
+    esbuild({ tsconfig, }),
   ];
 
   return {
     external: EXTERNALS,
     input: Object.fromEntries(
-      globSync(`${pkgSrcPath}/**/*.{ts,tsx}`, {
-        ignore: [],
-      }).map((file) => [
-        relative(pkgSrcPath, file.slice(0, file.length - extname(file).length)),
+      globSync(`${input}/**/*.{ts,tsx}`, { ignore: [], })
+      .map((file) => [
+        relative(input, file.slice(0, file.length - extname(file).length)),
         path.resolve(pkgPath, relative(path.resolve(pkgPath), file)),
       ])
     ),

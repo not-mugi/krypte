@@ -1,0 +1,11 @@
+{
+  "name": "@mugijs/tailwind-core",
+  "version": "0.0.1",
+  "main": "./cjs/lib.js",
+  "module": "./esm/lib.mjs",
+  "types": "./lib/lib.d.ts",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mugijs/shared-core": "*"
+  }
+}
