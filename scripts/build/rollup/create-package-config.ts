@@ -27,8 +27,8 @@ export function createTailwindConfig(pkgPath: string): RollupOptions {
 }
 
 // prettier-ignore
-export function createConfig( pkgName: string, pkgPath: string, rootDir = "src"): RollupOptions {
-  const input = "pkgs/" + pkgName + rootDir ? "/" + rootDir : "";
+export function createConfig( pkgName: string, pkgPath: string, rootDir = "/src"): RollupOptions {
+  const input = "pkgs/" + pkgName + rootDir;
   const tsconfig = getPath("tsconfig.json");
 
   const plugins = [

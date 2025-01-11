@@ -1,15 +1,11 @@
-import os from "os";
 import path from "path";
-import { $ } from "zx";
+import { $, usePowerShell } from "zx";
 
 export async function generateDts(pkgPath: string) {
   let tsBuild = "tsconfig.build.json";
-  if (os.platform() === "win32") {
-    tsBuild = "\tsconfig.build.json";
+  if (process.platform === "win32") {
+    usePowerShell();
   }
-  try {
-    await $`yarn tsc -p ${path.join(pkgPath, tsBuild)}`;
-  } catch (error) {
-    console.log(error);
-  }
+  const tsconfig = path.resolve(pkgPath, tsBuild);
+  await $`yarn tsc -p ${tsconfig}`;
 }

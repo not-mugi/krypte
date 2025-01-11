@@ -12,21 +12,21 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/src/main.d.ts",
+        "types": "./lib/main.d.ts",
         "default": "./esm/main.mjs"
       },
       "require": {
-        "types": "./lib/src/main.d.ts",
+        "types": "./lib/main.d.ts",
         "default": "./cjs/main.cjs"
       }
     },
     "./atoms": {
       "import": {
-        "types": "./lib/src/atoms/index.d.ts",
+        "types": "./lib/atoms/index.d.ts",
         "default": "./esm/atoms/index.mjs"
       },
       "require": {
-        "types": "./lib/src/atoms/index.d.ts",
+        "types": "./lib/atoms/index.d.ts",
         "default": "./cjs/atoms/index.cjs"
       }
     },
@@ -51,6 +51,10 @@
   "author": "mugi-tech.com",
   "license": "Apache-2.0",
   "description": "mugi react components library for web",
+  "dependencies": {
+    "@mugijs/shared-core": "*",
+    "@mugijs/tailwind-core": "*"
+  },
   "peerDependencies": {
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"

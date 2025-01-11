@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": ".tmp/tsconfig.build.tsbuildinfo",
-    "rootDir": ".",
+    "rootDir": "./src",
     "declaration": true,
     "declarationDir": "lib",
     "types": [

@@ -1,7 +1,7 @@
 import chalk from "chalk";
-import { createLogger } from "../others/logger";
-import { getPackageJson, isCorePkg, locatePackage, mustCompile } from "../pkgs";
 import { generateDts } from "./generate-d-ts";
+import { createLogger } from "../others/logger";
+import { isCorePkg, isLibPkg, locatePackage, getPackageJson } from "../pkgs";
 import {
   createConfig,
   createTailwindConfig,
@@ -19,33 +19,32 @@ export async function buildPackage(_pkg_name: string) {
     process.exit(1);
   }
   const chalkPkgName = chalk.cyan(pkgJson.name);
-  const corePkg = isCorePkg(pkgJson);
 
   logger.info(`Building package ${chalkPkgName}...`);
 
   try {
-    if (!corePkg) {
-      // Generate *.d.ts files for non-core packages
-      logger.info(`Generating ${chalkPkgName} *.d.ts files...`);
-      await generateDts(pkgPath);
-
-      // Generate tailwind css files
-      logger.info(`Generating ${chalkPkgName} tailwind css files...`);
-      const twConfig = createTailwindConfig(pkgPath);
-      await compile(twConfig);
-    }
-
-    // Skip build for non-core packages without main entry file
-    if (!mustCompile(pkgJson)) {
+    // Skip build for lib core packages without main entry file
+    if (!isLibPkg(pkgJson)) {
       // prettier-ignore
       logger.info( `Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`);
       logger.info(`Skipping build for ${chalkPkgName}`);
       return;
     }
 
-    // const rollupConfig = createSrcConfig(_pkg_name, pkgPath);
-    // logger.info(`Compiling ${chalkPkgName} with rollup`);
-    // await rollupCompile(rollupConfig);
+    logger.info(`Generating ${chalkPkgName} *.d.ts files...`);
+    await generateDts(pkgPath);
+
+    // Generate tailwind css for non-core packages
+    if (!isCorePkg(pkgJson)) {
+      logger.info(`Generating ${chalkPkgName} tailwind css files...`);
+      const twConfig = createTailwindConfig(pkgPath);
+      await compile(twConfig);
+    }
+
+    // Compile main bundle
+    const config = createConfig(_pkg_name, pkgPath);
+    logger.info(`Compiling ${chalkPkgName} with rollup`);
+    await compile(config);
   } catch (error) {
     logger.error(`Failed to build package ${chalkPkgName}`);
     logger.error(error);
