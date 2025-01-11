@@ -109,7 +109,7 @@ export const TEXT_ALIGNMENT_MAP = {
   end: "text-end",
 };
 
-export const BOX_SIXING_MAP = {
+export const BOX_SIZING_MAP = {
   content: "box-content",
   border: "box-border",
 };
@@ -243,6 +243,16 @@ export const FIXED_PLACEMENT_MAP = {
   "end-lg": "end-24",
   "end-xl": "end-48",
   "end-xxl": "end-96",
+};
+
+export const FIXED_SPACING_MAP = {
+  xxs: "spacing-0.5",
+  xs: "spacing-1",
+  sm: "spacing-2",
+  lg: "spacing-4",
+  xl: "spacing-8",
+  xxl: "spacing-16",
+  xxxl: "spacing-24",
 };
 
 export const VISIBILITY_MAP = {

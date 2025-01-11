@@ -1,30 +1,6 @@
 declare module "krypte_tw" {
   /** generics for maps */
-  export type KrypteTwMap<T extends string> = Record<T, string>;
-
-  export type KrypteTwFragMap<T extends string> = Partial<Record<T, string>>;
-
-  export type KrypteTwFragOnlyMap<
-    T extends string,
-    P extends keyof Partial<Record<T, string>>
-  > = Pick<Record<T, string>, P>;
-
-  export type KrypteTwFragExceptMap<
-    T extends string,
-    P extends keyof Partial<Record<T, string>>
-  > = Omit<Record<T, string>, P>;
-
-  type KrypteTwMergedMap<T extends string, B extends string> = {
-    [key in `${T}-${B}`]: string;
-  };
-
-  type KrypteTwMergedWithoutMap<
-    T extends string,
-    B extends string,
-    E extends string
-  > = {
-    [key in `${Exclude<T, E>}-${B}`]: string;
-  };
+  export type KeyofMap<T> = keyof T;
 
   /** supported styles */
   export type Colors =
@@ -75,6 +51,10 @@ declare module "krypte_tw" {
     | "fit"
     | "screen";
 
+  export type Extent = FixedExtent & PercentageExtent;
+
+  export type Dimensions = { width: Extent; height: Extent } | Extent;
+
   export type Placement =
     | "top"
     | "bottom"
@@ -92,17 +72,29 @@ declare module "krypte_tw" {
     | "between"
     | "around"
     | "evenly"
-    | "top"
-    | "leftTop"
-    | "left"
-    | "rightTop"
     | "middle"
-    | "leftBottom"
-    | "bottom"
-    | "rightBottom"
-    | "right"
     | "both"
     | "none";
+
+  export type InlinePlacement = "top" | "middle" | "bottom";
+
+  export type TextJustification =
+    | "start"
+    | "end"
+    | "center"
+    | "justify"
+    | "left"
+    | "right";
+
+  export type ObjectPlacement =
+    | "leftTop"
+    | "top"
+    | "rightTop"
+    | "right"
+    | "rightBottom"
+    | "bottom"
+    | "leftBottom"
+    | "left";
 
   export type BoxSizing = "border" | "content";
 

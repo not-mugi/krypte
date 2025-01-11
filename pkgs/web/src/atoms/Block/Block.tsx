@@ -6,7 +6,6 @@ import {
 } from "@mugijs/tailwind-core";
 
 // export function Block({
-//   children,
 //   scale = "md",
 //   className = "",
 //   alignment = "left",
