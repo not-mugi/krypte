@@ -17,7 +17,9 @@ export function locatePackageJson(pkgName: string): string | void {
   }
 }
 
-export function getPackageJson(pkgName: string): { [key: string]: any } | void {
+export function getPackageJson(
+  pkgName: string
+): { [key: string]: string } | void {
   const pkgJsonPath = locatePackageJson(pkgName);
   if (!pkgJsonPath) {
     return void 0;
@@ -27,4 +29,12 @@ export function getPackageJson(pkgName: string): { [key: string]: any } | void {
 
 export function getPackageSourcePath(pkgPath: string) {
   return path.join(pkgPath, "src");
+}
+
+export function isCorePkg(pkgJson: { [key: string]: string }) {
+  return pkgJson?.name!.endsWith("core");
+}
+
+export function isLibPkg(pkgJson: { [key: string]: string }) {
+  return pkgJson?.main!.trim().length > 0;
 }

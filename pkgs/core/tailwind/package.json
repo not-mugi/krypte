@@ -1,0 +1,29 @@
+{
+  "name": "@mugijs/tailwind-core",
+  "version": "0.0.1",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.mjs",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "cjs"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/index.d.ts",
+        "default": "./esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/index.d.ts",
+        "default": "./cjs/index.cjs"
+      }
+    }
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {},
+  "peerDependencies": {
+    "@mugijs/shared-core": "*"
+  }
+}

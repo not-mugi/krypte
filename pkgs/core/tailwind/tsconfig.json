@@ -14,6 +14,7 @@
     ],
     "module": "ESNext",
     "moduleResolution": "Node",
+    "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -23,7 +24,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "./lib",

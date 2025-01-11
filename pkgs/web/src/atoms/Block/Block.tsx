@@ -1,61 +1,70 @@
-import { ReactNode } from "react";
+import { Colors, Intensity } from "@mugijs/shared-core";
+import {
+  getColorClass,
+  getTextColorClass,
+  getBackgroundColorClass,
+} from "@mugijs/tailwind-core";
 
-type BlockProps = {
-  [key: string]: any;
-  scale: "sm" | "md" | "lg" | "xl" | "2xl" | "full" | "screen" | "auto";
-  alignment: "center" | "left" | "right";
-  children: ReactNode;
-};
+// export function Block({
+//   scale = "md",
+//   className = "",
+//   alignment = "left",
+//   ...props
+// }: BlockProps) {
+//   const classNames = getBlockClassNames(scale, alignment, className);
+//   return (
+//     <div className={classNames} {...props}>
+//       {children}
+//     </div>
+//   );
+// }
 
-export type BlockTailwindClasses =
-  | "border"
-  | "border-2"
-  | "border-4"
-  | "border-8"
-  | "border-16";
+// export function ThemedBlock({
+//   children,
+//   scale = "md",
+//   className = "",
+//   alignment = "left",
+//   ...props
+// }: BlockProps) {
+//   const themeClasses = "mugi:bg-mugi-300 dark:bg-gray-800";
+//   const classNames = getBlockClassNames(
+//     scale,
+//     alignment,
+//     `${themeClasses} ${className}`
+//   );
+//   return (
+//     <div className={classNames} {...props}>
+//       {children}
+//     </div>
+//   );
+// }
 
-const scaleClassesMap: Record<BlockProps["scale"], string> = {
-  full: "w-full h-full",
-  screen: "w-screen h-screen",
-  auto: "w-auto h-auto",
-  sm: "w-1/5 h-1/5",
-  md: "w-1/2 h-1/2",
-  lg: "w-3/5 h-3/5",
-  xl: "w-4/5 h-4/5",
-  "2xl": "w-11/12 h-4/5",
-};
-
-const alignClassesMap: Record<BlockProps["alignment"], string> = {
-  center: "flex justify-center items-center",
-  left: "flex justify-start items-center",
-  right: "flex justify-end items-center",
-};
-
-export function Block({
-  children,
-  alignment = "left",
-  scale = "md",
-  ...props
-}: BlockProps) {
-  const scaleClasses = scaleClassesMap[scale] || "";
-  const alignClasses = alignClassesMap[alignment] || "";
-  props.className = `${
-    props.className || ""
-  } ${scaleClasses} ${alignClasses}`.trim();
-  return <div {...props}>{children}</div>;
-}
-
-export function ThemedBlock({
-  children,
-  alignment = "left",
-  scale = "md",
-  ...props
-}: BlockProps) {
-  const scaleClasses = scaleClassesMap[scale] || "";
-  const alignClasses = alignClassesMap[alignment] || "";
-  const themeClasses = "mugi:bg-straw dark:bg-gray-800";
-  props.className = `${
-    props.className || ""
-  } ${scaleClasses} ${themeClasses} ${alignClasses}`.trim();
-  return <div {...props}>{children}</div>;
-}
+// export function ColoredBlock({
+//   children,
+//   scale = "md",
+//   className = "",
+//   alignment = "left",
+//   color,
+//   intensity,
+//   backgroundColor,
+//   ...props
+// }: BlockProps & {
+//   color?: TailwindColor;
+//   intensity?: TailwindIntensity;
+//   backgroundColor?: TailwindColor;
+// }) {
+//   const colorClasses = `${getColorClass(
+//     color,
+//     intensity
+//   )} ${getBackgroundColorClass(backgroundColor, intensity)}`.trim();
+//   const classNames = getBlockClassNames(
+//     scale,
+//     alignment,
+//     `${colorClasses} ${className}`
+//   );
+//   return (
+//     <div className={classNames} {...props}>
+//       {children}
+//     </div>
+//   );
+// }

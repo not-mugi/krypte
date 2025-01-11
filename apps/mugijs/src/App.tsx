@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ThemedText as Text, useTheme, ThemedBlock, Block } from "@mugijs/web";
+import { ThemedSpan, useTheme, ThemedBlock, Block, Text } from "@mugijs/web";
 
 function App() {
   const { theme, setTheme } = useTheme();
@@ -18,7 +18,9 @@ function App() {
           scale="2xl"
           alignment="center"
         >
-          <Text className="text-8xl">Mugi Js</Text>
+          <ThemedSpan width="400px" height="500px">
+            <Text className="text-2xl">Hello mugi js</Text>
+          </ThemedSpan>
         </Block>
       </ThemedBlock>
     </div>

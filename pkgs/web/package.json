@@ -51,6 +51,10 @@
   "author": "mugi-tech.com",
   "license": "Apache-2.0",
   "description": "mugi react components library for web",
+  "dependencies": {
+    "@mugijs/shared-core": "*",
+    "@mugijs/tailwind-core": "*"
+  },
   "peerDependencies": {
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"

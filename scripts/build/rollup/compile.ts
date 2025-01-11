@@ -1,6 +1,6 @@
 import { OutputOptions, rollup, RollupOptions } from "rollup";
 
-export async function rollupCompile(config: RollupOptions) {
+export async function compile(config: RollupOptions) {
   const build = await rollup(config);
   const outputs: OutputOptions[] = Array.isArray(config.output)
     ? config.output

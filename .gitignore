@@ -129,6 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-pkgs/*/cjs
-pkgs/*/esm
-pkgs/*/lib
+cjs
+esm
+lib
+.tmp
