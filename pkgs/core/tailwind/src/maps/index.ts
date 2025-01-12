@@ -127,23 +127,6 @@ export const BOX_DISPLAY_MAP = {
   inlineGrid: "inline-grid",
 };
 
-export const CONTENT_FLOAT_MAP = {
-  left: "float-left",
-  right: "float-right",
-  none: "float-none",
-  start: "float-start",
-  end: "float-end",
-};
-
-export const CONTENT_CLEAR_MAP = {
-  left: "clear-left",
-  right: "clear-right",
-  both: "clear-both",
-  none: "clear-none",
-  start: "clear-start",
-  end: "clear-end",
-};
-
 export const OBJECT_FIT_MAP = {
   contain: "object-contain",
   cover: "object-cover",
@@ -185,7 +168,24 @@ export const OVERSCROLL_MAP = {
   auto: "overscroll-auto",
 };
 
-export const POSITION_MAP = {
+export const CONTENT_FLOAT_MAP = {
+  left: "float-left",
+  right: "float-right",
+  none: "float-none",
+  start: "float-start",
+  end: "float-end",
+};
+
+export const CONTENT_CLEAR_MAP = {
+  left: "clear-left",
+  right: "clear-right",
+  both: "clear-both",
+  none: "clear-none",
+  start: "clear-start",
+  end: "clear-end",
+};
+
+export const CONTENT_POSITION_MAP = {
   static: "static",
   fixed: "fixed",
   absolute: "absolute",
@@ -249,10 +249,10 @@ export const FIXED_SPACING_MAP = {
   xxs: "spacing-0.5",
   xs: "spacing-1",
   sm: "spacing-2",
-  lg: "spacing-4",
-  xl: "spacing-8",
-  xxl: "spacing-16",
-  xxxl: "spacing-24",
+  md: "spacing-4",
+  lg: "spacing-8",
+  xl: "spacing-16",
+  xxl: "spacing-24",
 };
 
 export const VISIBILITY_MAP = {
@@ -266,4 +266,5 @@ export const ZINDEX_MAP = {
   sm: "z-10",
   md: "z-30",
   lg: "z-50",
+  inf: "z-999",
 };
