@@ -1,5 +1,5 @@
 import { MUGI_THEME_COLORS } from "../constants";
-import { INTENSITY_MAP, MUGI_INTENSITY_MAP } from "../maps";
+import { INTENSITY_MAP, MUGI_INTENSITY_MAP } from "../maps/colors";
 
 import { Colors, Intensity } from "@mugijs/shared-core";
 

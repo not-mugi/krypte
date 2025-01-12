@@ -22,7 +22,7 @@
     "composite": true,
   },
   "include": [
-    "src"
+    "./src"
   ],
   "exclude": [
     "./lib",

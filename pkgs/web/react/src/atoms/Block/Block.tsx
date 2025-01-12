@@ -1,9 +1,24 @@
-import { Colors, Intensity } from "@mugijs/shared-core";
-import {
-  getColorClass,
-  getTextColorClass,
-  getBackgroundColorClass,
-} from "@mugijs/tailwind-core";
+import { getColorClass } from "@mugijs/tailwind-core/functions";
+// prettier-ignore
+import { Arrangement, Colors, Extent, FixedExtent, MergedClassType, Spatiality, Placement } from "@mugijs/shared-core";
+
+export type BlockConfig = {
+  scale: Extent;
+  color: Colors;
+  backgroundColor: Colors;
+  display: Spatiality;
+  contentAlignment: Arrangement;
+  position: Arrangement;
+  placement: MergedClassType<Placement, FixedExtent>;
+};
+
+export function Block() {}
+
+// import {
+//   getColorClass,
+//   getTextColorClass,
+//   getBackgroundColorClass,
+// } from "@mugijs/tailwind-core";
 
 // export function Block({
 //   scale = "md",
