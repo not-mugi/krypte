@@ -1,0 +1,30 @@
+// prettier-ignore
+import { KeyofMap, FixedExtent, TextJustification, InlinePlacement} from "@mugijs/shared-core";
+
+// prettier-ignore
+import {
+  FIXED_SPACING_MAP,
+  TEXT_ALIGNMENT_MAP, INLINE_VERTICAL_ALIGN_MAP
+} from "../maps";
+
+export function getTextAlignClass(justification: TextJustification) {
+  if (justification in TEXT_ALIGNMENT_MAP) {
+    return TEXT_ALIGNMENT_MAP[
+      justification as KeyofMap<typeof TEXT_ALIGNMENT_MAP>
+    ];
+  }
+}
+
+export function getInlineYAlignClass(placement: InlinePlacement) {
+  if (placement in INLINE_VERTICAL_ALIGN_MAP) {
+    return INLINE_VERTICAL_ALIGN_MAP[
+      placement as KeyofMap<typeof INLINE_VERTICAL_ALIGN_MAP>
+    ];
+  }
+}
+
+export function getSpacingClass(spacing: FixedExtent) {
+  if (spacing in FIXED_SPACING_MAP) {
+    return FIXED_SPACING_MAP[spacing];
+  }
+}
