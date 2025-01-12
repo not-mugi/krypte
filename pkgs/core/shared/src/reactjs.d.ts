@@ -1,5 +1,3 @@
-declare module "krypte_react" {
-  import { HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 
-  export type KrypteAtomProps<P, B> = P & HTMLAttributes<B>;
-}
+export type KrypteAtomProps<P, B> = P & HTMLAttributes<B>;
