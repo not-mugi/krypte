@@ -12,6 +12,7 @@
       "DOM",
       "ESNext"
     ],
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "emitDeclarationOnly": true,

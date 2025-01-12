@@ -54,6 +54,13 @@ export type PercentageExtent =
 
 export type Extent = FixedExtent & PercentageExtent;
 
+export type SizeExtent = Exclude<Extent, "screen">;
+
+export type HeightExtent = Exclude<
+  Extent,
+  "1/12" | "1/4" | "5/12" | "7/12" | "3/4" | "11/12"
+>;
+
 export type Dimensions = { width: Extent; height: Extent } | Extent;
 
 export type Placement =
@@ -93,6 +100,8 @@ export type Alignment =
   | "baseline"
   | "stretch";
 
+export type PositionalPlacement = MergedClassType<Placement, FixedExtent>;
+
 export type ContentPlacement =
   | "center"
   | "start"
@@ -102,6 +111,35 @@ export type ContentPlacement =
   | "evenly"
   | "stretch"
   | "baseline";
+
+export type MainJustification =
+  | "normal"
+  | "start"
+  | "end"
+  | "center"
+  | "between"
+  | "around"
+  | "evenly"
+  | "stretch";
+
+export type InlineJustification = Extract<
+  MainJustification,
+  "start" | "end" | "center" | "stretch"
+>;
+
+export type SelfInlineJustification = Extract<
+  MainJustification,
+  "start" | "end" | "center" | "stretch" | "auto"
+>;
+
+export type MainAlignment = MainJustification | "baseline";
+
+export type CrossAlignment = Exclude<
+  MainAlignment,
+  "normal" | "between" | "stretch" | "around" | "evenly"
+>;
+
+export type SelfCrossAlignment = CrossAlignment | "auto";
 
 export type InlinePlacement = "top" | "middle" | "bottom";
 
@@ -113,13 +151,15 @@ export type TextJustification =
   | "left"
   | "right";
 
-export type ContentJustification =
+export type ContentPosition =
   | "left"
   | "right"
   | "both"
   | "none"
   | "start"
   | "end";
+
+export type ContentFloat = Exclude<ContentPosition, "both">;
 
 export type ObjectPlacement =
   | "leftTop"
@@ -131,7 +171,7 @@ export type ObjectPlacement =
   | "leftBottom"
   | "left";
 
-export type BoxSizing = "border" | "content";
+export type BoxContent = "border" | "content";
 
 export type Spatiality =
   | "flex"
@@ -169,12 +209,7 @@ export type Overflow =
 
 export type OverScroll = "contain" | "none" | "auto";
 
-export type Arrangement =
-  | "static"
-  | "fixed"
-  | "absolute"
-  | "relative"
-  | "sticky";
+export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 
 export type Visibility = "visible" | "invisible" | "collapse";
 
