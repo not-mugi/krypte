@@ -26,21 +26,24 @@ export function createTailwindConfig(pkgPath: string): RollupOptions {
   };
 }
 
-// prettier-ignore
-export function createConfig( pkgName: string, pkgPath: string, rootDir = "/src"): RollupOptions {
+export function createConfig(
+  pkgName: string,
+  pkgPath: string,
+  rootDir = "/src",
+  externals: Array<string> = []
+): RollupOptions {
   const input = "pkgs/" + pkgName + rootDir;
   const tsconfig = getPath("tsconfig.json");
 
   const plugins = [
-    nodeResolve({ extensions: [".ts", ".tsx", ".js", ".jsx"], }),
-    esbuild({ tsconfig, }),
+    nodeResolve({ extensions: [".ts", ".tsx", ".js", ".jsx"] }),
+    esbuild({ tsconfig }),
   ];
 
   return {
-    external: EXTERNALS,
+    external: externals,
     input: Object.fromEntries(
-      globSync(`${input}/**/*.{ts,tsx}`, { ignore: [], })
-      .map((file) => [
+      globSync(`${input}/**/*.{ts,tsx}`, { ignore: [] }).map((file) => [
         relative(input, file.slice(0, file.length - extname(file).length)),
         path.resolve(pkgPath, relative(path.resolve(pkgPath), file)),
       ])

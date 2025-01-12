@@ -2,6 +2,8 @@ declare module "krypte_tw" {
   /** generics for maps */
   export type KeyofMap<T> = keyof T;
 
+  export type MergedClassType<T extends string, U extends string> = `${T}-${U}`;
+
   /** supported styles */
   export type Colors =
     | "mugi"
@@ -65,6 +67,8 @@ declare module "krypte_tw" {
     | "end";
 
   export type Justification =
+    | "left"
+    | "right"
     | "start"
     | "end"
     | "center"
@@ -85,6 +89,14 @@ declare module "krypte_tw" {
     | "justify"
     | "left"
     | "right";
+
+  export type ContentJustification =
+    | "left"
+    | "right"
+    | "both"
+    | "none"
+    | "start"
+    | "end";
 
   export type ObjectPlacement =
     | "leftTop"
@@ -110,7 +122,7 @@ declare module "krypte_tw" {
     | "inlineFlex"
     | "inlineGrid";
 
-  export type Content =
+  export type ObjectResize =
     | "contain"
     | "cover"
     | "fill"
@@ -118,7 +130,7 @@ declare module "krypte_tw" {
     | "downscale"
     | "auto";
 
-  export type ContentOverflow =
+  export type Overflow =
     | "auto"
     | "hidden"
     | "visible"
@@ -131,6 +143,8 @@ declare module "krypte_tw" {
     | "yVisible"
     | "xScroll"
     | "yScroll";
+
+  export type OverScroll = "contain" | "none" | "auto";
 
   export type Arrangement =
     | "static"
@@ -146,4 +160,6 @@ declare module "krypte_tw" {
   export type BorderRadiusExtent = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 
   export type TextAlignment = "center" | "left" | "right";
+
+  export type StackOrder = "none" | "sm" | "md" | "lg" | "inf";
 }

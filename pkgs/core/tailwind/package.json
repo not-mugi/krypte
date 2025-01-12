@@ -10,14 +10,14 @@
     "cjs"
   ],
   "exports": {
-    ".": {
+    "./functions": {
       "import": {
         "types": "./lib/index.d.ts",
-        "default": "./esm/index.mjs"
+        "default": "./esm/mechanics/index.mjs"
       },
       "require": {
         "types": "./lib/index.d.ts",
-        "default": "./cjs/index.cjs"
+        "default": "./cjs/mechanics/index.cjs"
       }
     }
   },
