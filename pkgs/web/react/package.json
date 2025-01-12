@@ -1,5 +1,5 @@
 {
-  "name": "@mugijs/web",
+  "name": "@mugijs/react-web",
   "version": "0.0.1",
   "main": "./cjs/main.cjs",
   "module": "./esm/main.mjs",
