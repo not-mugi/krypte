@@ -22,6 +22,33 @@ module.exports = {
         /text-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
+    {
+      pattern: /border-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /border-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /outline-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /outline-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /ring-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /ring-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
   ],
   darkMode: "class",
   theme: {

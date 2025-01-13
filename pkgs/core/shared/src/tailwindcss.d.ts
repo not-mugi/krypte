@@ -72,6 +72,12 @@ export type Placement =
   | "start"
   | "end";
 
+export type Edges = Exclude<Placement, "inset" | "start" | "end" >
+
+export type Corners = "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
+
+export type LogicalCorners = "start" | "end" | "startstart" | "startend" | "endstart" | "endend";
+
 export type Justification =
   | "left"
   | "right"
@@ -213,9 +219,23 @@ export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 
 export type Visibility = "visible" | "invisible" | "collapse";
 
-export type BorderExtent = "base" | "lg" | "xl" | "xxl";
+export type BorderWidthExtent = "none" | "sm" | "md" | "lg" | "xl";
 
-export type BorderRadiusExtent = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+export type BorderRadiusExtent = "none" | "sm" | "md" | "lg" | "xl" | "xxl";
+
+export type BorderRingExtent = "none" | "sm" | "md" | "lg" | "xl" | "inset";
+
+export type FullBorderRadiusExtent = BorderRadiusExtent | "full";
+
+export type SideBorderRadiusExtent = MergedClassType<Edges, BorderRadiusExtent>;
+
+export type CornerBorderRadiusExtent = MergedClassType<Corners, BorderRadiusExtent>;
+
+export type LogicalBorderRadiusExtent = MergedClassType<LogicalCorners, BorderRadiusExtent>;
+
+export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
+
+export type OutlineStyle = Exclude<BorderStyle, "hidden">
 
 export type TextAlignment = "center" | "left" | "right";
 

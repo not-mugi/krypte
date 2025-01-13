@@ -18,7 +18,22 @@ function getBackgroundColorClass(color: Colors, intensity: Intensity = "slim") {
   return `bg-${getColorClass(color, intensity)}`;
 }
 
+function getBorderColorClass(color: Colors, intensity: Intensity = "slim") {
+  return `border-${getColorClass(color, intensity)}`;
+}
+
+function getBorderOutlineColorClass(color: Colors, intensity: Intensity = "slim") {
+  return `outline-${getColorClass(color, intensity)}`;
+}
+
+function getBorderRingColorClass(color: Colors, intensity: Intensity = "slim") {
+  return `ring-${getColorClass(color, intensity)}`;
+}
+
 export const ColorMechanics = {
   color: getTextColorClass,
-  backgroundColor: getBackgroundColorClass,
+  border : getBorderColorClass,
+  background: getBackgroundColorClass,
+  outline : getBorderOutlineColorClass,
+  ring : getBorderRingColorClass
 };
