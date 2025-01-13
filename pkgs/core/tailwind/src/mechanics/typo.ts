@@ -1,4 +1,4 @@
-import { TEXT_ALIGNMENT_MAP, INLINE_VERTICAL_ALIGN_MAP } from "../maps";
+import { TEXT_ALIGNMENT_MAP, INLINE_VERTICAL_ALIGN_MAP } from "../maps/typo";
 // prettier-ignore
 import { KeyofMap, TextJustification, InlinePlacement, } from "@mugijs/shared-core";
 

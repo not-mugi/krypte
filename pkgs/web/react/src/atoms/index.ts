@@ -1,4 +1,4 @@
-export { Text, ThemedText } from "./Text/Text";
-export { Span, ThemedSpan } from "./Span/Span";
-export { Input, ThemedInput } from "./Input/Input";
+// export { Text } from "./Text";
+// export { Span } from "./Span;
+// export { Input } from "./Input";
 export { Block } from "./Block";

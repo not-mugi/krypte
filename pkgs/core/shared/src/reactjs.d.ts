@@ -1,5 +1,3 @@
-import { JSX, HTMLAttributes } from "react";
-
-export type KrypteAtomProps<P> = P & HTMLAttributes<HTMLElement>;
+import { JSX } from "react";
 
 export type Component = keyof JSX.IntrinsicElements;

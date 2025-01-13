@@ -35,7 +35,7 @@
   "repository": {
     "url": "https://github.com/not-mugi/krypte.git",
     "type": "git",
-    "directory": "pkgs/web"
+    "directory": "pkgs/web/react"
   },
   "keywords": [
     "ui",

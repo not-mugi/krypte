@@ -2,7 +2,7 @@
 import {
   FIXED_SIZE_MAP, FIXED_HEIGHT_MAP, FIXED_WIDTH_MAP,
   PERCENTAGE_SIZE_MAP, PERCENTAGE_HEIGHT_MAP, PERCENTAGE_WIDTH_MAP,
-} from "../maps";
+} from "../maps/sizing";
 // prettier-ignore
 import {
   Dimensions, 

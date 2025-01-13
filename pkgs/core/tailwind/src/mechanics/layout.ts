@@ -10,7 +10,7 @@ import {
   VISIBILITY_MAP, ZINDEX_MAP,
   OVERFLOW_MAP, OVERSCROLL_MAP,
   OBJECT_FIT_MAP, OBJECT_POSITION_MAP,
-} from "../maps";
+} from "../maps/layout";
 
 export function getObjectFitClass(resize: Exclude<ObjectResize, "auto">) {
   if (resize in OBJECT_FIT_MAP) {

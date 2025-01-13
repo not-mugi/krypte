@@ -1,4 +1,4 @@
-import { BoxMechanics, createClass } from "@mugijs/tailwind-core/functions";
+import { createElement, HTMLAttributes } from "react";
 // prettier-ignore
 import {
   Spatiality, Position, PositionalPlacement,
@@ -6,8 +6,8 @@ import {
   MainAlignment, CrossAlignment, SelfCrossAlignment,
   MainJustification, InlineJustification, SelfInlineJustification,
 } from "@mugijs/shared-core/tailwind";
-import { KrypteAtomProps, Component } from "@mugijs/shared-core/react";
-import { createElement } from "react";
+import { Component } from "@mugijs/shared-core/react";
+import { BoxMechanics, createClass } from "@mugijs/tailwind-core/functions";
 
 export type BlockConfig = {
   display: Spatiality;
@@ -24,19 +24,19 @@ export type BlockConfig = {
   selfCrossAlignment: SelfCrossAlignment;
 };
 
-export type BlockProps = KrypteAtomProps<{
-  config: BlockConfig;
+export type BlockProps = {
+  config: Partial<BlockConfig>;
   component: Component;
-  overrides?: keyof BlockConfig;
-}>;
+  overrides?: Array<keyof BlockConfig>;
+} & HTMLAttributes<HTMLElement>;
 
 // prettier-ignore
-export function NewBlock({ config, overrides, children, component, ...props }: BlockProps) {
+export function NewBlock({ config, children, className, overrides = [], component, ...props }: BlockProps) {
   return createElement(
     component,
     {
       ...props,
-      className: createClass(config, BoxMechanics),
+      className: createClass(config, BoxMechanics, overrides, className!),
     },
     children
   );

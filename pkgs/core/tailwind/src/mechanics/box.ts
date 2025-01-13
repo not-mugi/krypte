@@ -2,8 +2,8 @@
 import {
   BoxContent, PositionalPlacement,
   MainAlignment, CrossAlignment, SelfCrossAlignment,
-  MainJustification, InlineJustification, SelfInlineJustification,
-  ContentFloat, ContentPosition, Position, Spatiality, Placement,
+  ContentFloat, ContentPosition, Position, Spatiality,
+  MainJustification, InlineJustification, SelfInlineJustification
 } from "@mugijs/shared-core";
 
 // prettier-ignore
