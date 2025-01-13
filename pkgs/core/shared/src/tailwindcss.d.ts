@@ -1,9 +1,9 @@
-/** generics for maps */
+/** Generics */
 export type KeyofMap<T> = keyof T;
 
 export type MergedClassType<T extends string, U extends string> = `${T}-${U}`;
 
-/** supported styles */
+/** Supported Tailwind Values */
 export type Colors =
   | "mugi"
   | "hat"
@@ -220,3 +220,5 @@ export type BorderRadiusExtent = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 export type TextAlignment = "center" | "left" | "right";
 
 export type StackOrder = "none" | "sm" | "md" | "lg" | "inf";
+
+export type FormElement = "input" | "textarea" | "select" | "multiselect" | "checkbox" | "radio";
