@@ -12,38 +12,47 @@ import {
   OBJECT_FIT_MAP, OBJECT_POSITION_MAP,
 } from "../maps/layout";
 
-export function getObjectFitClass(resize: Exclude<ObjectResize, "auto">) {
-  if (resize in OBJECT_FIT_MAP) {
+function getObjectFitClass(resize?: Exclude<ObjectResize, "auto">) {
+  if (resize && resize in OBJECT_FIT_MAP) {
     return OBJECT_FIT_MAP[resize];
   }
 }
 
-export function getObjectPositionClass(placement: ObjectPlacement | "center") {
-  if (placement in OBJECT_POSITION_MAP) {
+function getObjectPositionClass(placement?: ObjectPlacement | "center") {
+  if (placement && placement in OBJECT_POSITION_MAP) {
     return OBJECT_POSITION_MAP[placement];
   }
 }
 
-export function getOverflowClass(overflow: Overflow) {
-  if (overflow in OVERFLOW_MAP) {
+function getOverflowClass(overflow?: Overflow) {
+  if (overflow && overflow in OVERFLOW_MAP) {
     return OVERFLOW_MAP[overflow];
   }
 }
 
-export function getOverScrollClass(overscroll: OverScroll) {
-  if (overscroll in OVERSCROLL_MAP) {
+function getOverScrollClass(overscroll?: OverScroll) {
+  if (overscroll && overscroll in OVERSCROLL_MAP) {
     return OVERSCROLL_MAP[overscroll];
   }
 }
 
-export function getVisibliityClass(visibility: Visibility) {
-  if (visibility in VISIBILITY_MAP) {
+function getVisibliityClass(visibility?: Visibility) {
+  if (visibility && visibility in VISIBILITY_MAP) {
     return VISIBILITY_MAP[visibility];
   }
 }
 
-export function getStackOrderClass(stackorder: StackOrder) {
-  if (stackorder in ZINDEX_MAP) {
+function getStackOrderClass(stackorder?: StackOrder) {
+  if (stackorder && stackorder in ZINDEX_MAP) {
     return ZINDEX_MAP[stackorder];
   }
+}
+
+export const LayoutMechanics = {
+  overflow: getOverflowClass,
+  overscroll: getOverScrollClass,
+  visibility: getVisibliityClass,
+  stackOrder: getStackOrderClass,
+  objectFit: getObjectFitClass,
+  objectPosition: getObjectPositionClass,
 }
