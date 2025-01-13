@@ -1,12 +1,11 @@
-import path, { extname, relative } from "path";
-import esbuild from "rollup-plugin-esbuild";
-import postcss from "rollup-plugin-postcss";
-import nodeResolve from "@rollup/plugin-node-resolve";
+import { getPath } from "../../others/path";
 import { globSync } from "glob";
 import { RollupOptions } from "rollup";
-import { EXTERNALS } from "./externals";
-import { getPath } from "../../others/path";
 import { generateScopedName } from "hash-css-selector";
+import esbuild from "rollup-plugin-esbuild";
+import postcss from "rollup-plugin-postcss";
+import path, { extname, relative } from "path";
+import nodeResolve from "@rollup/plugin-node-resolve";
 
 export function createTailwindConfig(pkgPath: string): RollupOptions {
   const plugins = [

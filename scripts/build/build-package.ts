@@ -7,6 +7,7 @@ import {
   createTailwindConfig,
 } from "./rollup/create-package-config";
 import { compile } from "./rollup/compile";
+import { PKG_EXTERNALS, WORKSPACE_EXTERNALS } from "./rollup/externals";
 
 const logger = createLogger("build-package");
 
@@ -18,6 +19,8 @@ export async function buildPackage(_pkg_name: string) {
     logger.error(`Package ${_pkg_name} not found!`);
     process.exit(1);
   }
+
+  const corePkg = isCorePkg(pkgJson);
   const chalkPkgName = chalk.cyan(pkgJson.name);
 
   logger.info(`Building package ${chalkPkgName}...`);
@@ -35,14 +38,17 @@ export async function buildPackage(_pkg_name: string) {
     await generateDts(pkgPath);
 
     // Generate tailwind css for non-core packages
-    if (!isCorePkg(pkgJson)) {
+    if (!corePkg) {
       logger.info(`Generating ${chalkPkgName} tailwind css files...`);
       const twConfig = createTailwindConfig(pkgPath);
       await compile(twConfig);
     }
 
     // Compile main bundle
-    const config = createConfig(_pkg_name, pkgPath);
+    const rootDir = "/src"
+    const externals = corePkg ? WORKSPACE_EXTERNALS : PKG_EXTERNALS(_pkg_name);
+
+    const config = createConfig(_pkg_name, pkgPath, rootDir, externals);
     logger.info(`Compiling ${chalkPkgName} with rollup`);
     await compile(config);
   } catch (error) {

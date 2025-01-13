@@ -26,6 +26,7 @@ yargs(hideBin(process.argv))
     choices: [
       "all",
       "web",
+      "web/react",
       "ami-mugi",
       "core",
       "core/react",
