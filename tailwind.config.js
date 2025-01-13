@@ -5,7 +5,7 @@ module.exports = {
   content: ["./pkgs/**/src/*.{ts,tsx}", "./pkgs/core/tailwind/src/**/*.{ts,tsx}"],
   safelist: [
     {
-      pattern: /bg-(mugi|straw)-(100|200|300|400|500)/,
+      pattern: /bg-(mugi|hat)-(100|200|300|400|500)/,
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
     {
@@ -14,12 +14,39 @@ module.exports = {
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
     {
-      pattern: /text-(mugi|straw)-(100|200|300|400|500)/,
+      pattern: /text-(mugi|hat)-(100|200|300|400|500)/,
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
     {
       pattern:
         /text-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /border-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /border-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /outline-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /outline-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern: /ring-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /ring-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
   ],
@@ -35,11 +62,11 @@ module.exports = {
           500: "#FEBE00",
         },
         hat: {
-          100: "E18E5A",
-          200: "D35A50",
-          300: "C12C47",
-          400: "9E2E2C",
-          500: "7E1D1A",
+          100: "#E18E5A",
+          200: "#D35A50",
+          300: "#C12C47",
+          400: "#9E2E2C",
+          500: "#7E1D1A",
         },
       },
     },
@@ -49,5 +76,8 @@ module.exports = {
       addVariant("mugi", ".mugi &");
       addVariant("hocus", ["&:hover", "&:focus"]);
     }),
+    require("@tailwindcss/forms")({
+      strategy: "class",
+    })
   ],
 };

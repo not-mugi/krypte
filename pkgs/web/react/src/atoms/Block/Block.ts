@@ -1,4 +1,4 @@
-import { createElement, HTMLAttributes } from "react";
+import { createElement, HTMLAttributes, JSX } from "react";
 // prettier-ignore
 import {
   Spatiality, Position, PositionalPlacement,
@@ -6,7 +6,6 @@ import {
   MainAlignment, CrossAlignment, SelfCrossAlignment,
   MainJustification, InlineJustification, SelfInlineJustification,
 } from "@mugijs/shared-core/tailwind";
-import { Component } from "@mugijs/shared-core/react";
 import { BoxMechanics, createClass } from "@mugijs/tailwind-core/functions";
 
 export type BlockConfig = {
@@ -26,12 +25,12 @@ export type BlockConfig = {
 
 export type BlockProps = {
   config: Partial<BlockConfig>;
-  component: Component;
+  component: keyof JSX.IntrinsicElements;
   overrides?: Array<keyof BlockConfig>;
 } & HTMLAttributes<HTMLElement>;
 
 // prettier-ignore
-export function NewBlock({ config, children, className, overrides = [], component, ...props }: BlockProps) {
+export function NewBlock({ config, children, className, overrides = [], component, ...props }: BlockProps) : JSX.Element {
   return createElement(
     component,
     {

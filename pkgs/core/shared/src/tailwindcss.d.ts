@@ -1,9 +1,9 @@
-/** generics for maps */
+/** Generics */
 export type KeyofMap<T> = keyof T;
 
 export type MergedClassType<T extends string, U extends string> = `${T}-${U}`;
 
-/** supported styles */
+/** Supported Tailwind Values */
 export type Colors =
   | "mugi"
   | "hat"
@@ -63,6 +63,8 @@ export type HeightExtent = Exclude<
 
 export type Dimensions = { width: Extent; height: Extent } | Extent;
 
+export type Axis = "x" | "y";
+
 export type Placement =
   | "top"
   | "bottom"
@@ -71,6 +73,12 @@ export type Placement =
   | "inset"
   | "start"
   | "end";
+
+export type Edges = Exclude<Placement, "inset" | "start" | "end" >
+
+export type Corners = "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
+
+export type LogicalCorners = "start" | "end" | "startstart" | "startend" | "endstart" | "endend";
 
 export type Justification =
   | "left"
@@ -213,10 +221,28 @@ export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 
 export type Visibility = "visible" | "invisible" | "collapse";
 
-export type BorderExtent = "base" | "lg" | "xl" | "xxl";
+export type BorderExtent = "none" | "sm" | "md" | "lg" | "xl";
 
-export type BorderRadiusExtent = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+export type BorderRadiusExtent = "none" | "sm" | "md" | "lg" | "xl" | "xxl";
+
+export type BorderRingExtent = "none" | "sm" | "md" | "lg" | "xl" | "inset";
+
+export type FullBorderRadiusExtent = BorderRadiusExtent | "full";
+
+export type SideBorderRadiusExtent = MergedClassType<Edges, BorderRadiusExtent>;
+
+export type CornerBorderRadiusExtent = MergedClassType<Corners, BorderRadiusExtent>;
+
+export type LogicalBorderRadiusExtent = MergedClassType<LogicalCorners, BorderRadiusExtent>;
+
+export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
+
+export type OutlineStyle = Exclude<BorderStyle, "hidden">
+
+export type BorderRingOffset = Exclude<BorderRingExtent, "inset">;
 
 export type TextAlignment = "center" | "left" | "right";
 
 export type StackOrder = "none" | "sm" | "md" | "lg" | "inf";
+
+export type FormElement = "input" | "textarea" | "select" | "multiselect" | "checkbox" | "radio";

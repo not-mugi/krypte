@@ -2,15 +2,14 @@ import { Block } from "@mugijs/react-web";
 
 function App() {
   return (
-    <div className={`App mugi`}>
+    <div className={'mugi'}>
       <Block
         component="section"
-        className="bg-mugi-500"
+        className="mugi:bg-mugi-200"
         config={{
           display: "flex",
           content: "content",
           justification: "center",
-          inlineJustification: "center"
         }}
       >
         Hello world
