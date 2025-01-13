@@ -63,6 +63,8 @@ export type HeightExtent = Exclude<
 
 export type Dimensions = { width: Extent; height: Extent } | Extent;
 
+export type Axis = "x" | "y";
+
 export type Placement =
   | "top"
   | "bottom"
@@ -219,7 +221,7 @@ export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 
 export type Visibility = "visible" | "invisible" | "collapse";
 
-export type BorderWidthExtent = "none" | "sm" | "md" | "lg" | "xl";
+export type BorderExtent = "none" | "sm" | "md" | "lg" | "xl";
 
 export type BorderRadiusExtent = "none" | "sm" | "md" | "lg" | "xl" | "xxl";
 
@@ -236,6 +238,8 @@ export type LogicalBorderRadiusExtent = MergedClassType<LogicalCorners, BorderRa
 export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
 
 export type OutlineStyle = Exclude<BorderStyle, "hidden">
+
+export type BorderRingOffset = Exclude<BorderRingExtent, "inset">;
 
 export type TextAlignment = "center" | "left" | "right";
 
