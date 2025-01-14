@@ -7,6 +7,10 @@ function getFormElementClass(element : FormElement) {
     }
 }
 
+export type InputElementConfig = {
+    element : FormElement
+}
+
 export const InputMechanics = {
     element : getFormElementClass
 }

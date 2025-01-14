@@ -87,6 +87,23 @@ function getBorderLogicalCornerRadiusClass(radius?: LogicalBorderRadiusExtent) {
   }
 }
 
+export type BorderConfig = {
+    width?: BorderExtent,
+    style?: BorderStyle,
+    dividerAxis?: Axis,
+    inlineDividerWidth?: BorderExtent,
+    crossDividerWidth?: BorderExtent,
+    outlineWidth?: BorderExtent,
+    outlineStyle?: OutlineStyle,
+    outlineOffset?: BorderExtent,
+    ringWidth?: BorderRingExtent,
+    ringOffset?: BorderRingOffset,
+    fullRadius?: FullBorderRadiusExtent,
+    sideRadius?: SideBorderRadiusExtent,
+    cornerRadius?: CornerBorderRadiusExtent,
+    logicalCornerRadius?: LogicalBorderRadiusExtent,
+}
+
 export const BorderMechanics = {
   width: getBorderWidthClass,
   style: getBorderStyleClass,

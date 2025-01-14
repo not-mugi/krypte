@@ -39,7 +39,7 @@ function getPostionalPlacementClass(positionalPlacement?: PositionalPlacement) {
 }
 
 function getContentFloatClass(contentFloat?: ContentFloat) {
-  if (contentFloat && contentFloat in CONTENT_FLOAT_MAP) {
+if (contentFloat && contentFloat in CONTENT_FLOAT_MAP) {
     return CONTENT_FLOAT_MAP[contentFloat];
   }
 }
@@ -87,6 +87,21 @@ function getSelfCrossAlignmentClass(alignment?: SelfCrossAlignment) {
     return CROSS_SELF_ALIGNMENT_MAP[alignment];
   }
 }
+
+export type BoxConfig = {
+  display: Spatiality;
+  content: BoxContent;
+  position: Position;
+  placement: PositionalPlacement;
+  float: ContentFloat;
+  clear: ContentPosition;
+  justification: MainJustification;
+  inlineJustification: InlineJustification;
+  selfJustification: SelfInlineJustification;
+  alignment: MainAlignment;
+  crossAlignment: CrossAlignment;
+  selfCrossAlignment: SelfCrossAlignment;
+};
 
 export const BoxMechanics = {
   display: getBoxDisplayClass,

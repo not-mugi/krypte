@@ -3,6 +3,8 @@ export * from "./box";
 export * from "./layout";
 export * from "./typo";
 export * from "./size";
+export * from "./border"
+export * from "./input"
 
 // prettier-ignore
 export function createClass<

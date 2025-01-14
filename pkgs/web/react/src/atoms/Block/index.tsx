@@ -1,16 +1,10 @@
-import { BlockConfig, BlockProps, NewBlock } from "./Block";
+import { BlockProps, NewBlock, createNewBoxConfig } from "./Block";
 
-function createNewBlockConfig(): Partial<BlockConfig> {
-  return {
-    display: "block",
-    content: "content",
-  };
-}
 
-export function Block({ config, component, ...props }: BlockProps) {
+export function Block({ boxConfig, component, ...props }: BlockProps) {
   return NewBlock({
     ...props,
-    config: { ...createNewBlockConfig(), ...config },
+    boxConfig: { ...createNewBoxConfig(), ...boxConfig },
     component: component || "div",
   });
 }
