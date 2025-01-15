@@ -133,3 +133,5 @@ cjs
 esm
 lib
 .tmp
+
+.lock

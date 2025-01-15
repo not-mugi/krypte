@@ -14,6 +14,7 @@ export const PKG_EXTERNALS = (pkgName : string) => {
 
   return pkgJson ? [
     ...Object.keys({
+      ...pkgJson.dependencies as {},
       ...pkgJson.devDependencies as {},
       ...pkgJson.peerDependencies as {},
     })

@@ -1,7 +1,7 @@
 import chalk from "chalk";
-import { generateDts } from "./generate-d-ts";
+import { generateDts, generateCoreDts } from "./generate-d-ts";
 import { createLogger } from "../others/logger";
-import { isCorePkg, isLibPkg, locatePackage, getPackageJson } from "../pkgs";
+import { isCorePkg, isDtsPkg, locatePackage, getPackageJson } from "../pkgs";
 import {
   createConfig,
   createTailwindConfig,
@@ -11,44 +11,46 @@ import { PKG_EXTERNALS, WORKSPACE_EXTERNALS } from "./rollup/externals";
 
 const logger = createLogger("build-package");
 
-export async function buildPackage(_pkg_name: string) {
-  const pkgPath = locatePackage(_pkg_name);
-  const pkgJson = getPackageJson(_pkg_name);
+export async function buildPackage(pkgName: string) {
+  const pkgPath = locatePackage(pkgName);
+  const pkgJson = getPackageJson(pkgName);
 
   if (!pkgPath || !pkgJson) {
-    logger.error(`Package ${_pkg_name} not found!`);
+    logger.error(`Package ${pkgName} not found!`);
     process.exit(1);
   }
 
+  const dtsPkg = isDtsPkg(pkgJson);
   const corePkg = isCorePkg(pkgJson);
   const chalkPkgName = chalk.cyan(pkgJson.name);
 
   logger.info(`Building package ${chalkPkgName}...`);
 
   try {
-    // Skip build for lib core packages without main entry file
-    if (!isLibPkg(pkgJson)) {
-      // prettier-ignore
-      logger.info( `Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`);
+    if (dtsPkg) {
+      logger.info(
+        `Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`
+      );
       logger.info(`Skipping build for ${chalkPkgName}`);
       return;
     }
 
     logger.info(`Generating ${chalkPkgName} *.d.ts files...`);
-    await generateDts(pkgPath);
 
-    // Generate tailwind css for non-core packages
+    await generateDts(pkgPath);
+    /** compile types as inline for core pkgs */
+    corePkg && (await generateCoreDts(pkgPath));
+
     if (!corePkg) {
       logger.info(`Generating ${chalkPkgName} tailwind css files...`);
       const twConfig = createTailwindConfig(pkgPath);
       await compile(twConfig);
     }
 
-    // Compile main bundle
-    const rootDir = "/src"
-    const externals = corePkg ? WORKSPACE_EXTERNALS : PKG_EXTERNALS(_pkg_name);
+    const rootDir = "/src";
+    const externals = corePkg ? WORKSPACE_EXTERNALS : PKG_EXTERNALS(pkgName);
+    const config = createConfig(pkgName, pkgPath, rootDir, externals);
 
-    const config = createConfig(_pkg_name, pkgPath, rootDir, externals);
     logger.info(`Compiling ${chalkPkgName} with rollup`);
     await compile(config);
   } catch (error) {

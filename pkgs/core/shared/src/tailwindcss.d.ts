@@ -1,9 +1,10 @@
-/** Generics */
+/** @beta */
 export type KeyofMap<T> = keyof T;
 
+/** @beta */
 export type MergedClassType<T extends string, U extends string> = `${T}-${U}`;
 
-/** Supported Tailwind Values */
+/** @beta */
 export type Colors =
   | "mugi"
   | "hat"
@@ -30,10 +31,13 @@ export type Colors =
   | "pink"
   | "rose";
 
+/** @beta */
 export type Intensity = "slim" | "regular" | "bold" | "heavy" | "hardcore";
 
+/** @beta */
 export type FixedExtent = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 
+/** @beta */
 export type PercentageExtent =
   | "1/12"
   | "1/6"
@@ -52,19 +56,25 @@ export type PercentageExtent =
   | "fit"
   | "screen";
 
+/** @beta */
 export type Extent = FixedExtent & PercentageExtent;
 
+/** @beta */
 export type SizeExtent = Exclude<Extent, "screen">;
 
+/** @beta */
 export type HeightExtent = Exclude<
   Extent,
   "1/12" | "1/4" | "5/12" | "7/12" | "3/4" | "11/12"
 >;
 
+/** @beta */
 export type Dimensions = { width: Extent; height: Extent } | Extent;
 
+/** @beta */
 export type Axis = "x" | "y";
 
+/** @beta */
 export type Placement =
   | "top"
   | "bottom"
@@ -74,12 +84,16 @@ export type Placement =
   | "start"
   | "end";
 
+/** @beta */
 export type Edges = Exclude<Placement, "inset" | "start" | "end" >
 
+/** @beta */
 export type Corners = "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
 
+/** @beta */
 export type LogicalCorners = "start" | "end" | "startstart" | "startend" | "endstart" | "endend";
 
+/** @beta */
 export type Justification =
   | "left"
   | "right"
@@ -97,6 +111,7 @@ export type Justification =
   | "auto"
   | "normal";
 
+/** @beta */
 export type Alignment =
   | "normal"
   | "start"
@@ -108,8 +123,10 @@ export type Alignment =
   | "baseline"
   | "stretch";
 
+/** @beta */
 export type PositionalPlacement = MergedClassType<Placement, FixedExtent>;
 
+/** @beta */
 export type ContentPlacement =
   | "center"
   | "start"
@@ -120,6 +137,7 @@ export type ContentPlacement =
   | "stretch"
   | "baseline";
 
+/** @beta */
 export type MainJustification =
   | "normal"
   | "start"
@@ -130,27 +148,34 @@ export type MainJustification =
   | "evenly"
   | "stretch";
 
+/** @beta */
 export type InlineJustification = Extract<
   MainJustification,
   "start" | "end" | "center" | "stretch"
 >;
 
+/** @beta */
 export type SelfInlineJustification = Extract<
   MainJustification,
   "start" | "end" | "center" | "stretch" | "auto"
 >;
 
+/** @beta */
 export type MainAlignment = MainJustification | "baseline";
 
+/** @beta */
 export type CrossAlignment = Exclude<
   MainAlignment,
   "normal" | "between" | "stretch" | "around" | "evenly"
 >;
 
+/** @beta */
 export type SelfCrossAlignment = CrossAlignment | "auto";
 
+/** @beta */
 export type InlinePlacement = "top" | "middle" | "bottom";
 
+/** @beta */
 export type TextJustification =
   | "start"
   | "end"
@@ -159,6 +184,7 @@ export type TextJustification =
   | "left"
   | "right";
 
+/** @beta */
 export type ContentPosition =
   | "left"
   | "right"
@@ -167,8 +193,10 @@ export type ContentPosition =
   | "start"
   | "end";
 
+/** @beta */
 export type ContentFloat = Exclude<ContentPosition, "both">;
 
+/** @beta */
 export type ObjectPlacement =
   | "leftTop"
   | "top"
@@ -179,8 +207,10 @@ export type ObjectPlacement =
   | "leftBottom"
   | "left";
 
+/** @beta */
 export type BoxContent = "border" | "content";
 
+/** @beta */
 export type Spatiality =
   | "flex"
   | "grid"
@@ -193,6 +223,7 @@ export type Spatiality =
   | "inlineFlex"
   | "inlineGrid";
 
+/** @beta */
 export type ObjectResize =
   | "contain"
   | "cover"
@@ -201,6 +232,7 @@ export type ObjectResize =
   | "downscale"
   | "auto";
 
+/** @beta */
 export type Overflow =
   | "auto"
   | "hidden"
@@ -215,34 +247,50 @@ export type Overflow =
   | "xScroll"
   | "yScroll";
 
+/** @beta */
 export type OverScroll = "contain" | "none" | "auto";
 
+/** @beta */
 export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 
+/** @beta */
 export type Visibility = "visible" | "invisible" | "collapse";
 
+/** @beta */
 export type BorderExtent = "none" | "sm" | "md" | "lg" | "xl";
 
+/** @beta */
 export type BorderRadiusExtent = "none" | "sm" | "md" | "lg" | "xl" | "xxl";
 
+/** @beta */
 export type BorderRingExtent = "none" | "sm" | "md" | "lg" | "xl" | "inset";
 
+/** @beta */
 export type FullBorderRadiusExtent = BorderRadiusExtent | "full";
 
+/** @beta */
 export type SideBorderRadiusExtent = MergedClassType<Edges, BorderRadiusExtent>;
 
+/** @beta */
 export type CornerBorderRadiusExtent = MergedClassType<Corners, BorderRadiusExtent>;
 
+/** @beta */
 export type LogicalBorderRadiusExtent = MergedClassType<LogicalCorners, BorderRadiusExtent>;
 
+/** @beta */
 export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
 
+/** @beta */
 export type OutlineStyle = Exclude<BorderStyle, "hidden">
 
+/** @beta */
 export type BorderRingOffset = Exclude<BorderRingExtent, "inset">;
 
+/** @beta */
 export type TextAlignment = "center" | "left" | "right";
 
+/** @beta */
 export type StackOrder = "none" | "sm" | "md" | "lg" | "inf";
 
+/** @beta */
 export type FormElement = "input" | "textarea" | "select" | "multiselect" | "checkbox" | "radio";

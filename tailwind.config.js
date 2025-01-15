@@ -2,7 +2,7 @@ import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pkgs/**/src/*.{ts,tsx}", "./pkgs/core/tailwind/src/**/*.{ts,tsx}"],
+  content: ["./pkgs/core/tailwind/src/maps/*.{ts,tsx}"],
   safelist: [
     {
       pattern: /bg-(mugi|hat)-(100|200|300|400|500)/,

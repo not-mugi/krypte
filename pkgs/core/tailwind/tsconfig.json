@@ -4,14 +4,9 @@
     "rootDir": "./src",
     "declaration": true,
     "declarationDir": "lib",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "target": "ES2015",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
+    "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "react-jsx",
@@ -21,15 +16,8 @@
     "skipLibCheck": true,
     "strict": true,
     "composite": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": [
-    "src",
-  ],
-  "exclude": [
-    "./lib",
-    "./esm",
-    "./cjs",
-    "./.tmp"
-  ]
+  "include": ["src"],
+  "exclude": ["./lib", "./esm", "./cjs", "./.tmp", "./dist", "./node_modules"]
 }

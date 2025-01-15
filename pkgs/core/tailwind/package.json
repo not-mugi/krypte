@@ -3,27 +3,27 @@
   "version": "0.0.1",
   "main": "./cjs/index.js",
   "module": "./esm/index.mjs",
-  "types": "./lib/index.d.ts",
+  "types": "./dist/bundle.d.ts",
   "files": [
-    "lib",
+    "dist",
     "esm",
     "cjs"
   ],
   "exports": {
     "./functions": {
       "import": {
-        "types": "./lib/index.d.ts",
+        "types": "./dist/bundle.d.ts",
         "default": "./esm/mechanics/index.mjs"
       },
       "require": {
-        "types": "./lib/index.d.ts",
+        "types": "./dist/bundle.d.ts",
         "default": "./cjs/mechanics/index.cjs"
       }
     }
   },
   "license": "Apache-2.0",
-  "devDependencies": {},
-  "peerDependencies": {
+  "devDependencies": {
     "@mugijs/shared-core": "*"
-  }
+  },
+  "peerDependencies": {}
 }

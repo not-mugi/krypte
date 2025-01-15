@@ -35,6 +35,6 @@ export function isCorePkg(pkgJson: { [key: string]: string }) {
   return pkgJson?.name!.endsWith("core");
 }
 
-export function isLibPkg(pkgJson: { [key: string]: string }) {
-  return pkgJson?.main!.trim().length > 0;
+export function isDtsPkg(pkgJson: { [key: string]: string }) {
+  return pkgJson?.main!.trim().length === 0;
 }
