@@ -1,17 +1,20 @@
 // prettier-ignore
 import {
-  BoxContent, PositionalPlacement,
+  BoxContent, LogicalPlacement, EdgesPlacement,
   MainAlignment, CrossAlignment, SelfCrossAlignment,
   ContentFloat, ContentPosition, Position, Spatiality,
-  MainJustification, InlineJustification, SelfInlineJustification
+  MainJustification, InlineJustification, SelfInlineJustification,
+  PositionalPlacement
 } from "@mugijs/shared-core";
 // prettier-ignore
 import {
-  FIXED_PLACEMENT_MAP, BOX_CONTENT_MAP, BOX_DISPLAY_MAP,
+  BOX_CONTENT_MAP, BOX_DISPLAY_MAP,
+  FIXED_SIDES_PLACEMENT_MAP, FIXED_LOGICAL_PLACEMENT_MAP, 
   CONTENT_POSITION_MAP, CONTENT_FLOAT_MAP, CONTENT_CLEAR_MAP,
   MAIN_ALIGNMENT_MAP, CROSS_ALIGNMENT_MAP, CROSS_SELF_ALIGNMENT_MAP,
   MAIN_JUSTIFICATION_MAP, INLINE_JUSTIFICATION_MAP, INLINE_SELF_JUSTIFICATION_MAP,
 } from "../maps/box";
+import { FIXED_SIDES_MARGIN_MAP } from "../maps/spacing";
 
 /** @beta */
 export function getBoxDisplayClass(spatiality?: Spatiality) {
@@ -35,15 +38,18 @@ export function getContentPositionClass(position?: Position) {
 }
 
 /** @beta */
-export function getPostionalPlacementClass(positionalPlacement?: PositionalPlacement) {
-  if (positionalPlacement && positionalPlacement in FIXED_PLACEMENT_MAP) {
-    return FIXED_PLACEMENT_MAP[positionalPlacement];
+export function getPositionalPlacement(placement?: PositionalPlacement) {
+  if (placement && placement in FIXED_SIDES_PLACEMENT_MAP) {
+    return FIXED_SIDES_MARGIN_MAP[placement as EdgesPlacement];
+  }
+  if (placement && placement in FIXED_LOGICAL_PLACEMENT_MAP) {
+    return FIXED_LOGICAL_PLACEMENT_MAP[placement as LogicalPlacement];
   }
 }
 
 /** @beta */
 export function getContentFloatClass(contentFloat?: ContentFloat) {
-if (contentFloat && contentFloat in CONTENT_FLOAT_MAP) {
+  if (contentFloat && contentFloat in CONTENT_FLOAT_MAP) {
     return CONTENT_FLOAT_MAP[contentFloat];
   }
 }
@@ -63,7 +69,9 @@ export function getMainJustificationClass(justification?: MainJustification) {
 }
 
 /** @beta */
-export function getInlineJustificationClass(justification?: InlineJustification) {
+export function getInlineJustificationClass(
+  justification?: InlineJustification
+) {
   if (justification && justification in INLINE_JUSTIFICATION_MAP) {
     return MAIN_JUSTIFICATION_MAP[justification];
   }
@@ -120,7 +128,7 @@ export const BoxMechanics = {
   display: getBoxDisplayClass,
   content: getBoxContentClass,
   position: getContentPositionClass,
-  placement: getPostionalPlacementClass,
+  placement: getPositionalPlacement,
   float: getContentFloatClass,
   clear: getContentClearClass,
   justification: getMainJustificationClass,
