@@ -7,6 +7,8 @@ export * from "./border"
 export * from "./input"
 
 // prettier-ignore
+
+/** @beta */
 export function createClass<
   C extends { [K in keyof C]: C[K] },
   M extends { [K in keyof C]: (value: C[K]) => string | void },
