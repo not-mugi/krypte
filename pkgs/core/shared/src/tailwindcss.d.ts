@@ -75,23 +75,22 @@ export type Dimensions = { width: Extent; height: Extent } | Extent;
 export type Axis = "x" | "y";
 
 /** @beta */
-export type Placement =
-  | "top"
-  | "bottom"
-  | "left"
-  | "right"
-  | "inset"
-  | "start"
-  | "end";
+export type Edges = "top" | "bottom" | "left" | "right";
 
 /** @beta */
-export type Edges = Exclude<Placement, "inset" | "start" | "end" >
+export type Logical = "inset" | "start" | "end";
 
 /** @beta */
 export type Corners = "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
 
 /** @beta */
-export type LogicalCorners = "start" | "end" | "startstart" | "startend" | "endstart" | "endend";
+export type LogicalCorners =
+  | "start"
+  | "end"
+  | "startstart"
+  | "startend"
+  | "endstart"
+  | "endend";
 
 /** @beta */
 export type Justification =
@@ -124,7 +123,46 @@ export type Alignment =
   | "stretch";
 
 /** @beta */
-export type PositionalPlacement = MergedClassType<Placement, FixedExtent>;
+export type EdgesPlacement = MergedClassType<Edges, FixedExtent>;
+
+/** @beta */
+export type LogicalPlacement = MergedClassType<Logical, FixedExtent>;
+
+/** @beta */
+export type PositionalPlacement = EdgesPlacement | LogicalPlacement;
+
+/** @beta */
+export type EdgesSpacing = MergedClassType<Edges, FixedExtent>;
+
+/** @beta */
+export type AxisSpacing = MergedClassType<Axis, FixedExtent>;
+
+/** @beta */
+export type LogicalSpacing = MergedClassType<
+  Exclude<Logical, "inset">,
+  FixedExtent
+>;
+
+/** @beta */
+export type BetweenSpacing = AxisSpacing;
+
+/** @beta */
+export type NegativeBetweenSpacing = MergedClassType<"", BetweenSpacing>;
+
+/** @beta */
+export type PositionalSpacing = AxisSpacing | EdgesSpacing | LogicalSpacing;
+
+/** @beta */
+export type NegativeEdgesSpacing = MergedClassType<"", EdgesSpacing>;
+
+/** @beta */
+export type NegativeAxisSpacing = MergedClassType<"", AxisSpacing>;
+
+/** @beta */
+export type NegativeLogicalSpacing = MergedClassType<"", LogicalSpacing>;
+
+/** @beta */
+export type NegativePositionalSpacing = MergedClassType<"", PositionalSpacing>;
 
 /** @beta */
 export type ContentPlacement =
@@ -272,16 +310,28 @@ export type FullBorderRadiusExtent = BorderRadiusExtent | "full";
 export type SideBorderRadiusExtent = MergedClassType<Edges, BorderRadiusExtent>;
 
 /** @beta */
-export type CornerBorderRadiusExtent = MergedClassType<Corners, BorderRadiusExtent>;
+export type CornerBorderRadiusExtent = MergedClassType<
+  Corners,
+  BorderRadiusExtent
+>;
 
 /** @beta */
-export type LogicalBorderRadiusExtent = MergedClassType<LogicalCorners, BorderRadiusExtent>;
+export type LogicalBorderRadiusExtent = MergedClassType<
+  LogicalCorners,
+  BorderRadiusExtent
+>;
 
 /** @beta */
-export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
+export type BorderStyle =
+  | "solid"
+  | "dashed"
+  | "dotted"
+  | "double"
+  | "hidden"
+  | "none";
 
 /** @beta */
-export type OutlineStyle = Exclude<BorderStyle, "hidden">
+export type OutlineStyle = Exclude<BorderStyle, "hidden">;
 
 /** @beta */
 export type BorderRingOffset = Exclude<BorderRingExtent, "inset">;
@@ -293,4 +343,10 @@ export type TextAlignment = "center" | "left" | "right";
 export type StackOrder = "none" | "sm" | "md" | "lg" | "inf";
 
 /** @beta */
-export type FormElement = "input" | "textarea" | "select" | "multiselect" | "checkbox" | "radio";
+export type FormElement =
+  | "input"
+  | "textarea"
+  | "select"
+  | "multiselect"
+  | "checkbox"
+  | "radio";
