@@ -41,7 +41,7 @@ export const CONTENT_CLEAR_MAP = {
   end: "clear-end",
 };
 
-export const FIXED_PLACEMENT_MAP = {
+export const FIXED_SIDES_PLACEMENT_MAP = {
   "top-xxs": "top-0",
   "top-xs": "top-4",
   "top-sm": "top-8",
@@ -70,6 +70,9 @@ export const FIXED_PLACEMENT_MAP = {
   "left-lg": "left-24",
   "left-xl": "left-48",
   "left-xxl": "left-96",
+};
+
+export const FIXED_LOGICAL_PLACEMENT_MAP = {
   "inset-xxs": "inset-0",
   "inset-xs": "inset-4",
   "inset-sm": "inset-8",
