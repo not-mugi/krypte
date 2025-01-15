@@ -52,7 +52,6 @@
   "license": "Apache-2.0",
   "description": "mugi react components library for web",
   "dependencies": {
-    "@mugijs/shared-core": "*",
     "@mugijs/tailwind-core": "*"
   },
   "peerDependencies": {
