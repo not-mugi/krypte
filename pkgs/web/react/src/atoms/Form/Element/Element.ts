@@ -13,8 +13,6 @@ export function createNewElementConfig() : Partial<InputElementConfig> {
 }
 
 export function createNewBorderConfig() : Partial<BorderConfig> {
-    return {
-        width : "ewrer"
-    }
+    return {}
 }
 

@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { generateDts } from "./generate-d-ts";
+import { generateDts, generateCoreDts } from "./generate-d-ts";
 import { createLogger } from "../others/logger";
 import { isCorePkg, isDtsPkg, locatePackage, getPackageJson } from "../pkgs";
 import {
@@ -28,16 +28,19 @@ export async function buildPackage(pkgName: string) {
 
   try {
     if (dtsPkg) {
-      logger.info(`Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`);
+      logger.info(
+        `Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`
+      );
       logger.info(`Skipping build for ${chalkPkgName}`);
       return;
     }
 
     logger.info(`Generating ${chalkPkgName} *.d.ts files...`);
 
-    // corePkg ? await generateCoreDts(pkgPath) :
     await generateDts(pkgPath);
-    
+    /** compile types as inline for core pkgs */
+    corePkg && (await generateCoreDts(pkgPath));
+
     if (!corePkg) {
       logger.info(`Generating ${chalkPkgName} tailwind css files...`);
       const twConfig = createTailwindConfig(pkgPath);
