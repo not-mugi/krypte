@@ -1,0 +1,31 @@
+{
+  "mainEntryPointFilePath": "lib/index.d.ts",
+  "bundledPackages": ["@mugijs/shared-core"],
+  "apiReport": {
+    "enabled": false
+  },
+  "docModel": {
+    "enabled": false
+  },
+  "dtsRollup": {
+    "enabled": true,
+    "untrimmedFilePath": "dist/bundle.d.ts"
+  },
+  "compiler": {
+    "overrideTsconfig": {
+      "compilerOptions": {
+        "baseUrl": "../",
+        "paths": {
+          "@mugijs/shared-core": ["shared/**"]
+        }
+      }
+    }
+  },
+  "messages": {
+    "extractorMessageReporting": {
+      "ae-forgotten-export": {
+        "logLevel": "none"
+      }
+    }
+  }
+}

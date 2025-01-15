@@ -5,10 +5,7 @@
   "license": "Apache-2.0",
   "main": "",
   "types": "index.d.ts",
-  "exports": {
-    "./react": "./src/reactjs.d.ts",
-    "./tailwind": "./src/tailwindcss.d.ts"
-  },
+  "exports": "./index.d.ts",
   "typesVersions": {
     "<=5.6": {
       "*": [

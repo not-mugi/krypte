@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
     "target": "ESNext",
     "lib": ["ESNext", "DOM"],
     "noImplicitAny": true,
