@@ -1,10 +1,10 @@
-export * from "./colors";
-export * from "./box";
+export * from "./alignment";
+export * from "./display";
 export * from "./layout";
-export * from "./typo";
-export * from "./size";
-export * from "./border"
-export * from "./input"
+// export * from "./typo";
+// export * from "./size";
+// export * from "./border"
+// export * from "./input"
 
 // prettier-ignore
 

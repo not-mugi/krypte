@@ -1,3 +1,20 @@
+export const CONTENT_FLOAT_MAP = {
+  left: "float-left",
+  right: "float-right",
+  none: "float-none",
+  start: "float-start",
+  end: "float-end",
+};
+
+export const CONTENT_CLEAR_MAP = {
+  left: "clear-left",
+  right: "clear-right",
+  both: "clear-both",
+  none: "clear-none",
+  start: "clear-start",
+  end: "clear-end",
+};
+
 export const OBJECT_FIT_MAP = {
   contain: "object-contain",
   cover: "object-cover",
@@ -45,7 +62,7 @@ export const VISIBILITY_MAP = {
   collapse: "collapse",
 };
 
-export const ZINDEX_MAP = {
+export const STACK_ORDER_MAP = {
   none: "z-0",
   sm: "z-10",
   md: "z-30",
