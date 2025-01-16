@@ -1,75 +1,86 @@
-// prettier-ignore
-import {
-  Overflow, OverScroll,
-  Visibility, StackOrder,
-  ObjectResize, ObjectPlacement, 
-} from "@mugijs/shared-core";
+import { ContentClear, ContentFloat } from "@mugijs/shared-core"
+import { 
+    Overflow, Overscroll, Stackorder, Visibility, 
+    ObjectFit, ObjectPosition, PositionalPlacement, 
+} from "@mugijs/shared-core"
+import { 
+    OVERFLOW_MAP, OVERSCROLL_MAP, CONTENT_CLEAR_MAP, CONTENT_FLOAT_MAP,
+    OBJECT_FIT_MAP, OBJECT_POSITION_MAP, VISIBILITY_MAP, STACK_ORDER_MAP,
+} from "../maps/layout"
 
-// prettier-ignore
-import {
-  VISIBILITY_MAP, ZINDEX_MAP,
-  OVERFLOW_MAP, OVERSCROLL_MAP,
-  OBJECT_FIT_MAP, OBJECT_POSITION_MAP,
-} from "../maps/layout";
+export type Layout = Partial<{
+    clear : ContentClear
+    float : ContentFloat,
+    objectFit : ObjectFit,
+    objectPosition : ObjectPosition,
+    overflow : Overflow,
+    overscroll : Overscroll,
+    placement : PositionalPlacement
+    visibility : Visibility
+    stackorder : Stackorder
+}>
 
-/** @beta */
-export function getObjectFitClass(resize?: Exclude<ObjectResize, "auto">) {
-  if (resize && resize in OBJECT_FIT_MAP) {
-    return OBJECT_FIT_MAP[resize];
-  }
+export function getContentClearClass(clear? : ContentClear) {
+    if(clear && clear in CONTENT_CLEAR_MAP) {
+        return CONTENT_CLEAR_MAP[clear]
+    }
 }
 
-/** @beta */
-export function getObjectPositionClass(placement?: ObjectPlacement | "center") {
-  if (placement && placement in OBJECT_POSITION_MAP) {
-    return OBJECT_POSITION_MAP[placement];
-  }
+export function getContentFloatClass(float? : ContentFloat) {
+    if(float && float in CONTENT_FLOAT_MAP) {
+        return CONTENT_FLOAT_MAP[float]
+    }
 }
 
-/** @beta */
-export function getOverflowClass(overflow?: Overflow) {
-  if (overflow && overflow in OVERFLOW_MAP) {
-    return OVERFLOW_MAP[overflow];
-  }
+export function getObjectFitClass(objectFit? : ObjectFit) {
+    if(objectFit && objectFit in OBJECT_FIT_MAP) {
+        return OBJECT_FIT_MAP[objectFit]
+    }
 }
 
-/** @beta */
-export function getOverScrollClass(overscroll?: OverScroll) {
-  if (overscroll && overscroll in OVERSCROLL_MAP) {
-    return OVERSCROLL_MAP[overscroll];
-  }
+export function getObjectPositionClass(objectPosition? : ObjectPosition) {
+    if(objectPosition && objectPosition in OBJECT_POSITION_MAP) {
+        return OBJECT_POSITION_MAP[objectPosition]
+    }
 }
 
-/** @beta */
-export function getVisibliityClass(visibility?: Visibility) {
-  if (visibility && visibility in VISIBILITY_MAP) {
-    return VISIBILITY_MAP[visibility];
-  }
+export function getOverflowClass(overflow? : Overflow) {
+    if(overflow && overflow in OVERFLOW_MAP) {
+        return OVERFLOW_MAP[overflow]
+    }
 }
 
-/** @beta */
-export function getStackOrderClass(stackorder?: StackOrder) {
-  if (stackorder && stackorder in ZINDEX_MAP) {
-    return ZINDEX_MAP[stackorder];
-  }
+export function getOverscrollClass(overscroll? : Overscroll) {
+    if(overscroll && overscroll in OVERSCROLL_MAP) {
+        return OVERSCROLL_MAP[overscroll]
+    }
 }
 
-/** @beta */
-export type LayoutConfig = {
-  overflow?: Overflow;
-  overscroll?: OverScroll;
-  visibility?: Visibility;
-  stackOrder?: StackOrder;
-  objectFit?: Exclude<ObjectResize, "auto">;
-  objectPosition?: ObjectPlacement | "center";
+export function getVisibilityClass(visibility? : Visibility) {
+    if(visibility && visibility in VISIBILITY_MAP) {
+        return VISIBILITY_MAP[visibility]
+    }
 }
 
-/** @beta */
+export function getStackorderClass(stackorder? : Stackorder) {
+    if(stackorder && stackorder in STACK_ORDER_MAP){
+        return STACK_ORDER_MAP[stackorder]
+    }
+}
+
 export const LayoutMechanics = {
-  overflow: getOverflowClass,
-  overscroll: getOverScrollClass,
-  visibility: getVisibliityClass,
-  stackOrder: getStackOrderClass,
-  objectFit: getObjectFitClass,
-  objectPosition: getObjectPositionClass,
+    clear : getContentClearClass,
+    float : getContentFloatClass,
+    objectFit : getObjectFitClass,
+    objectPosition : getObjectPositionClass,
+    overflow : getOverflowClass,
+    overscroll : getOverscrollClass,
+    visibility : getVisibilityClass,
+    stackorder : getStackorderClass,
+}
+
+export function layoutBlueprint() : Layout {
+    return {
+        overflow : "auto",
+    }
 }
