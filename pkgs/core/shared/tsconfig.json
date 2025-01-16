@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "lib": ["ESNext", "DOM"],
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -10,5 +12,6 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
+  "include": ["./src/**/*.ts"],
   "files": ["index.d.ts"]
 }

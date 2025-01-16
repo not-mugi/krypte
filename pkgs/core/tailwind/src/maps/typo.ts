@@ -12,3 +12,7 @@ export const TEXT_ALIGNMENT_MAP = {
   start: "text-start",
   end: "text-end",
 };
+
+export const FIXED_TEXT_LINE_HEIGHT_MAP = {
+
+}
