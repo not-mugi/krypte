@@ -12,6 +12,6 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*.d.ts"],
   "files": ["index.d.ts"]
 }

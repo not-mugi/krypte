@@ -1,31 +1,39 @@
-import { BOX_DISPLAY_MAP, BOX_SIZING_MAP } from "../maps/box"
-import { BoxDisplay, BoxSizing } from "@mugijs/shared-core"
+import type { BoxDisplay, BoxSizing } from "@mugijs/shared-core";
+import { BOX_DISPLAY_MAP, BOX_SIZING_MAP } from "../maps/box";
 
-export type Display = Partial<{
-    boxDisplay : BoxDisplay
-    boxSizing : BoxSizing,
-}>
+/** @alpha */
+export { BoxDisplay, BoxSizing };
 
-export function getBoxDisplayClass(boxDisplay? : BoxDisplay) {
-    if(boxDisplay && boxDisplay in BOX_DISPLAY_MAP) {
-        return BOX_DISPLAY_MAP[boxDisplay]
-    }
+/** @alpha */
+export type Display = Partial<{ 
+  boxSizing: BoxSizing 
+  boxDisplay: BoxDisplay; 
+}>;
+
+/** @alpha */
+export function getBoxDisplayClass(boxDisplay?: BoxDisplay) {
+  if (boxDisplay && boxDisplay in BOX_DISPLAY_MAP) {
+    return BOX_DISPLAY_MAP[boxDisplay];
+  }
 }
 
-export function getBoxSizingClass(boxSizing? : BoxSizing) {
-    if(boxSizing && boxSizing in BOX_SIZING_MAP) {
-        return BOX_SIZING_MAP[boxSizing]
-    }
+/** @alpha */
+export function getBoxSizingClass(boxSizing?: BoxSizing) {
+  if (boxSizing && boxSizing in BOX_SIZING_MAP) {
+    return BOX_SIZING_MAP[boxSizing];
+  }
 }
 
+/** @alpha */
 export const DisplayMechanics = {
-    boxDisplay : getBoxDisplayClass,
-    boxSizing : getBoxSizingClass,
-}
+  boxDisplay: getBoxDisplayClass,
+  boxSizing: getBoxSizingClass,
+};
 
-export function displayBlueprint() : Display {
-    return {
-        boxDisplay : "block",
-        boxSizing : "border",
-    }
+/** @alpha */
+export function displayBlueprint(): Display {
+  return {
+    boxDisplay: "block",
+    boxSizing: "border",
+  };
 }

@@ -1,4 +1,6 @@
-/// <reference lib="es2020" />
-
-export * from "./src/tailwind";
-// export * from "./src/reactjs";s
+export * from "./src/tailwind/alignment"
+export * from "./src/tailwind/border"
+export * from "./src/tailwind/box"
+export * from "./src/tailwind/color"
+export * from "./src/tailwind/layout"
+export * from "./src/tailwind/measurement"

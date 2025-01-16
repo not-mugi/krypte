@@ -2,11 +2,11 @@ import { Block } from "@mugijs/react-web";
 
 function App() {
   return (
-    <div className={'mugi'}>
+    <div className={"mugi"}>
       <Block
         component="section"
         className="mugi:bg-mugi-200"
-        config={{
+        boxConfig={{
           display: "flex",
           content: "content",
           justification: "center",
