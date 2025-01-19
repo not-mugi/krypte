@@ -1,33 +1,45 @@
-import { MixedTwClass } from "../generics/tailwind";
-import { MeasurementScales } from "./measurement";
-import { Corners, Edges, LogicalCorners } from "./layout"
+import { MixedTwClass } from "../typescript/tailwind";
+import { MeasurementScales } from "./sizing";
+import { Axis, Corners, Edges, LogicalCorners } from "./layout"
 
-/** Border Style */
-/** @alpha */
+/** @alpha */ /** Border Style */
 export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
 
-/** Outline Style */
-/** @alpha */
+/** @alpha */ /** Outline Style */
 export type OutlineStyle = Exclude<BorderStyle, "hidden">
 
-/** Border Width */
-/** @alpha */
+/** @alpha */ /** Border Width */
 export type BorderMeasurements = Extract<MeasurementScales, "none" | "sm" | "md" | "lg" | "xl">;
 
-/** Border Radius */
-/** @alpha */
+/** @alpha */ /** Border Radius */
 export type BorderRadiusMeasurements = BorderMeasurements | "xxl";
 /** @alpha */
 export type FullBorderRadiusMeasurements = BorderRadiusMeasurements | "full"
 /** @alpha */
 export type SideBorderRadiusMeasurements = MixedTwClass<Edges, BorderRadiusMeasurements>;
 /** @alpha */
-export type CornerBorderRadiusExtent = MixedTwClass<Corners, BorderRadiusMeasurements>;
+export type CornerBorderRadiusMeasurements = MixedTwClass<Corners, BorderRadiusMeasurements>;
 /** @alpha */
-export type LogicalBorderRadiusExtent = MixedTwClass<LogicalCorners, BorderRadiusMeasurements>;
+export type LogicalBorderRadiusMeasurements = MixedTwClass<LogicalCorners, BorderRadiusMeasurements>;
 
-/** Border Ring */
-/** @alpha */
+/** @alpha */ /** Border Ring */
 export type BorderRingMeasurements = BorderMeasurements | "inset";
-/** @alpha */
-export type BorderRingOffsetMeasurements = Exclude<BorderRingMeasurements, "inset">;
+
+/** @alpha */ /** Border Radius */
+export type Border = Partial<{
+    style : BorderStyle,
+    width : BorderMeasurements,
+    outline : OutlineStyle,
+    outlineWidth : BorderMeasurements,
+    outlineOffset : BorderMeasurements,
+    dividerWidth : BorderMeasurements,
+    dividerReverse : Axis,
+    dividerInlineWidth : BorderMeasurements,
+    dividerCrossWidth : BorderMeasurements,
+    ringWidth : BorderRingMeasurements,
+    ringOffset : BorderMeasurements,
+    borderRadius : FullBorderRadiusMeasurements,
+    sideRadius : SideBorderRadiusMeasurements,
+    cornerRadius : CornerBorderRadiusMeasurements,
+    logicalRadius : LogicalBorderRadiusMeasurements
+}>
