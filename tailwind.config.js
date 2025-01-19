@@ -49,6 +49,15 @@ module.exports = {
         /ring-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
       variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
     },
+    {
+      pattern: /decoration-(mugi|hat)-(100|200|300|400|500)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
+    {
+      pattern:
+        /decoration-(slate|gray|zinc|neutral|stone|red|orange|yellow|amber|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(400|500|600|700|800)/,
+      variants: ["dark", "light", "mugi", "hocus", "hover", "focus"],
+    },
   ],
   darkMode: "class",
   theme: {
