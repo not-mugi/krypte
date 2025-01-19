@@ -10,14 +10,12 @@ export type Measurements = MeasurementScales | MeasurementRatios;
 /** @alpha */
 export type SizeMeasurements = Exclude<Measurements, "screen">;
 /** @alpha */
-export type WidthMeasurements = MeasurementScales;
+export type WidthMeasurements = Measurements;
 /** @alpha */
-export type HeightMeasurements = Exclude< MeasurementScales, "1/12" | "1/4" | "5/12" | "7/12" | "3/4" | "11/12" >
+export type HeightMeasurementRatios = Exclude< MeasurementRatios, "1/12" | "1/4" | "5/12" | "7/12" | "3/4" | "11/12" >
+/** @alpha */
+export type HeightMeasurements = MeasurementScales | HeightMeasurementRatios;
 /** @alpha */
 export type DimensionMeasurements = { width: WidthMeasurements; height: HeightMeasurements };
-
-/** Line Height */
 /** @alpha */
-export type LineHeightScales = "none" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
-/** @alpha */
-export type RelativeLineHeight = "none" | "tight" | "snug" | "normal" | "relaxed" | "loose";
+export type Sizing = Partial<{ size: SizeMeasurements; width: WidthMeasurements; height: HeightMeasurements; dimensions: DimensionMeasurements }>

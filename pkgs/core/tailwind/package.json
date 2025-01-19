@@ -10,7 +10,7 @@
     "cjs"
   ],
   "exports": {
-    "./types" : "./dist/bundle.d.ts",
+    "./types" : "./lib/tsc/index.d.ts",
     "./functions": {
       "import": {
         "types": "./dist/bundle.d.ts",

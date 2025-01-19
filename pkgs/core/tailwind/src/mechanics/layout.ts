@@ -1,23 +1,13 @@
-import type { ContentClear, ContentFloat, Overflow, Overscroll, Visibility, Stackorder, Position, SidesPlacement, LogicalPlacement, ObjectFit, ObjectPosition, } from "@mugijs/shared-core";
-import { OBJECT_FIT_MAP, OBJECT_POSITION_MAP, CONTENT_CLEAR_MAP, CONTENT_FLOAT_MAP, OVERFLOW_MAP, OVERSCROLL_MAP, VISIBILITY_MAP, STACK_ORDER_MAP, CONTENT_POSITION_MAP, SIDE_PLACEMENT_SCALE_MAP, LOGICAL_PLACEMENT_SCALE_MAP, } from "../maps/layout";
-
-/** @alpha */
-export { ContentClear, ContentFloat, ObjectFit, ObjectPosition, Position, SidesPlacement, LogicalPlacement, Overflow, Overscroll, Stackorder, Visibility, };
-
-/** @alpha */
-export type Layout = Partial<{
-  clear: ContentClear;
-  float: ContentFloat;
-  overflow: Overflow;
-  overscroll: Overscroll;
-  visibility: Visibility;
-  stackorder: Stackorder;
-  objectFit: ObjectFit;
-  objectPosition: ObjectPosition;
-  position: Position;
-  edgePlacement: SidesPlacement;
-  logicalPlacement: LogicalPlacement;
-}>;
+import type { 
+  Layout, ContentClear, ContentFloat, 
+  Overflow, Overscroll, Visibility, Stackorder, 
+  Position, SidesPlacement, LogicalPlacement, ObjectFit, ObjectPosition
+} from "../tsc";
+import { 
+  OBJECT_FIT_MAP, OBJECT_POSITION_MAP, CONTENT_CLEAR_MAP, 
+  CONTENT_FLOAT_MAP, OVERFLOW_MAP, OVERSCROLL_MAP, VISIBILITY_MAP, STACK_ORDER_MAP, 
+  CONTENT_POSITION_MAP, SIDE_PLACEMENT_SCALE_MAP, LOGICAL_PLACEMENT_SCALE_MAP
+} from "../maps/layout";
 
 /** @alpha */
 export function getContentClearClass(clear?: ContentClear) {
