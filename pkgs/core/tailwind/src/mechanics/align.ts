@@ -1,29 +1,14 @@
-import type { ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, MainAlignment, CrossAlignment, SelfCrossAlignment, MainJustification, InlineJustification, SelfInlineJustification } from "@mugijs/shared-core";
-import { CONTENT_PLACEMENT_MAP, CONTENT_ITEMS_PLACEMENT_MAP, CONTENT_SELF_PLACEMENT_MAP, MAIN_JUSTIFICATION_MAP, INLINE_JUSTIFICATION_MAP, INLINE_SELF_JUSTIFICATION_MAP, MAIN_ALIGNMENT_MAP, CROSS_ALIGNMENT_MAP, CROSS_SELF_ALIGNMENT_MAP } from "../maps/alignment";
-
-/** @alpha */
-export { ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, MainAlignment, CrossAlignment, SelfCrossAlignment, MainJustification, InlineJustification, SelfInlineJustification };
-
-/** @alpha */
-export type Alignment = Partial<{
-  mainAlignment: MainAlignment;
-  crossAlignment: CrossAlignment;
-  selfCrossAlignment: SelfCrossAlignment;
-}>;
-
-/** @alpha */
-export type Justification = Partial<{
-  mainJustification: MainJustification;
-  inlineJustification: InlineJustification;
-  selfInlineJustification: SelfInlineJustification;
-}>;
-
-/** @alpha */
-export type ContentAlignment = Partial<{
-  contentPlacement: ContentPlacement;
-  contentItemsPlacement: ContentItemsPlacement;
-  contentSelfPlacement: ContentSelfPlacement;
-}>;
+import type { 
+  Alignment, Justification, ContentAlignment,
+  MainAlignment, CrossAlignment, SelfCrossAlignment, 
+  ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, 
+  MainJustification, InlineJustification, SelfInlineJustification
+} from "../tsc";
+import { 
+  MAIN_ALIGNMENT_MAP, CROSS_ALIGNMENT_MAP, CROSS_SELF_ALIGNMENT_MAP,
+  CONTENT_PLACEMENT_MAP, CONTENT_ITEMS_PLACEMENT_MAP, CONTENT_SELF_PLACEMENT_MAP, 
+  MAIN_JUSTIFICATION_MAP, INLINE_JUSTIFICATION_MAP, INLINE_SELF_JUSTIFICATION_MAP, 
+} from "../maps/align";
 
 /** @alpha */
 export function getMainAlignmentClass(mainAlignment?: MainAlignment) {
