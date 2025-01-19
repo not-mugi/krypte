@@ -16,19 +16,19 @@ export const BORDER_STYLE_MAP = {
 }
 
 export const BORDER_INLINE_DIVIDER_WIDTH_MAP = {
-    none : "divide-x-0",
     sm : "divide-x",
     md : "divide-x-2",
     lg : "divide-x-4",
-    xl : "divide-x-8"
+    xl : "divide-x-8",
+    none : "divide-x-0",
 }
 
 export const BORDER_CROSS_DIVIDER_WIDTH_MAP = {
-    none : "divide-y-0",
     sm : "divide-y",
     md : "divide-y-2",
     lg : "divide-y-4",
-    xl : "divide-y-8"
+    xl : "divide-y-8",
+    none : "divide-y-0",
 }
 
 export const BORDER_DIVIDER_REVERSE_MAP = {
@@ -37,11 +37,11 @@ export const BORDER_DIVIDER_REVERSE_MAP = {
 }
 
 export const BORDER_OUTLINE_WIDTH_MAP = {
-    none : "outline-none",
     sm : "outline-1",
     md : "outline-2",
     lg : "outline-4",
-    xl : "outline-8"
+    xl : "outline-8",
+    none : "outline-none",
 }
 
 export const BORDER_OUTLINE_STYLE_MAP = {
@@ -53,28 +53,28 @@ export const BORDER_OUTLINE_STYLE_MAP = {
 }
 
 export const BORDER_OUTLINE_OFFSET_MAP = {
-    none : "outline-offset-0",
     sm : "outline-offset-1",
     md : "outline-offset-2",
     lg : "outline-offset-4",
-    xl : "outline-offset-8"
+    xl : "outline-offset-8",
+    none : "outline-offset-0",
 }
 
 export const BORDER_RING_WIDTH_MAP = {
-    none : "ring-0",
     sm : "ring-2",
     md : "ring",
     lg : "ring-4",
     xl : "ring-8",
+    none : "ring-0",
     inset : "ring-inset"
 }
 
 export const BORDER_RING_OFFSET_MAP = {
-    none : "ring-offset-0",
     sm : "ring-offset-1",
     md : "ring-offset-2",
     lg : "ring-offset-4",
-    xl : "ring-offset-8"
+    xl : "ring-offset-8",
+    none : "ring-offset-0",
 }
 
 export const FULL_BORDER_RADIUS_MAP = {

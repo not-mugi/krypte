@@ -246,3 +246,13 @@ export const NEGATIVE_FIXED_LOGICAL_MARGIN_MAP = {
   "-end-xl": "-me-48",
   "-end-xxl": "-me-96",
 };
+
+export const GUTTERS_MAP = {
+  xxs: "gap-0.5",
+  xs: "gap-1",
+  sm: "gap-2",
+  md: "gap-4",
+  lg: "gap-8",
+  xl: "gap-16",
+  xxl: "gap-24",
+};
