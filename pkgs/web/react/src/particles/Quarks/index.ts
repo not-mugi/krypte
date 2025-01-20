@@ -1,22 +1,17 @@
-import { tailwindexchange } from "../exchange";
-
 export type Quirk = { [k: string]: QuirkFlavor };
-
 export type QuirkFlavor = { [name: string]: string | QuirkFlavor };
-
-export type QuirkMechs<F> = { [name: string]: ExchangeFunctions<F> };
-
-export type ExchangeFunctions<Q> = { [N in keyof Q]: (value?: any) => string };
+export type QuarkInteractions<EF> = { [name: string]: ExchangeFunctions<EF> };
+export type ExchangeFunctions<Qi> = { [N in keyof Qi]: (value?: any) => string };
 
 export class Quark {
   #quirks: Quirk = {};
-  #quirkMechanics: QuirkMechs<Quirk> = {};
+  #quirkMechanics: QuarkInteractions<Quirk> = {};
 
   get quirks(): Quirk {
     return this.#quirks;
   }
 
-  get quirkMechanics(): QuirkMechs<{}> {
+  get quirkMechanics(): QuarkInteractions<{}> {
     return this.#quirkMechanics;
   }
 
@@ -25,6 +20,15 @@ export class Quark {
   }
 
   exchange(): string {
-    return tailwindexchange(this.quirks, this.quirkMechanics);
+    return Object.entries(this.quirks)
+    .map(([name, flavors]) => {
+      const exchange : ExchangeFunctions<Quirk> = this.quirkMechanics[name];
+      return Object.entries(flavors)
+        .map(([flavor, energy]) =>
+          exchange[flavor](energy)
+        )
+        .join(" ");
+    })
+    .join(" ").trim();
   }
 }
