@@ -5,7 +5,7 @@ import { isCorePkg, isDtsPkg, locatePackage, getPackageJson } from "../pkgs";
 import {
   createConfig,
   createTailwindConfig,
-} from "./rollup/create-package-config";
+} from "./rollup/create-rollup-config";
 import { compile } from "./rollup/compile";
 import { PKG_EXTERNALS, WORKSPACE_EXTERNALS } from "./rollup/externals";
 

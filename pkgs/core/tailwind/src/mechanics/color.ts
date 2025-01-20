@@ -1,4 +1,4 @@
-import { Colors, ColorStrength } from "../tsc";
+import { Colors, ColorStrength } from "../typings";
 import { MUGI_THEME_COLORS } from "../constants";
 import { INTENSITY_MAP, MUGI_INTENSITY_MAP } from "../maps/color";
 

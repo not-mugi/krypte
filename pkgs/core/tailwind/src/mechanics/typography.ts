@@ -3,7 +3,7 @@ import type {
     TextMeasurementScales, TextStyleMeasurementScales, 
     LineHeightMeasurements, LineHeightScales, LineHeightRelativeScales, 
     TextDecoration, TextTransform, TextOverflow, TextWrap, TextWhitespace, TextWordBreak, TextHyphen 
-} from "../tsc";
+} from "../typings";
 import { 
     TEXT_LINE_CLAMP_MAP, TEXT_UNDERLINE_OFFSET_MAP, 
     FIXED_LINE_HEIGHT_MAP, RELATIVE_LINE_HEIGHT_MAP, 
@@ -12,7 +12,6 @@ import {
     TEXT_WORD_BREAK_MAP, TEXT_WRAP_MAP, TEXT_HYPHENS_MAP, 
     TEXT_OVERFLOW_MAP, TEXT_TRANSFORM_MAP, TEXT_WHITESPACE_MAP, 
 } from "../maps/typography";
-
 
 /** @alpha */
 export function getTextAlignClass(textAlign?: TextHorizontalAlign) {
@@ -108,6 +107,7 @@ export function getTextHyphenClass(hyphen?: TextHyphen) {
     }
 }
 
+/** @alpha */
 export const TypographyMechanics = {
     align : getTextAlignClass,
     verticalAlign : getTextVerticalAlignClass,

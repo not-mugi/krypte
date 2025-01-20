@@ -33,7 +33,6 @@ export function createConfig(
 ): RollupOptions {
   const input = "pkgs/" + pkgName + rootDir;
   const tsconfig = getPath("tsconfig.json");
-
   const plugins = [
     nodeResolve({ extensions: [".ts", ".tsx", ".js", ".jsx"] }),
     esbuild({ tsconfig }),

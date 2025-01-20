@@ -3,7 +3,7 @@ import type {
   MainAlignment, CrossAlignment, SelfCrossAlignment, 
   ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, 
   MainJustification, InlineJustification, SelfInlineJustification
-} from "../tsc";
+} from "../typings";
 import { 
   MAIN_ALIGNMENT_MAP, CROSS_ALIGNMENT_MAP, CROSS_SELF_ALIGNMENT_MAP,
   CONTENT_PLACEMENT_MAP, CONTENT_ITEMS_PLACEMENT_MAP, CONTENT_SELF_PLACEMENT_MAP, 

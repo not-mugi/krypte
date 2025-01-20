@@ -10,7 +10,7 @@
     "cjs"
   ],
   "exports": {
-    "./types" : "./lib/tsc/index.d.ts",
+    "./types" : "./lib/typings.d.ts",
     "./functions": {
       "import": {
         "types": "./dist/bundle.d.ts",
@@ -26,5 +26,8 @@
   "devDependencies": {
     "@mugijs/shared-core": "*"
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "externals" : {
+    "./src/typings": ""
+  }
 }
