@@ -4,7 +4,7 @@ import {
     BorderMeasurements, BorderRingMeasurements, 
     CornerBorderRadiusMeasurements, FullBorderRadiusMeasurements, 
     LogicalBorderRadiusMeasurements, SideBorderRadiusMeasurements, 
-} from "../typings";
+} from "../main";
 import { 
   BORDER_RING_WIDTH_MAP, BORDER_RING_OFFSET_MAP,
   BORDER_WIDTH_MAP, BORDER_STYLE_MAP, FULL_BORDER_RADIUS_MAP,

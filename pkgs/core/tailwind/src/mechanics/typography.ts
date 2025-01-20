@@ -4,7 +4,7 @@ import type {
     TextMeasurementScales, TextStyleMeasurementScales, 
     LineHeightMeasurements, LineHeightScales, LineHeightRelativeScales, 
     TextDecoration, TextTransform, TextOverflow, TextWrap, TextWhitespace, TextWordBreak, TextHyphen, 
-} from "../typings";
+} from "../main";
 import { 
     TEXT_LINE_CLAMP_MAP, TEXT_UNDERLINE_OFFSET_MAP, 
     FIXED_LINE_HEIGHT_MAP, RELATIVE_LINE_HEIGHT_MAP, 

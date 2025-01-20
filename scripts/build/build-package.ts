@@ -8,6 +8,7 @@ import {
 } from "./rollup/create-rollup-config";
 import { compile } from "./rollup/compile";
 import { PKG_EXTERNALS, WORKSPACE_EXTERNALS } from "./rollup/externals";
+import { deleteArtifacts } from "../others/path";
 
 const logger = createLogger("build-package");
 
@@ -25,11 +26,12 @@ export async function buildPackage(pkgName: string) {
   const chalkPkgName = chalk.cyan(pkgJson.name);
 
   logger.info(`Building package ${chalkPkgName}...`);
+  await deleteArtifacts(pkgPath);
 
   try {
     if (dtsPkg) {
       logger.info(
-        `Couldn't find main entry file. Assumed package ${chalkPkgName} is a library.`
+        `Couldn't find main entry file. Assumed package ${chalkPkgName} is a typings library.`
       );
       logger.info(`Skipping build for ${chalkPkgName}`);
       return;
@@ -50,7 +52,6 @@ export async function buildPackage(pkgName: string) {
     const rootDir = "/src";
     const externals = corePkg ? WORKSPACE_EXTERNALS : PKG_EXTERNALS(pkgName);
     const config = createConfig(pkgName, pkgPath, rootDir, externals);
-
     logger.info(`Compiling ${chalkPkgName} with rollup`);
     await compile(config);
   } catch (error) {
