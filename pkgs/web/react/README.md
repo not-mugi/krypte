@@ -14,4 +14,14 @@ This document will guide you through the structure of the project **Krypte React
 ├── tests/                      # Unit and integration tests
 └── README.md                   # Project documentation
 ```
-Mugi-Team! 💻✨
+
+## 🌌 quarks to be defined 
+- Up(visible properties) - color, opacity, background
+- Down(structure) - container, spacing, sizing
+- Charm(decorative) - border, typo, transitions & animations
+- Strange(interactive) - cursor, hover/focus/active/..., user-select, form
+- Top(layout and order) align, layout
+- Bottom(subtle properties) smoothing, media queries
+
+Happy Coding! 💻✨
+Mugi-Team
