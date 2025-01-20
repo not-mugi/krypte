@@ -5,7 +5,7 @@ export * from "./container";
 export * from "./layout";
 export * from "./sizing";
 export * from "./typography";
-// export * from "./input"
+export * from "./form"
 
 
 

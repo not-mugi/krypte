@@ -13,7 +13,6 @@ import {
     TEXT_OVERFLOW_MAP, TEXT_TRANSFORM_MAP, TEXT_WHITESPACE_MAP, 
 } from "../maps/typography";
 
-
 /** @alpha */
 export function getTextAlignClass(textAlign?: TextHorizontalAlign) {
   if (textAlign && textAlign in TEXT_HORIZONTAL_ALIGN_MAP) {
@@ -108,6 +107,7 @@ export function getTextHyphenClass(hyphen?: TextHyphen) {
     }
 }
 
+/** @alpha */
 export const TypographyMechanics = {
     align : getTextAlignClass,
     verticalAlign : getTextVerticalAlignClass,
