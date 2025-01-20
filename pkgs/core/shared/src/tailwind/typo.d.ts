@@ -1,3 +1,5 @@
+import { Color } from "./color";
+
 /** @alpha */ /** Alignment */
 export type TextVerticalAlign = "top" | "middle" | "bottom";
 /** @alpha */
@@ -29,4 +31,4 @@ export type TextWordBreak = "normal" | "words" | "all" | "keep";
 /** @alpha */
 export type TextHyphen = "none" | "manual" | "auto";
 /** @alpha */ /** Alignment */
-export type Typography = Partial<{ align?: TextHorizontalAlign; verticalAlign?: TextVerticalAlign; lineClamp?: TextMeasurementScales; lineHeight?: LineHeightMeasurements; decoration?: TextDecoration; decorationThickness?: TextStyleMeasurementScales; underlineOffset?: TextStyleMeasurementScales; transform?: TextTransform; overflow?: TextOverflow; wrap?: TextWrap; whitespace?: TextWhitespace; wordBreak?: TextWordBreak; hyphen?: TextHyphen }>
+export type Typography = Partial<{ color: Color, align: TextHorizontalAlign; verticalAlign: TextVerticalAlign; lineClamp: TextMeasurementScales; lineHeight: LineHeightMeasurements; decoration: TextDecoration; decorationThickness: TextStyleMeasurementScales; decorationColor : Color, underlineOffset: TextStyleMeasurementScales; transform: TextTransform; overflow: TextOverflow; wrap: TextWrap; whitespace: TextWhitespace; wordBreak: TextWordBreak; hyphen: TextHyphen }>
