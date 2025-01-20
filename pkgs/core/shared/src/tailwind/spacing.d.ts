@@ -1,6 +1,6 @@
 import { Axis, Edges } from "./layout"
+import { MixedTwClass } from "./utility"
 import { MeasurementScales } from "./sizing"
-import { MixedTwClass } from "../typescript/tailwind"
 
 /** Spacing /** @alpha */
 export type AxisSpacingMeasurements = MixedTwClass<Axis, MeasurementScales>

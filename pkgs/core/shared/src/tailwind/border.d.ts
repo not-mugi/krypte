@@ -1,4 +1,4 @@
-import { MixedTwClass } from "../typescript/tailwind";
+import { MixedTwClass } from "./utility";
 import { MeasurementScales } from "./sizing";
 import { Axis, Corners, Edges, LogicalCorners } from "./layout"
 import { Color } from "./color";

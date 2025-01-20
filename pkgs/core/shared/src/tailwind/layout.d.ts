@@ -1,5 +1,5 @@
+import { MixedTwClass } from "./utility";
 import { MeasurementScales } from "./sizing"
-import { MixedTwClass } from "../typescript/tailwind";
 
 /** @alpha */ /** Object */
 export type ObjectFit = "fill" | "contain" | "cover" | "none" | "downscale";
