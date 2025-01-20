@@ -1,4 +1,4 @@
-import { Form, FormElement } from "../typings";
+import { Form, FormElement } from "../main";
 import { FORM_ELEMENT_MAP } from "../maps/form";
 
 /** @alpha */

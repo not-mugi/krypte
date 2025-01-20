@@ -3,7 +3,7 @@ import type {
     SizeMeasurements, DimensionMeasurements,
     WidthMeasurements, HeightMeasurements, HeightMeasurementRatios,
     Sizing,
-} from "../typings";
+} from "../main";
 import {
   FIXED_SIZE_MAP, FIXED_HEIGHT_MAP, FIXED_WIDTH_MAP,
   PERCENTAGE_SIZE_MAP, PERCENTAGE_HEIGHT_MAP, PERCENTAGE_WIDTH_MAP,

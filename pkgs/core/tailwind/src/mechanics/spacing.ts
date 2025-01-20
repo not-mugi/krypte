@@ -5,7 +5,7 @@ import type {
     NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements,
     PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
     Spacing
-} from "../typings";
+} from "../main";
 import { 
     FIXED_SPACING_MAP, NEGATIVE_FIXED_SPACING_MAP, 
     FIXED_MARGIN_MAP, FIXED_AXIS_MARGIN_MAP, FIXED_SIDES_MARGIN_MAP, FIXED_LOGICAL_MARGIN_MAP,
