@@ -2,13 +2,13 @@ import { Axis, Edges } from "./layout"
 import { MeasurementScales } from "./sizing"
 import { MixedTwClass } from "../typescript/tailwind"
 
-/** @alpha */ /** Spacing */
+/** Spacing /** @alpha */
 export type AxisSpacingMeasurements = MixedTwClass<Axis, MeasurementScales>
 /** @alpha */
 export type AxisSpacingNegativeMeasurements = MixedTwClass<'', AxisSpacingMeasurements>
-/** @alpha */ /** Spacing */
+/** Spacing /** @alpha */
 export type SpacingMeasurements = AxisSpacingMeasurements | AxisSpacingNegativeMeasurements
-/** @alpha */ /** Padding */
+/** Padding /** @alpha */
 export type PaddingMeasurements = MeasurementScales
 /** @alpha */
 export type AxisPaddingMeasurements = MixedTwClass<Axis, PaddingMeasurements>
