@@ -1,6 +1,0 @@
-export * from "./display"
-export * from "./alignment"
-export * from "./layout"
-export * from "./border"
-export * from "./color"
-export * from "./sizing"
