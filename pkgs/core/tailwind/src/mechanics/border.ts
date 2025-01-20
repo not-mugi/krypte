@@ -1,9 +1,9 @@
 import { 
-    Axis, 
-    BorderStyle, OutlineStyle, 
+    Border,
+    Axis, BorderStyle, OutlineStyle, 
     BorderMeasurements, BorderRingMeasurements, 
     CornerBorderRadiusMeasurements, FullBorderRadiusMeasurements, 
-    LogicalBorderRadiusMeasurements, SideBorderRadiusMeasurements 
+    LogicalBorderRadiusMeasurements, SideBorderRadiusMeasurements, 
 } from "../typings";
 import { 
   BORDER_RING_WIDTH_MAP, BORDER_RING_OFFSET_MAP,
@@ -12,6 +12,7 @@ import {
   CORNER_BORDER_RADIUS_MAP, SIDE_BORDER_RADIUS_MAP, LOGICAL_CORNER_BORDER_RADIUS_MAP,
   BORDER_DIVIDER_REVERSE_MAP, BORDER_INLINE_DIVIDER_WIDTH_MAP, BORDER_CROSS_DIVIDER_WIDTH_MAP, 
 } from "../maps/border";
+import { getBorderColorClass, getBorderOutlineColorClass, getBorderRingColorClass } from "./color";
 
 /** @alpha */
 export function getBorderWidthClass(borderWidth?: BorderMeasurements) {
@@ -112,16 +113,22 @@ export function getBorderLogicalCornerRadiusClass(radius?: LogicalBorderRadiusMe
 }
 
 /** @alpha */
+export const borderBlueprint = () : Border => ({})
+
+/** @alpha */
 export const BorderMechanics = {
   style: getBorderStyleClass,
   width: getBorderWidthClass,
+  color : getBorderColorClass,
   outline: getBorderOutlineStyleClass,
   outlineWidth: getBorderOutlineWidthClass,
+  outlineColor : getBorderOutlineColorClass,
   outlineOffset: getBorderOutlineOffsetClass,
   dividerReverse: getBorderDividerAxisClass,
   dividerInlineWidth: getBorderInlineDividerWidthClass,
   dividerCrossWidth: getBorderCrossDividerWidthClass,
   ringWidth: getBorderRingWidthClass,
+  ringColor : getBorderRingColorClass,
   ringOffset: getBorderRingOffsetClass,
   borderRadius: getBorderFullRadiusClass,
   sideRadius: getBorderSideRadiusClass,

@@ -1,4 +1,4 @@
-import type { Display, BoxSizing, BoxDisplay } from "../typings";
+import type { Container, Display, BoxSizing } from "../typings";
 import { BOX_SIZING_MAP, BOX_DISPLAY_MAP } from "../maps/container";
 
 /** @alpha */
@@ -6,11 +6,11 @@ export const getBoxSizingClass = (boxSizing?: BoxSizing) =>
   boxSizing && boxSizing in BOX_SIZING_MAP ? BOX_SIZING_MAP[boxSizing] : "";
 
 /** @alpha */
-export const getBoxDisplayClass = (boxDisplay?: BoxDisplay) =>
+export const getBoxDisplayClass = (boxDisplay?: Display) =>
   boxDisplay && boxDisplay in BOX_DISPLAY_MAP ? BOX_DISPLAY_MAP[boxDisplay] : "";
 
 /** @alpha */
-export const containerBlueprints = (): Display => ({ boxSizing: "border", boxDisplay: "block" });
+export const containerBlueprints = () : Container => ({ sizing: "border", display: "block" });
 
 /** @alpha */
 export const ContainerMechanics = {

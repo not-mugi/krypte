@@ -1,5 +1,5 @@
 {
-  "mainEntryPointFilePath": "lib/index.d.ts",
+  "mainEntryPointFilePath": "lib/main.d.ts",
   "bundledPackages": ["@mugijs/shared-core"],
   "apiReport": {
     "enabled": false
