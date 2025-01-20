@@ -42,81 +42,6 @@ export const FIXED_MARGIN_MAP = {
   xxl: "m-24",
 };
 
-export const FIXED_PADDING_MAP = {
-  xxs: "p-0.5",
-  xs: "p-1",
-  sm: "p-2",
-  md: "p-4",
-  lg: "p-8",
-  xl: "p-16",
-  xxl: "p-24",
-};
-
-export const FIXED_SIDES_PADDING_MAP = {
-  "top-xxs": "pt-0.5",
-  "top-xs": "pt-4",
-  "top-sm": "pt-8",
-  "top-md": "pt-16",
-  "top-lg": "pt-24",
-  "top-xl": "pt-48",
-  "top-xxl": "pt-96",
-  "right-xxs": "pr-0.5",
-  "right-xs": "pr-4",
-  "right-sm": "pr-8",
-  "right-md": "pr-16",
-  "right-lg": "pr-24",
-  "right-xl": "pr-48",
-  "right-xxl": "pr-96",
-  "bottom-xxs": "pb-0.5",
-  "bottom-xs": "pb-4",
-  "bottom-sm": "pb-8",
-  "bottom-md": "pb-16",
-  "bottom-lg": "pb-24",
-  "bottom-xl": "pb-48",
-  "bottom-xxl": "pb-96",
-  "left-xxs": "pk-0.5",
-  "left-xs": "pl-4",
-  "left-sm": "pl-8",
-  "left-md": "pl-16",
-  "left-lg": "pl-24",
-  "left-xl": "pl-48",
-  "left-xxl": "pl-96",
-};
-
-export const FIXED_AXIS_PADDING_MAP = {
-  "x-xxs": "px-0.5",
-  "x-xs": "px-4",
-  "x-sm": "px-8",
-  "x-md": "px-16",
-  "x-lg": "px-24",
-  "x-xl": "px-48",
-  "x-xxl": "px-96",
-  "y-xxs": "py-0",
-  "y-xs": "py-4",
-  "y-sm": "py-8",
-  "y-md": "py-16",
-  "y-lg": "py-24",
-  "y-xl": "py-48",
-  "y-xxl": "py-96",
-};
-
-export const FIXED_LOGICAL_PADDING_MAP = {
-  "start-xxs": "ps-0.5",
-  "start-xs": "ps-4",
-  "start-sm": "ps-8",
-  "start-md": "ps-16",
-  "start-lg": "ps-24",
-  "start-xl": "ps-48",
-  "start-xxl": "ps-96",
-  "end-xxs": "pe-0.5",
-  "end-xs": "pe-4",
-  "end-sm": "pe-8",
-  "end-md": "pe-16",
-  "end-lg": "pe-24",
-  "end-xl": "pe-48",
-  "end-xxl": "pe-96",
-};
-
 export const FIXED_SIDES_MARGIN_MAP = {
   "top-xxs": "mt-0.5",
   "top-xs": "mt-4",
@@ -245,6 +170,81 @@ export const NEGATIVE_FIXED_LOGICAL_MARGIN_MAP = {
   "-end-lg": "-me-24",
   "-end-xl": "-me-48",
   "-end-xxl": "-me-96",
+};
+
+export const FIXED_PADDING_MAP = {
+  xxs: "p-0.5",
+  xs: "p-1",
+  sm: "p-2",
+  md: "p-4",
+  lg: "p-8",
+  xl: "p-16",
+  xxl: "p-24",
+};
+
+export const FIXED_SIDES_PADDING_MAP = {
+  "top-xxs": "pt-0.5",
+  "top-xs": "pt-4",
+  "top-sm": "pt-8",
+  "top-md": "pt-16",
+  "top-lg": "pt-24",
+  "top-xl": "pt-48",
+  "top-xxl": "pt-96",
+  "right-xxs": "pr-0.5",
+  "right-xs": "pr-4",
+  "right-sm": "pr-8",
+  "right-md": "pr-16",
+  "right-lg": "pr-24",
+  "right-xl": "pr-48",
+  "right-xxl": "pr-96",
+  "bottom-xxs": "pb-0.5",
+  "bottom-xs": "pb-4",
+  "bottom-sm": "pb-8",
+  "bottom-md": "pb-16",
+  "bottom-lg": "pb-24",
+  "bottom-xl": "pb-48",
+  "bottom-xxl": "pb-96",
+  "left-xxs": "pk-0.5",
+  "left-xs": "pl-4",
+  "left-sm": "pl-8",
+  "left-md": "pl-16",
+  "left-lg": "pl-24",
+  "left-xl": "pl-48",
+  "left-xxl": "pl-96",
+};
+
+export const FIXED_AXIS_PADDING_MAP = {
+  "x-xxs": "px-0.5",
+  "x-xs": "px-4",
+  "x-sm": "px-8",
+  "x-md": "px-16",
+  "x-lg": "px-24",
+  "x-xl": "px-48",
+  "x-xxl": "px-96",
+  "y-xxs": "py-0",
+  "y-xs": "py-4",
+  "y-sm": "py-8",
+  "y-md": "py-16",
+  "y-lg": "py-24",
+  "y-xl": "py-48",
+  "y-xxl": "py-96",
+};
+
+export const FIXED_LOGICAL_PADDING_MAP = {
+  "start-xxs": "ps-0.5",
+  "start-xs": "ps-4",
+  "start-sm": "ps-8",
+  "start-md": "ps-16",
+  "start-lg": "ps-24",
+  "start-xl": "ps-48",
+  "start-xxl": "ps-96",
+  "end-xxs": "pe-0.5",
+  "end-xs": "pe-4",
+  "end-sm": "pe-8",
+  "end-md": "pe-16",
+  "end-lg": "pe-24",
+  "end-xl": "pe-48",
+  "end-xxl": "pe-96",
 };
 
 export const GUTTERS_MAP = {
