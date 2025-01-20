@@ -1,4 +1,4 @@
-import type { Display, BoxSizing, BoxDisplay } from "../tsc";
+import type { Display, BoxSizing, BoxDisplay } from "../typings";
 import { BOX_SIZING_MAP, BOX_DISPLAY_MAP } from "../maps/container";
 
 /** @alpha */

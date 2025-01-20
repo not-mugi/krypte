@@ -4,7 +4,7 @@ import type {
     MarginMeasurements, AxisMarginMeasurements, SideMarginMeasurements, LogicalMarginMeasurements,
     NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements,
     PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements
-} from "../tsc";
+} from "../typings";
 import { 
     FIXED_SPACING_MAP, NEGATIVE_FIXED_SPACING_MAP, 
     FIXED_MARGIN_MAP, FIXED_AXIS_MARGIN_MAP, FIXED_SIDES_MARGIN_MAP, FIXED_LOGICAL_MARGIN_MAP,
