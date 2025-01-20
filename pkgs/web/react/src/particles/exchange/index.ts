@@ -1,6 +1,6 @@
-import { Quirk, QuirkMechs } from "../Quarks";
+import { Quirk, QuirkMechs } from "../quarks";
 
-export const tailwindInteraction = <Q extends Quirk>(
+export const tailwindexchange = <Q extends Quirk>(
   quirk: Q,
   mechanics: QuirkMechs<Q>,
 ) => {

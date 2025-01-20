@@ -1,4 +1,4 @@
-import { FormElement } from "../typings";
+import { Form, FormElement } from "../typings";
 import { FORM_ELEMENT_MAP } from "../maps/form";
 
 /** @alpha */
@@ -7,6 +7,9 @@ export function getFormElementClass(element? : FormElement) {
         return FORM_ELEMENT_MAP[element]
     }
 }
+
+/** @alpha */
+export const formBlueprint = () : Form => ({ element : "input" })
 
 /** @alpha */
 export const FormMechanics = {

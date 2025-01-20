@@ -1,8 +1,8 @@
 {
   "name": "@mugijs/tailwind-core",
   "version": "0.0.1",
-  "main": "./cjs/index.js",
-  "module": "./esm/index.mjs",
+  "main": "./cjs/main.js",
+  "module": "./esm/main.mjs",
   "types": "./dist/bundle.d.ts",
   "files": [
     "dist",
@@ -14,11 +14,11 @@
     "./functions": {
       "import": {
         "types": "./dist/bundle.d.ts",
-        "default": "./esm/mechanics/index.mjs"
+        "default": "./esm/main.mjs"
       },
       "require": {
         "types": "./dist/bundle.d.ts",
-        "default": "./cjs/mechanics/index.cjs"
+        "default": "./cjs/main.cjs"
       }
     }
   },

@@ -102,11 +102,7 @@ export const AlignmentMechanics = {
 };
 
 /** @alpha */
-export function alignmentBlueprint(): Alignment {
-  return {
-    mainAlignment: "center",
-  };
-}
+export const alignmentBlueprint = () : Alignment => ({ mainAlignment: "center" })
 
 /** @alpha */
 export const JustificationMechanics = {
@@ -116,11 +112,7 @@ export const JustificationMechanics = {
 };
 
 /** @alpha */
-export function justificationBlueprint(): Justification {
-  return {
-    mainJustification: "center",
-  };
-}
+export const justificationBlueprint = () : Justification => ({ mainJustification: "center", })
 
 /** @alpha */
 export const ContentAlignmentMechanics = {
@@ -130,8 +122,4 @@ export const ContentAlignmentMechanics = {
 };
 
 /** @alpha */
-export function contentAlignmentBlueprint(): ContentAlignment {
-  return {
-    contentPlacement: "center",
-  };
-}
+export const contentAlignmentBlueprint = (): ContentAlignment => ({ contentPlacement: "center" })

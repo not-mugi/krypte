@@ -1,8 +1,8 @@
-import { tailwindInteraction } from "../Interactions";
+import { tailwindexchange } from "../exchange";
 
 export type Quirk = { [k: string]: QuirkFlavor };
 
-export type QuirkFlavor = { [name: string]: string };
+export type QuirkFlavor = { [name: string]: string | QuirkFlavor };
 
 export type QuirkMechs<F> = { [name: string]: ExchangeFunctions<F> };
 
@@ -20,11 +20,11 @@ export class Quark {
     return this.#quirkMechanics;
   }
 
-  addFlavor(fn : string, flavor : QuirkFlavor) {
+  addquirk(fn : string, flavor : QuirkFlavor) {
     this.#quirks = { ...this.#quirks, [fn] : flavor }
   }
 
-  interact(): string {
-    return tailwindInteraction(this.quirks, this.quirkMechanics);
+  exchange(): string {
+    return tailwindexchange(this.quirks, this.quirkMechanics);
   }
 }

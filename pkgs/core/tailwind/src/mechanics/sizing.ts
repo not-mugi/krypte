@@ -2,6 +2,7 @@ import type {
     MeasurementScales, MeasurementRatios,
     SizeMeasurements, DimensionMeasurements,
     WidthMeasurements, HeightMeasurements, HeightMeasurementRatios,
+    Sizing,
 } from "../typings";
 import {
   FIXED_SIZE_MAP, FIXED_HEIGHT_MAP, FIXED_WIDTH_MAP,
@@ -44,6 +45,9 @@ export function getDimensionClasses(dimension?: DimensionMeasurements) {
   const { width, height } = dimension;
   return `${getWidthClass(width)} ${getHeightClass(height)}`;
 }
+
+/** @alpha */
+export const sizingBlueprints = () : Sizing => ({ size : "md" });
 
 /** @alpha */
 export const SizingMechanics = {

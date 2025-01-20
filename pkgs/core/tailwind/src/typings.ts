@@ -3,7 +3,7 @@ export type {
   /*** utilities ***/
   Constructor, Keyof, MixedTwClass,
   /** display */
-  Display, BoxDisplay, BoxSizing,
+  Container, Display, BoxSizing,
   /** alignment */
   Alignment, Justification, ContentAlignment, MainAlignment, CrossAlignment, SelfCrossAlignment, ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, MainJustification, InlineJustification, SelfInlineJustification,
   /** layout */

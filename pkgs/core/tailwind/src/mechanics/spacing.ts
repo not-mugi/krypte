@@ -3,7 +3,8 @@ import type {
     SpacingMeasurements, AxisSpacingMeasurements, AxisSpacingNegativeMeasurements, 
     MarginMeasurements, AxisMarginMeasurements, SideMarginMeasurements, LogicalMarginMeasurements,
     NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements,
-    PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements
+    PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
+    Spacing
 } from "../typings";
 import { 
     FIXED_SPACING_MAP, NEGATIVE_FIXED_SPACING_MAP, 
@@ -62,6 +63,9 @@ export function getPaddingClass(padding?: PaddingMeasurements) {
         return FIXED_LOGICAL_PADDING_MAP[padding as LogicalPaddingMeasurements];
     }
 }
+
+/** @alpha */
+export const spacingBlueprints = () : Spacing => ({});
 
 /** @alpha */
 export const SpacingMechanics = {

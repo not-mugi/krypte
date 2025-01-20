@@ -87,7 +87,11 @@ export function getLogicalPlacementClass(logicalPlacement?: LogicalPlacement) {
 }
 
 /** @alpha */
+export const layoutBlueprint = () : Layout => ({})
+
+/** @alpha */
 export const LayoutMechanics = {
+  position: getPositionClass,
   clear: getContentClearClass,
   float: getContentFloatClass,
   objectFit: getObjectFitClass,
@@ -96,14 +100,6 @@ export const LayoutMechanics = {
   overscroll: getOverscrollClass,
   visibility: getVisibilityClass,
   stackorder: getStackorderClass,
-  position: getPositionClass,
   edgePlacement: getEdgePlacementClass,
   logicalPlacement: getLogicalPlacementClass,
 };
-
-/** @alpha */
-export function layoutBlueprint(): Layout {
-  return {
-    overflow: "auto",
-  };
-}

@@ -1,8 +1,9 @@
 import type { 
+    Typography,
     TextHorizontalAlign, TextVerticalAlign, 
     TextMeasurementScales, TextStyleMeasurementScales, 
     LineHeightMeasurements, LineHeightScales, LineHeightRelativeScales, 
-    TextDecoration, TextTransform, TextOverflow, TextWrap, TextWhitespace, TextWordBreak, TextHyphen 
+    TextDecoration, TextTransform, TextOverflow, TextWrap, TextWhitespace, TextWordBreak, TextHyphen, 
 } from "../typings";
 import { 
     TEXT_LINE_CLAMP_MAP, TEXT_UNDERLINE_OFFSET_MAP, 
@@ -12,6 +13,7 @@ import {
     TEXT_WORD_BREAK_MAP, TEXT_WRAP_MAP, TEXT_HYPHENS_MAP, 
     TEXT_OVERFLOW_MAP, TEXT_TRANSFORM_MAP, TEXT_WHITESPACE_MAP, 
 } from "../maps/typography";
+import { getTextColorClass, getTextDecorationColorClass } from "./color";
 
 /** @alpha */
 export function getTextAlignClass(textAlign?: TextHorizontalAlign) {
@@ -108,13 +110,18 @@ export function getTextHyphenClass(hyphen?: TextHyphen) {
 }
 
 /** @alpha */
+export const typographyBlueprints = () : Typography => ({ color : { color : "mugi" }, align : "center" })
+
+/** @alpha */
 export const TypographyMechanics = {
+    color : getTextColorClass,
     align : getTextAlignClass,
     verticalAlign : getTextVerticalAlignClass,
     lineClamp : getTextLineClampClass,
     lineHeight : getLineHeightClass,
     decoration : getTextDecorationClass,
     decorationThickness : getTextDecorationThicknessClass,
+    decorationColor : getTextDecorationColorClass,
     underlineOffset : getTextUnderlineOffsetClass,
     transform : getTextTransformClass,
     overflow : getTextOverflowClass,

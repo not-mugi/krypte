@@ -1,6 +1,7 @@
 import { MixedTwClass } from "../typescript/tailwind";
 import { MeasurementScales } from "./sizing";
 import { Axis, Corners, Edges, LogicalCorners } from "./layout"
+import { Color } from "./color";
 
 /** @alpha */ /** Border Style */
 export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
@@ -29,14 +30,17 @@ export type BorderRingMeasurements = BorderMeasurements | "inset";
 export type Border = Partial<{
     style : BorderStyle,
     width : BorderMeasurements,
+    color : Color,
     outline : OutlineStyle,
     outlineWidth : BorderMeasurements,
+    outlineColor : Color,
     outlineOffset : BorderMeasurements,
     dividerWidth : BorderMeasurements,
     dividerReverse : Axis,
     dividerInlineWidth : BorderMeasurements,
     dividerCrossWidth : BorderMeasurements,
     ringWidth : BorderRingMeasurements,
+    ringColor : Color,
     ringOffset : BorderMeasurements,
     borderRadius : FullBorderRadiusMeasurements,
     sideRadius : SideBorderRadiusMeasurements,
