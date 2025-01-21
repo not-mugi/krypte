@@ -1,12 +1,5 @@
-export * from "./mechanics/align";
-export * from "./mechanics/border";
-export * from "./mechanics/color";
-export * from "./mechanics/container";
-export * from "./mechanics/layout";
-export * from "./mechanics/sizing";
-export * from "./mechanics/typography";
-export * from "./mechanics/form"
-export * from "./mechanics/spacing"
+export * as FlavorMixins from "./mixins/exports"
+export * as ClassGetters from "./getters/exports"
 
 /** @alpha */ 
 export type {
@@ -29,3 +22,43 @@ export type {
   /** Spacing */
   Spacing, SpacingMeasurements, AxisSpacingMeasurements, AxisSpacingNegativeMeasurements, MarginMeasurements, AxisMarginMeasurements, SideMarginMeasurements, LogicalMarginMeasurements, NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements, PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
 } from "@mugijs/typescript";
+
+/** @alpha */
+export type Quirk = { [k: string]: QuirkFlavor };
+/** @alpha */
+export type QuirkFlavor = { [name: string]: string | QuirkFlavor };
+/** @alpha */
+export type GetterFunctions<Qi> = { [N in keyof Qi]: (value?: any) => string };
+/** @alpha */
+export type QuirkInteractions<EF> = { [name: string]: GetterFunctions<EF> };
+
+/** @alpha */
+export class Quark {
+  #quirks: Quirk = {};
+  #interactions: QuirkInteractions<Quirk> = {};
+
+  get quirks(): Quirk {
+    return this.#quirks;
+  }
+
+  get interactions(): QuirkInteractions<{}> {
+    return this.#interactions;
+  }
+
+  addquirk(fn : string, flavor : QuirkFlavor) {
+    this.#quirks = { ...this.#quirks, [fn] : flavor }
+  }
+
+  exchange(): string {
+    return Object.entries(this.quirks)
+    .map(([property, flavors]) => {
+      const get : GetterFunctions<Quirk> = this.interactions[property];
+      return Object.entries(flavors)
+        .map(([flavor, energy]) =>
+          get[flavor](energy)
+        )
+        .join(" ");
+    })
+    .join(" ").trim();
+  }
+}
