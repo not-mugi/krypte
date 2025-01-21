@@ -1,4 +1,9 @@
 import { Quark } from "@mugijs/tailwind";
-import { ColorFlavor } from "@mugijs/tailwind/mixins"
+import { ColorFlavor, BackgroundFlavor } from "@mugijs/tailwind/mixins"
 
-const UpQuark = ColorFlavor(Quark);
+class UpQuark extends BackgroundFlavor(ColorFlavor(Quark)) {}
+
+const up = new UpQuark()
+up.setBackground({
+    attachment : "fixed"
+})
