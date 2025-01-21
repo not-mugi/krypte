@@ -26,8 +26,11 @@ export type {
   /** color */ 
   Color, Colors, ColorStrength,
 
-  /** display */
+  /** container */
   Container, Display, BoxSizing,
+
+  /** effect */
+  Effect, ShadowMeasurements, OpacityMeasurements, BlendMode,
 
   /** Form */
   Form, FormElement,

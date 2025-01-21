@@ -1,10 +1,10 @@
 import { Color } from "../main";
-import { COLOR_STRENGHT_MAP } from "../classes/color";
+import { COLOR_STRENGTH_MAP } from "../classes/color";
 
 /** @alpha */
 export const getColorClass = ({ color, strength = "slim" }: Color) =>
-  color && strength in COLOR_STRENGHT_MAP
-    ? `${color}-${COLOR_STRENGHT_MAP[strength]}` : "";
+  color && strength in COLOR_STRENGTH_MAP
+    ? `${color}-${COLOR_STRENGTH_MAP[strength]}` : "";
 
 /** @alpha */
 export const getTextColorClass = (color: Color = {}) =>
@@ -29,6 +29,10 @@ export const getBorderRingColorClass = (color: Color = {}) =>
 /** @alpha */
 export const getTextDecorationColorClass = (color: Color = {}) =>
   `decoration-${getColorClass(color)}`;
+
+/** @alpha */
+export const getShadowColorClass = (color: Color = {}) =>
+  `shadow-${getColorClass(color)}`;
 
 /** @alpha */
 export const colorBlueprint = (): Color => ({ strength: "slim" });
