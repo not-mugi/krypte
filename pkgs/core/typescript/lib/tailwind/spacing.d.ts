@@ -1,33 +1,33 @@
 import { Axis, Edges } from "./layout"
-import { MixedTwClass } from "./utility"
+import { CSSClass } from "./utility"
 import { MeasurementScales } from "./sizing"
 
 /** Spacing /** @alpha */
-export type AxisSpacingMeasurements = MixedTwClass<Axis, MeasurementScales>
+export type AxisSpacingMeasurements = CSSClass<Axis, MeasurementScales>
 /** @alpha */
-export type AxisSpacingNegativeMeasurements = MixedTwClass<'', AxisSpacingMeasurements>
+export type AxisSpacingNegativeMeasurements = CSSClass<'', AxisSpacingMeasurements>
 /** Spacing /** @alpha */
 export type SpacingMeasurements = AxisSpacingMeasurements | AxisSpacingNegativeMeasurements
 /** Padding /** @alpha */
 export type PaddingMeasurements = MeasurementScales
 /** @alpha */
-export type AxisPaddingMeasurements = MixedTwClass<Axis, PaddingMeasurements>
+export type AxisPaddingMeasurements = CSSClass<Axis, PaddingMeasurements>
 /** @alpha */
-export type SidePaddingMeasurements = MixedTwClass<Edges, PaddingMeasurements>
+export type SidePaddingMeasurements = CSSClass<Edges, PaddingMeasurements>
 /** @alpha */
-export type LogicalPaddingMeasurements = MixedTwClass<"start" | "end", PaddingMeasurements>
+export type LogicalPaddingMeasurements = CSSClass<"start" | "end", PaddingMeasurements>
 /** @alpha */ /** Margin */
-export type AxisMarginMeasurements = MixedTwClass<Axis, MeasurementScales>
+export type AxisMarginMeasurements = CSSClass<Axis, MeasurementScales>
 /** @alpha */
-export type SideMarginMeasurements = MixedTwClass<Edges, MeasurementScales>
+export type SideMarginMeasurements = CSSClass<Edges, MeasurementScales>
 /** @alpha */
-export type LogicalMarginMeasurements = MixedTwClass<"start" | "end", MeasurementScales>
+export type LogicalMarginMeasurements = CSSClass<"start" | "end", MeasurementScales>
 /** @alpha */
-export type NegativeAxisMarginMeasurements = MixedTwClass<'', AxisMarginMeasurements>
+export type NegativeAxisMarginMeasurements = CSSClass<'', AxisMarginMeasurements>
 /** @alpha */
-export type NegativeSideMarginMeasurements = MixedTwClass<'', SideMarginMeasurements>
+export type NegativeSideMarginMeasurements = CSSClass<'', SideMarginMeasurements>
 /** @alpha */
-export type NegativeLogicalMarginMeasurements = MixedTwClass<'', LogicalMarginMeasurements>
+export type NegativeLogicalMarginMeasurements = CSSClass<'', LogicalMarginMeasurements>
 /** @alpha */
 export type MarginMeasurements = AxisMarginMeasurements | SideMarginMeasurements | LogicalMarginMeasurements | NegativeAxisMarginMeasurements | NegativeSideMarginMeasurements | NegativeLogicalMarginMeasurements
 /** @alpha */ /** Gap(F/G) */

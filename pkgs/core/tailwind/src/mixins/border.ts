@@ -3,6 +3,7 @@ import type { Constructor, Border } from "../main";
 import { BorderMechanics, borderBlueprint } from "../getters/border";
 
 /** ---- border flavor ----- */
+/** @alpha */
 export const BorderFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -16,11 +17,11 @@ export const BorderFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       };
       super(flavors, exchangeMechs);
     }
-    /** @param border */ /** {
+    /** @param border */ /** \{
      *   width : "sm",
      *   style : "solid",
-     *   color : { color : "mugi", strength : "heavy" }
-     * }
+     *   color : \{ color : "mugi", strength : "heavy" \}
+     * \}
     */
     setBorder(b: Border) {
       this.addquirk("border", b);

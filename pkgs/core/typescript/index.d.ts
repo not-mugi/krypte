@@ -3,6 +3,7 @@ export * from "./lib/js/index"
 /** tailwind css typings **/ 
 export * from "./lib/tailwind/align"
 export * from "./lib/tailwind/border"
+export * from "./lib/tailwind/background"
 export * from "./lib/tailwind/color"
 export * from "./lib/tailwind/display"
 export * from "./lib/tailwind/form"

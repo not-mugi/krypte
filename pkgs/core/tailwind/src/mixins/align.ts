@@ -6,6 +6,7 @@ import {
 } from "../getters/align";
 
 /** ---- alignment flavor ---- */
+/** @alpha */
 export const AlignFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -23,29 +24,29 @@ export const AlignFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       };
       super(flavors, exchangeMechs);
     }
-    /** @param alignment */ /** {
+    /** @param alignment */ /** \{
      *   mainAlignment : "center",
      *   crossAlignment : "center",
      *   selfCrossAlignment : "auto"
-     * }
+     * \}
     */
     setAlign(a: Alignment) {
       this.addquirk("align", a);
     }
-    /** @param justification */ /** {
+    /** @param justification */ /** \{
     *   mainJustification : "center",
     *   inlineJustification : "center",
     *   selfInlineJustification : "center"
-    * }
+    * \}
     */
     setJustification(j: Justification) {
       this.addquirk("justify", j);
     }
-    /** @param contentAlignment */ /** {
+    /** @param contentAlignment */ /** \{
     *   contentPlacement : "center",
     *   contentItemsPlacement : "center",
     *   contentSelfPlacement : "center"
-    * }
+    * \}
     */
     setContentAlign(c : ContentAlignment) {
       this.addquirk("content", c);

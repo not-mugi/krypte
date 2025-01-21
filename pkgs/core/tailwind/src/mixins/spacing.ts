@@ -3,6 +3,7 @@ import type { Constructor, Spacing } from "../main";
 import { SpacingMechanics, spacingBlueprints  } from "../getters/spacing";
 
 /** ---- spacing flavor ---- */
+/** @alpha */
 export const SpacingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -17,11 +18,11 @@ export const SpacingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       super(flavors, exchangeMechs);
     }
 
-    /** @param spacing */ /** {
+    /** @param spacing */ /** \{
     *    spacing : "x-xxs",
     *    margin : "-y-xs",
     *    padding : "end-xs"
-    * }
+    * \}
     */
     setSpacing(s: Spacing) {
       this.addquirk("space", s);

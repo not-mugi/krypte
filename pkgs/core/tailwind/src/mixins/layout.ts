@@ -3,6 +3,7 @@ import type { Constructor, Layout } from "../main";
 import { LayoutMechanics, layoutBlueprint } from "../getters/layout";
 
 /** ---- layout flavor ---- */
+/** @alpha */
 export const LayoutFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -16,10 +17,10 @@ export const LayoutFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       };
       super(flavors, exchangeMechs);
     }
-    /** @param layout */ /** {
+    /** @param layout */ /** \{
      *  position : "relative",
      *  overflow : "auto
-     * }
+     * \}
     */
     setLayout(l: Layout) {
       this.addquirk("layout", l);

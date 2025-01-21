@@ -3,6 +3,7 @@ import type { Constructor, Form } from "../main";
 import { FormMechanics, formBlueprint } from "../getters/form";
 
 /** ---- form flavor ---- */
+/** @alpha */
 export const FormFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -17,9 +18,9 @@ export const FormFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       super(flavors, exchangeMechs);
     }
 
-    /** @param form */ /** {
+    /** @param form */ /** \{
     *    element : "input"
-    * }
+    * \}
     */
     setForm(f: Form) {
       this.addquirk("form", f);

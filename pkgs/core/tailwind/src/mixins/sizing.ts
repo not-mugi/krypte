@@ -3,6 +3,7 @@ import type { Constructor, Sizing } from "../main";
 import { SizingMechanics, sizingBlueprints } from "../getters/sizing";
 
 /** ---- size flavor ---- */
+/** @alpha */
 export const SizingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -17,14 +18,14 @@ export const SizingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       super(flavors, exchangeMechs);
     }
 
-    /** @param sizing */ /** {
+    /** @param sizing */ /** \{
     *    size : "md"
-    * } {
+    * \} \{
     *    width : "screen"
     *    height : "screen"
-    * } {
-    *    dimensions : { width : "screen", height : "screen" }
-    * }
+    * \} \{
+    *    dimensions : \{ width : "screen", height : "screen" \}
+    * \}
     */
     setSizing(s: Sizing) {
       this.addquirk("size", s);

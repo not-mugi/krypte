@@ -1,4 +1,4 @@
-import { MixedTwClass } from "./utility";
+import { CSSClass } from "./utility";
 import { MeasurementScales } from "./sizing";
 import { Axis, Corners, Edges, LogicalCorners } from "./layout"
 import { Color } from "./color";
@@ -17,11 +17,11 @@ export type BorderRadiusMeasurements = BorderMeasurements | "xxl";
 /** @alpha */
 export type FullBorderRadiusMeasurements = BorderRadiusMeasurements | "full"
 /** @alpha */
-export type SideBorderRadiusMeasurements = MixedTwClass<Edges, BorderRadiusMeasurements>;
+export type SideBorderRadiusMeasurements = CSSClass<Edges, BorderRadiusMeasurements>;
 /** @alpha */
-export type CornerBorderRadiusMeasurements = MixedTwClass<Corners, BorderRadiusMeasurements>;
+export type CornerBorderRadiusMeasurements = CSSClass<Corners, BorderRadiusMeasurements>;
 /** @alpha */
-export type LogicalBorderRadiusMeasurements = MixedTwClass<LogicalCorners, BorderRadiusMeasurements>;
+export type LogicalBorderRadiusMeasurements = CSSClass<LogicalCorners, BorderRadiusMeasurements>;
 
 /** @alpha */ /** Border Ring */
 export type BorderRingMeasurements = BorderMeasurements | "inset";

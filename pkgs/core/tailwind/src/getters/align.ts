@@ -8,7 +8,7 @@ import {
   MAIN_ALIGNMENT_MAP, CROSS_ALIGNMENT_MAP, CROSS_SELF_ALIGNMENT_MAP,
   CONTENT_PLACEMENT_MAP, CONTENT_ITEMS_PLACEMENT_MAP, CONTENT_SELF_PLACEMENT_MAP,
   MAIN_JUSTIFICATION_MAP, INLINE_JUSTIFICATION_MAP, INLINE_SELF_JUSTIFICATION_MAP,
-} from "../references/align";
+} from "../classes/align";
 
 /** @alpha */
 export const getMainAlignmentClass = (mainAlignment?: MainAlignment) =>

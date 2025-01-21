@@ -1,13 +1,10 @@
 import { Color } from "../main";
-import { INTENSITY_MAP, MUGI_INTENSITY_MAP } from "../references/color";
+import { COLOR_STRENGHT_MAP } from "../classes/color";
 
 /** @alpha */
-export const getColorClass = ({ color, strength = "slim" }: Color) => {
-  if (color && color in ["mugi", "hat"]) {
-    return `${color}-${MUGI_INTENSITY_MAP[strength]}`;
-  }
-  return `${color}-${INTENSITY_MAP[strength]}`;
-};
+export const getColorClass = ({ color, strength = "slim" }: Color) =>
+  color && strength in COLOR_STRENGHT_MAP
+    ? `${color}-${COLOR_STRENGHT_MAP[strength]}` : "";
 
 /** @alpha */
 export const getTextColorClass = (color: Color = {}) =>

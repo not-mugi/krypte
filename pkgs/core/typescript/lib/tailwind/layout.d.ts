@@ -1,4 +1,4 @@
-import { MixedTwClass } from "./utility";
+import { CSSClass } from "./utility";
 import { MeasurementScales } from "./sizing"
 
 /** @alpha */ /** Object */
@@ -27,9 +27,9 @@ export type LogicalCorners = "start" | "end" | "startstart" | "startend" | "ends
 /** @alpha */
 export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
 /** @alpha */
-export type SidesPlacement = MixedTwClass<Edges, MeasurementScales>;
+export type SidesPlacement = CSSClass<Edges, MeasurementScales>;
 /** @alpha */
-export type LogicalPlacement = MixedTwClass< "start" | "end" | "inset", MeasurementScales >;
+export type LogicalPlacement = CSSClass< "start" | "end" | "inset", MeasurementScales >;
 
 /** @alpha */ /** Content */
 export type ContentGap = MeasurementScales;

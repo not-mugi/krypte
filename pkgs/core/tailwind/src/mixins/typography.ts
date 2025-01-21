@@ -3,6 +3,7 @@ import type { Constructor, Typography } from "../main";
 import { TypographyMechanics, typographyBlueprints  } from "../getters/typography";
 
 /** ---- typography flavor ---- */
+/** @alpha */
 export const TypographyFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -17,10 +18,10 @@ export const TypographyFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       super(flavors, exchangeMechs);
     }
 
-    /** @param typography */ /** {
-     *   color : { color : "mugi", }
+    /** @param typography */ /** \{
+     *   color : \{ color : "mugi", \}
      *   align : "center",
-     * }
+     * \}
     */
     setTypography(t: Typography) {
       this.addquirk("typo", t);

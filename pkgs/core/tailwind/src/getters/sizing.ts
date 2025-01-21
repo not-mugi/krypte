@@ -15,7 +15,7 @@ import {
   PERCENTAGE_SIZE_MAP,
   PERCENTAGE_HEIGHT_MAP,
   PERCENTAGE_WIDTH_MAP,
-} from "../references/sizing";
+} from "../classes/sizing";
 
 /** @alpha */
 export const getSizeClass = (extent?: SizeMeasurements) => {

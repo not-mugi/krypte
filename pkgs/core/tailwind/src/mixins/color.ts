@@ -3,8 +3,9 @@ import type { Constructor, Color } from "../main";
 import { ColorMechanics, colorBlueprint, } from "../getters/color";
 
 /** ---- color flavor ---- */
-export const ColorFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
-  return class extends Quark {
+/** @alpha */
+export const ColorFlavor = <Q extends Constructor<Quark>>(BaseQuark: Q) => {
+  return class extends BaseQuark {
     constructor(...args: any[]) {
       const flavors = {
         ...args[0],
@@ -16,10 +17,10 @@ export const ColorFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       };
       super(flavors, exchangeMechs);
     }
-    /** @param color */ /** {
+    /** @param color */ /** \{
      *  color : "mugi",
      *  strength : "slim"
-     * }
+     * \}
     */
     setColor(c: Color) {
       this.addquirk("color", c);

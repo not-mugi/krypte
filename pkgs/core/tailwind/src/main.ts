@@ -3,24 +3,59 @@ export * as ClassGetters from "./getters/exports"
 
 /** @alpha */ 
 export type {
-  /*** utilities ***/
-  Constructor, Keyof, MixedTwClass,
+
+  /** utils */
+  Constructor, Keyof, CSSClass,
+
+  /** alignment */
+  Alignment, Justification, ContentAlignment, 
+  MainAlignment, CrossAlignment, SelfCrossAlignment, 
+  ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, 
+  MainJustification, InlineJustification, SelfInlineJustification,
+
+  /** border */
+  Border, Axis, BorderMeasurements, 
+  OutlineStyle, SideBorderRadiusMeasurements, 
+  BorderRingMeasurements, BorderStyle, CornerBorderRadiusMeasurements, FullBorderRadiusMeasurements, LogicalBorderRadiusMeasurements, 
+
+  /** background */
+  Background, BackgroundGradient, BackgroundPlacement, 
+  BackgroundAttachment, BackgroundClip, BackgroundOrigin, 
+  BackgroundPosition, BackgroundRepeat, BackgroundSize, 
+
+  /** color */ 
+  Color, Colors, ColorStrength,
+
   /** display */
   Container, Display, BoxSizing,
-  /** alignment */
-  Alignment, Justification, ContentAlignment, MainAlignment, CrossAlignment, SelfCrossAlignment, ContentPlacement, ContentItemsPlacement, ContentSelfPlacement, MainJustification, InlineJustification, SelfInlineJustification,
-  /** layout */
-  Layout, Position, Overflow, Overscroll, Stackorder, Visibility, ContentClear, ContentFloat, ObjectFit, ObjectPosition, SidesPlacement, LogicalPlacement,
-  /** border */
-  Border, Axis, BorderMeasurements, BorderRingMeasurements, BorderStyle, CornerBorderRadiusMeasurements, FullBorderRadiusMeasurements, LogicalBorderRadiusMeasurements, OutlineStyle, SideBorderRadiusMeasurements, /** color */ Color, Colors, ColorStrength,
-  /** sizing */
-  Sizing, MeasurementScales, MeasurementRatios, WidthMeasurements, HeightMeasurements, HeightMeasurementRatios, SizeMeasurements, DimensionMeasurements,
-  /** typography */
-  Typography, TextHorizontalAlign, TextVerticalAlign, TextMeasurementScales, LineHeightMeasurements, LineHeightScales, LineHeightRelativeScales, TextDecoration, TextStyleMeasurementScales, TextTransform, TextOverflow, TextWrap, TextWhitespace, TextWordBreak, TextHyphen,
+
   /** Form */
   Form, FormElement,
+
+  /** layout */
+  Layout, Position, Overflow, 
+  Overscroll, Stackorder, Visibility, 
+  ContentClear, ContentFloat, ObjectFit, 
+  ObjectPosition, SidesPlacement, LogicalPlacement,
+
+  /** sizing */
+  Sizing, MeasurementScales, MeasurementRatios, 
+  WidthMeasurements, HeightMeasurements, 
+  HeightMeasurementRatios, SizeMeasurements, DimensionMeasurements,
+
   /** Spacing */
-  Spacing, SpacingMeasurements, AxisSpacingMeasurements, AxisSpacingNegativeMeasurements, MarginMeasurements, AxisMarginMeasurements, SideMarginMeasurements, LogicalMarginMeasurements, NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements, PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
+  Spacing, SpacingMeasurements, AxisSpacingMeasurements, 
+  AxisSpacingNegativeMeasurements, MarginMeasurements, AxisMarginMeasurements,
+  SideMarginMeasurements, LogicalMarginMeasurements, NegativeAxisMarginMeasurements,
+  NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements, PaddingMeasurements,
+  AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
+
+  /** typography */
+  Typography, TextHorizontalAlign, TextVerticalAlign, 
+  TextMeasurementScales, LineHeightMeasurements, LineHeightScales, 
+  LineHeightRelativeScales, TextDecoration, TextStyleMeasurementScales, 
+  TextTransform, TextOverflow, TextWrap, 
+  TextWhitespace, TextWordBreak, TextHyphen,
 } from "@mugijs/typescript";
 
 /** @alpha */
@@ -34,21 +69,23 @@ export type QuirkInteractions<EF> = { [name: string]: GetterFunctions<EF> };
 
 /** @alpha */
 export class Quark {
+  /** @alpha */
   #quirks: Quirk = {};
+  /** @alpha */
   #interactions: QuirkInteractions<Quirk> = {};
-
+  /** @alpha */
   get quirks(): Quirk {
     return this.#quirks;
   }
-
+  /** @alpha */
   get interactions(): QuirkInteractions<{}> {
     return this.#interactions;
   }
-
+  /** @alpha */
   addquirk(fn : string, flavor : QuirkFlavor) {
     this.#quirks = { ...this.#quirks, [fn] : flavor }
   }
-
+  /** @alpha */
   exchange(): string {
     return Object.entries(this.quirks)
     .map(([property, flavors]) => {

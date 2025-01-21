@@ -3,6 +3,7 @@ import type { Constructor, Container } from "../main";
 import { ContainerMechanics, containerBlueprints, } from "../getters/container";
 
 /** ---- container flavor ---- */
+/** @alpha */
 export const ContainerFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {
@@ -16,10 +17,10 @@ export const ContainerFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
       };
       super(flavors, exchangeMechs);
     }
-    /** @param container */ /** {
+    /** @param container */ /** \{
      *    sizing: "border", 
      *    display: "block"
-     * }
+     * \}
     */
     setContainer(c: Container) {
       this.addquirk("container", c);

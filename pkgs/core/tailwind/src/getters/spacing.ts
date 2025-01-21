@@ -10,7 +10,7 @@ import {
   FIXED_AXIS_MARGIN_MAP, FIXED_SIDES_MARGIN_MAP, FIXED_LOGICAL_MARGIN_MAP,
   NEGATIVE_FIXED_AXIS_MARGIN_MAP, NEGATIVE_FIXED_SIDES_MARGIN_MAP, NEGATIVE_FIXED_LOGICAL_MARGIN_MAP,
   FIXED_PADDING_MAP, FIXED_AXIS_PADDING_MAP, FIXED_SIDES_PADDING_MAP, FIXED_LOGICAL_PADDING_MAP,
-} from "../references/spacing";
+} from "../classes/spacing";
 
 /** @alpha */
 export const getSpacingClass = (spacing?: SpacingMeasurements) => {
