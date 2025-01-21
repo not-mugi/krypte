@@ -7,21 +7,32 @@
   "files": [
     "dist",
     "esm",
-    "cjstailtata"
+    "cjs"
   ],
   "exports": {
-    "./types" : "./lib/main.d.ts",
-    "./functions": {
+    "." : {
       "import": {
-        "types": "./dist/bundle.d.ts",
+        "types": "./lib/main.d.ts",
         "default": "./esm/main.mjs"
       },
       "require": {
-        "types": "./dist/bundle.d.ts",
+        "types": "./lib/main.d.ts",
         "default": "./cjs/main.cjs"
+      }
+    },
+    "./types" : "./lib/bundle.d.ts",
+    "./mixins": {
+      "import": {
+        "types": "./lib/mixins/exports.d.ts",
+        "default": "./esm/mixins/exports.mjs"
+      },
+      "require": {
+        "types": "./lib/mixins/exports.d.ts",
+        "default": "./cjs/mixins/main.cjs"
       }
     }
   },
+  "isCore" : true,
   "license": "Apache-2.0",
   "devDependencies": {
     "@mugijs/typescript": "*"

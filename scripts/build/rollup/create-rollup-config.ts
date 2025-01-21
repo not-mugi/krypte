@@ -7,16 +7,21 @@ import postcss from "rollup-plugin-postcss";
 import path, { extname, relative } from "path";
 import nodeResolve from "@rollup/plugin-node-resolve";
 
-export function createTailwindConfig(pkgPath: string): RollupOptions {
+export function createTailwindConfig(pkgPath: string, entry : string = "main.css"): RollupOptions {
   const plugins = [
     postcss({
       extract: true,
       modules: { generateScopedName },
       minimize: true,
+      plugins : [ 
+        require("cssnano")({
+          preset: 'default'
+        })
+      ]
     }),
   ];
   return {
-    input: "styles/main.css",
+    input: path.resolve(pkgPath, entry),
     output: {
       format: "es",
       file: path.resolve(pkgPath, "lib/main.css"),

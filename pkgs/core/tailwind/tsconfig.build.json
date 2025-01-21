@@ -4,8 +4,6 @@
         "./lib",
         "./esm",
         "./cjs",
-        "**/*.test.tsx",
-        "**/*.test.ts",
-        "**/*.story.tsx"
+        "./dist"
     ]
 }
