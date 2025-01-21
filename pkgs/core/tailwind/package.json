@@ -1,5 +1,5 @@
 {
-  "name": "@mugijs/tailwind-core",
+  "name": "@mugijs/tailwind",
   "version": "0.0.1",
   "main": "./cjs/main.js",
   "module": "./esm/main.mjs",
@@ -7,7 +7,7 @@
   "files": [
     "dist",
     "esm",
-    "cjs"
+    "cjstailtata"
   ],
   "exports": {
     "./types" : "./lib/main.d.ts",
@@ -24,10 +24,7 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@mugijs/shared-core": "*"
+    "@mugijs/typescript": "*"
   },
-  "peerDependencies": {},
-  "externals" : {
-    "./src/typings": ""
-  }
+  "peerDependencies": {}
 }

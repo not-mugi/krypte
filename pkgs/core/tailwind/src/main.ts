@@ -28,4 +28,4 @@ export type {
   Form, FormElement,
   /** Spacing */
   Spacing, SpacingMeasurements, AxisSpacingMeasurements, AxisSpacingNegativeMeasurements, MarginMeasurements, AxisMarginMeasurements, SideMarginMeasurements, LogicalMarginMeasurements, NegativeAxisMarginMeasurements, NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements, PaddingMeasurements, AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements,
-} from "@mugijs/shared-core";
+} from "@mugijs/typescript";
