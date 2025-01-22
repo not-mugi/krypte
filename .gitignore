@@ -132,6 +132,7 @@ dist
 cjs
 esm
 lib
+!pkgs/core/typescript/lib
 .tmp
 
 .lock

@@ -31,8 +31,8 @@ export function getPackageSourcePath(pkgPath: string) {
   return path.join(pkgPath, "src");
 }
 
-export function isCorePkg(pkgJson: { [key: string]: string }) {
-  return pkgJson?.name!.endsWith("core");
+export function isCorePkg(pkgJson: { [key: string]: string | boolean }) {
+  return pkgJson?.isCore === true;
 }
 
 export function isDtsPkg(pkgJson: { [key: string]: string }) {

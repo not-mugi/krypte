@@ -16,7 +16,7 @@
       "compilerOptions": {
         "baseUrl": "../",
         "paths": {
-          "@mugijs/shared-core": ["shared/**"]
+          "@mugijs/typescript": ["typescript/**"]
         }
       }
     }

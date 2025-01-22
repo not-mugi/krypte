@@ -5,7 +5,7 @@
     "declaration": true,
     "declarationDir": "lib",
     "types": ["node"],
-    "target": "ES2015",
+    "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -17,6 +17,9 @@
     "strict": true,
     "composite": true,
     "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@mugijs/typescript": ["../typescript/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["./lib", "./esm", "./cjs", "./.tmp", "./dist", "./node_modules"]
