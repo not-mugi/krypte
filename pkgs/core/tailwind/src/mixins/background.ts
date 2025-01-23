@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Background } from "../main";
 import { BackgroundMechanics, backgroundBlueprint } from "../getters/background";
 

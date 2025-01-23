@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Container } from "../main";
 import { ContainerMechanics, containerBlueprints, } from "../getters/container";
 

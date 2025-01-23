@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Spacing } from "../main";
 import { SpacingMechanics, spacingBlueprints  } from "../getters/spacing";
 

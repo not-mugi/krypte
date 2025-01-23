@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Layout } from "../main";
 import { LayoutMechanics, layoutBlueprint } from "../getters/layout";
 

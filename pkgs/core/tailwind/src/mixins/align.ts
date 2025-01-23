@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Alignment, Justification, ContentAlignment } from "../main";
 import {
   AlignmentMechanics, alignmentBlueprint, JustificationMechanics, 
