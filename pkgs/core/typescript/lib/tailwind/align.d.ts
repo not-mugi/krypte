@@ -1,4 +1,4 @@
-/** @alpha */ /** Box Justification */ 
+/** @alpha */
 export type MainJustification = "normal" | "start" | "end" | "center" | "between" | "around" | "evenly" | "stretch";
 /** @alpha */
 export type InlineJustification = Extract< MainJustification, "start" | "end" | "center" | "stretch">;
@@ -11,7 +11,7 @@ export type Justification = Partial<{
   selfInlineJustification: SelfInlineJustification;
 }>;
 
-/** @alpha */ /** Box Alignment */
+/** @alpha */
 export type MainAlignment = MainJustification | "baseline";
 /** @alpha */
 export type CrossAlignment = Exclude< MainAlignment, "normal" | "between" | "stretch" | "around" | "evenly">;
@@ -24,7 +24,7 @@ export type Alignment = Partial<{
   selfCrossAlignment: SelfCrossAlignment;
 }>;
 
-/** @alpha */ /** Content */
+/** @alpha */
 export type ContentPlacement = "center" | "start" | "end" | "between" | "around" | "evenly" | "stretch" | "baseline";
 /** @alpha */
 export type ContentItemsPlacement = Exclude<ContentPlacement, "between" | "around" | "evenly">;

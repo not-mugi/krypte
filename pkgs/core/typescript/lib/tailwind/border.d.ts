@@ -3,16 +3,16 @@ import { MeasurementScales } from "./sizing";
 import { Axis, Corners, Edges, LogicalCorners } from "./layout"
 import { Color } from "./color";
 
-/** @alpha */ /** Border Style */
+/** @alpha */
 export type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "hidden" | "none";
 
-/** @alpha */ /** Outline Style */
+/** @alpha */
 export type OutlineStyle = Exclude<BorderStyle, "hidden">
 
-/** @alpha */ /** Border Width */
+/** @alpha */
 export type BorderMeasurements = Extract<MeasurementScales, "none" | "sm" | "md" | "lg" | "xl">;
 
-/** @alpha */ /** Border Radius */
+/** @alpha */
 export type BorderRadiusMeasurements = BorderMeasurements | "xxl";
 /** @alpha */
 export type FullBorderRadiusMeasurements = BorderRadiusMeasurements | "full"
@@ -23,10 +23,10 @@ export type CornerBorderRadiusMeasurements = CSSClass<Corners, BorderRadiusMeasu
 /** @alpha */
 export type LogicalBorderRadiusMeasurements = CSSClass<LogicalCorners, BorderRadiusMeasurements>;
 
-/** @alpha */ /** Border Ring */
+/** @alpha */
 export type BorderRingMeasurements = BorderMeasurements | "inset";
 
-/** @alpha */ /** Border Radius */
+/** @alpha */
 export type Border = Partial<{
     style : BorderStyle,
     width : BorderMeasurements,
