@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Typography } from "../main";
 import { TypographyMechanics, typographyBlueprints  } from "../getters/typography";
 

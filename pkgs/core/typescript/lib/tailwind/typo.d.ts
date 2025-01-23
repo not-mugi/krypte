@@ -1,6 +1,6 @@
 import { Color } from "./color";
 
-/** Alignment /** @alpha */
+/** @alpha */
 export type TextVerticalAlign = "top" | "middle" | "bottom";
 /** @alpha */
 export type TextHorizontalAlign =
@@ -10,9 +10,9 @@ export type TextHorizontalAlign =
   | "justify"
   | "left"
   | "right";
-/** Measaurement /** @alpha */
+/** @alpha */
 export type TextMeasurementScales = "xs" | "sm" | "md" | "lg" | "xl" | "none";
-/** Line Height /** @alpha */
+/** @alpha */
 export type LineHeightScales = Exclude<TextMeasurementScales, "none">;
 /** @alpha */
 export type LineHeightRelativeScales =
@@ -26,7 +26,7 @@ export type LineHeightRelativeScales =
 export type LineHeightMeasurements =
   | LineHeightScales
   | LineHeightRelativeScales;
-/** Decoration /** @alpha */
+/** @alpha */
 export type TextDecoration =
   | "underline"
   | "overline"
@@ -62,7 +62,7 @@ export type TextWhitespace =
 export type TextWordBreak = "normal" | "words" | "all" | "keep";
 /** @alpha */
 export type TextHyphen = "none" | "manual" | "auto";
- /** Alignment /** @alpha */
+/** @alpha */
 export type Typography = Partial<{
   color: Color;
   align: TextHorizontalAlign;

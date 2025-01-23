@@ -2,13 +2,13 @@ import { Axis, Edges } from "./layout"
 import { CSSClass } from "./utility"
 import { MeasurementScales } from "./sizing"
 
-/** Spacing /** @alpha */
+/** @alpha */
 export type AxisSpacingMeasurements = CSSClass<Axis, MeasurementScales>
 /** @alpha */
 export type AxisSpacingNegativeMeasurements = CSSClass<'', AxisSpacingMeasurements>
-/** Spacing /** @alpha */
+/** @alpha */
 export type SpacingMeasurements = AxisSpacingMeasurements | AxisSpacingNegativeMeasurements
-/** Padding /** @alpha */
+/** @alpha */
 export type PaddingMeasurements = MeasurementScales
 /** @alpha */
 export type AxisPaddingMeasurements = CSSClass<Axis, PaddingMeasurements>
@@ -16,7 +16,7 @@ export type AxisPaddingMeasurements = CSSClass<Axis, PaddingMeasurements>
 export type SidePaddingMeasurements = CSSClass<Edges, PaddingMeasurements>
 /** @alpha */
 export type LogicalPaddingMeasurements = CSSClass<"start" | "end", PaddingMeasurements>
-/** @alpha */ /** Margin */
+/** @alpha */
 export type AxisMarginMeasurements = CSSClass<Axis, MeasurementScales>
 /** @alpha */
 export type SideMarginMeasurements = CSSClass<Edges, MeasurementScales>
@@ -30,7 +30,7 @@ export type NegativeSideMarginMeasurements = CSSClass<'', SideMarginMeasurements
 export type NegativeLogicalMarginMeasurements = CSSClass<'', LogicalMarginMeasurements>
 /** @alpha */
 export type MarginMeasurements = AxisMarginMeasurements | SideMarginMeasurements | LogicalMarginMeasurements | NegativeAxisMarginMeasurements | NegativeSideMarginMeasurements | NegativeLogicalMarginMeasurements
-/** @alpha */ /** Gap(F/G) */
+/** @alpha */
 export type GuttersGap = MeasurementScales
-/** @alpha */ /** Spacing */ 
+/** @alpha */
 export type Spacing = Partial<{ spacing: SpacingMeasurements, margin: MarginMeasurements, padding: PaddingMeasurements }>

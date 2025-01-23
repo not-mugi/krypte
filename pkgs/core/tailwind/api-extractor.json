@@ -1,6 +1,6 @@
 {
   "mainEntryPointFilePath": "lib/main.d.ts",
-  "bundledPackages": ["@mugijs/shared-core"],
+  "bundledPackages": ["@mugijs/typescript"],
   "apiReport": {
     "enabled": false
   },

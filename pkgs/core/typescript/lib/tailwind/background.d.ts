@@ -18,11 +18,11 @@ export type BackgroundSize = "auto" | "cover" | "contain"
 export type BackgroundGradient = CSSClass<"gradient", Exclude<BackgroundPosition, "center">> | "none"
 /** @alpha */
 export type Background = Partial<{
-    attachment: BackgroundAttachment,
-    clip: BackgroundClip,
-    origin: BackgroundOrigin,
-    position: BackgroundPosition,
-    repeat: BackgroundRepeat,
-    size: BackgroundSize,
-    gradient: BackgroundGradient
+    backgroundAttachment: BackgroundAttachment,
+    backgroundClip: BackgroundClip,
+    backgroundOrigin: BackgroundOrigin,
+    backgroundPosition: BackgroundPosition,
+    backgroundRepeat: BackgroundRepeat,
+    backgroundSize: BackgroundSize,
+    backgroundGradient: BackgroundGradient
 }>

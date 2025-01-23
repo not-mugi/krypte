@@ -1,4 +1,4 @@
-import { Quark } from "../main";
+import { Quark } from "../quark";
 import type { Constructor, Border } from "../main";
 import { BorderMechanics, borderBlueprint } from "../getters/border";
 
