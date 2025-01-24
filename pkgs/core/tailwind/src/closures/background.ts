@@ -27,11 +27,10 @@ export type BackgroundSetters = {
 
 /** 
  * @alpha
- * @example
  * ```
- *    const { setters : { setBackgroundAttachment, ...}, { exchange }} = BackgroundFlavor({})
- *    setBackgroundAttachment("fixed")
- *    const twcss = exchange() // "bg-fixed"
+ *  const { setters : { setBackgroundAttachment, ...}, { exchange }} = BackgroundFlavor({})
+ *  setBackgroundAttachment("fixed")
+ *  const twcss = exchange() // "bg-fixed"
  * ```
  */
 export const BackgroundFlavor = ( background: Background = {}): Flavor<BackgroundSetters> => {

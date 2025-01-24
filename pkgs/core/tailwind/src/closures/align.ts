@@ -13,13 +13,12 @@ export type AlignmentSetters = {
 }
 
 /**
- * @example
- * ```
- *    const { setters : { setMainAlignment, ...}, { exchange }} = BackgroundFlavor({})
- *    setMainAlignment("center")
- *    const twcss = exchange() // "content-center"
- * ```
  * @alpha
+ * ```
+ *  const { setters : { setMainAlignment, ...}, { exchange }} = AlignmentFlavor({})
+ *  setMainAlignment("center")
+ *  const twcss = exchange() // "content-center"
+ * ```
  */
 export const AlignmentFlavor = ( alignment : Alignment = {} ) : Flavor<AlignmentSetters> => {
 
