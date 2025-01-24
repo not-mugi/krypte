@@ -20,7 +20,7 @@
         "default": "./cjs/main.cjs"
       }
     },
-    "./types" : "./lib/bundle.d.ts",
+    "./types" : "./dist/bundle.d.ts",
     "./mixins": {
       "import": {
         "types": "./lib/mixins/exports.d.ts",
