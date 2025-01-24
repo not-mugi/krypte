@@ -1,5 +1,18 @@
-import { BackgroundFlavor, AlignmentFlavor  } from "@mugijs/tailwind"
+import type { Alignment, Background } from "@mugijs/tailwind/types";
+import {
+  BackgroundFlavor,
+  AlignmentFlavor,
+  CreateComposite,
+} from "@mugijs/tailwind";
 
-const a = AlignmentFlavor({ mainAlignment : "around" })
-a.setters.setCrossAlignment("center")
-a.exchange() // outputs "content-center"
+export type UpQuarkProps = {
+  alignment: Alignment;
+  background: Background;
+};
+
+export const UpQuark = ({ alignment, background }: UpQuarkProps) => {
+  const align = AlignmentFlavor(alignment);
+  const bg = BackgroundFlavor(background);
+  const composite = CreateComposite(align, bg);
+  return composite.exchange();
+};
