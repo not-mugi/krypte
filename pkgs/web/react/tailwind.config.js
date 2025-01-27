@@ -2,7 +2,7 @@ import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pkgs/core/tailwind/**/*.ts"],
+  content: ["./pkgs/core/tw/src/**/*.ts"],
   darkMode: "class",
   theme: {
     extend: {

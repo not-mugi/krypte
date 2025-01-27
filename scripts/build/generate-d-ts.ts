@@ -7,7 +7,12 @@ export async function generateCoreDts(pkgPath: string) {
     usePowerShell();
   }
   const extractorPath = path.resolve(pkgPath, apiExtractor);
-  await $`yarn api-extractor run --local --config ${extractorPath}`;
+  try {
+    await $`yarn api-extractor run --local --config ${extractorPath}`;
+  } catch (error) {
+    console.log(error) 
+    process.exit(1)
+  }
 }
 
 export async function generateDts(pkgPath: string) {
@@ -16,5 +21,10 @@ export async function generateDts(pkgPath: string) {
     usePowerShell();
   }
   const tsconfig = path.resolve(pkgPath, tsBuild);
-  await $`yarn tsc -p ${tsconfig}`;
+  try {
+    await $`yarn tsc -p ${tsconfig}`;
+  } catch (error) {
+    console.log(error)
+    process.exit(1)
+  }
 }
