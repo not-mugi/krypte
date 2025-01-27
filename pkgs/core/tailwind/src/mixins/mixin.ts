@@ -1,31 +1,25 @@
-/** @alpha */
+/** @beta */
 export type Quirk = { [k: string]: QuirkFlavor };
-/** @alpha */
+/** @beta */
 export type QuirkFlavor = { [name: string]: string | QuirkFlavor };
-/** @alpha */
+/** @beta */
 export type GetterFunctions<Qi> = { [N in keyof Qi]: (value?: any) => string };
-/** @alpha */
+/** @beta */
 export type QuirkInteractions<EF> = { [name: string]: GetterFunctions<EF> };
 
-/** @alpha */
+/** @beta */
 export class Quark {
-  /** @alpha */
-  #quirks: Quirk = {};
-  /** @alpha */
-  #interactions: QuirkInteractions<Quirk> = {};
-  /** @alpha */
-  get quirks(): Quirk {
-    return this.#quirks;
-  }
-  /** @alpha */
-  get interactions(): QuirkInteractions<{}> {
-    return this.#interactions;
-  }
-  /** @alpha */
+  /** @beta */
+  quirks: Quirk = {};
+  /** @beta */
+  interactions: QuirkInteractions<Quirk> = {};
+  /** @beta */
+  
+  /** @beta */
   addquirk(fn : string, flavor : QuirkFlavor) {
-    this.#quirks = { ...this.#quirks, [fn] : flavor }
+    this.quirks = { ...this.quirks, [fn] : flavor }
   }
-  /** @alpha */
+  /** @beta */
   exchange(): string {
     return Object.entries(this.quirks)
     .map(([property, flavors]) => {

@@ -1,9 +1,9 @@
-import { Quark } from "../quark";
+import { Quark } from "./mixin";
 import type { Constructor, Border } from "../main";
 import { BorderMechanics, borderBlueprint } from "../getters/border";
 
 /** ---- border flavor ----- */
-/** @alpha */
+/** @beta */
 export const BorderFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {

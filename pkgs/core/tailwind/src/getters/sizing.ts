@@ -50,7 +50,7 @@ export const getHeightClass = (extent?: HeightMeasurements) => {
 };
 
 /** @alpha */
-export const getDimensionClasses = (dimension?: DimensionMeasurements) => {
+export const getDimensionClass = (dimension?: DimensionMeasurements) => {
   if (!dimension) return;
   const { width, height } = dimension;
   return `${getWidthClass(width)} ${getHeightClass(height)}`;
@@ -64,5 +64,5 @@ export const SizingMechanics = {
   size: getSizeClass,
   width: getWidthClass,
   height: getHeightClass,
-  dimensions: getDimensionClasses,
+  dimensions: getDimensionClass,
 };

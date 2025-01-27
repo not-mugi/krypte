@@ -1,9 +1,9 @@
-import { Quark } from "../quark";
+import { Quark } from "./mixin";
 import type { Constructor, Sizing } from "../main";
 import { SizingMechanics, sizingBlueprints } from "../getters/sizing";
 
 /** ---- size flavor ---- */
-/** @alpha */
+/** @beta */
 export const SizingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {

@@ -1,4 +1,4 @@
-import { Quark } from "../quark";
+import { Quark } from "./mixin";
 import type { Constructor, Alignment, Justification, ContentAlignment } from "../main";
 import {
   AlignmentMechanics, alignmentBlueprint, JustificationMechanics, 
@@ -6,7 +6,7 @@ import {
 } from "../getters/align";
 
 /** ---- alignment flavor ---- */
-/** @alpha */
+/** @beta */
 export const AlignFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {

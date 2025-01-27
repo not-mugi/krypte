@@ -1,3 +1,10 @@
+export const COLOR_STRENGTH_MAP = {
+  "slim" : "400",
+  "regular" : "300",
+  "bold" : "500",
+  "heavy" : "700",
+}
+
 export const COLOR_MAP  = {
   "mugi" : "text-mugi-400",
   "hat" : "text-hat-400",

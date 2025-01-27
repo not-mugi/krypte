@@ -1,4 +1,4 @@
-export * from "./closures/lib"
+export * from "./closures/exports"
 
 /** @alpha */ 
 export type {
@@ -63,4 +63,4 @@ export type {
 export type Exchange = () => string;
 
 /** @alpha */
-export interface Flavor<S> { exchange: Exchange, setters : S }
+export interface Flavor { exchange: Exchange }

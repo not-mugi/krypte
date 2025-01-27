@@ -1,9 +1,9 @@
-import { Quark } from "../quark";
+import { Quark } from "./mixin";
 import type { Constructor, Spacing } from "../main";
 import { SpacingMechanics, spacingBlueprints  } from "../getters/spacing";
 
 /** ---- spacing flavor ---- */
-/** @alpha */
+/** @beta */
 export const SpacingFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {

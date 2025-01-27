@@ -1,9 +1,9 @@
-import { Quark } from "../quark";
+import { Quark } from "./mixin";
 import type { Constructor, Form } from "../main";
 import { FormMechanics, formBlueprint } from "../getters/form";
 
 /** ---- form flavor ---- */
-/** @alpha */
+/** @beta */
 export const FormFlavor = <Q extends Constructor<Quark>>(Quark: Q) => {
   return class extends Quark {
     constructor(...args: any[]) {

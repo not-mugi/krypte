@@ -8,7 +8,8 @@ import { Exchange, Flavor } from "../main";
  *  const twcss = exchange() // "content-around bg-origin-content"
  * ```
  */
-export const CreateComposite = <Q extends Flavor<any>[]>(...args: Q) => {
+export const CreateComposite = <Q extends Flavor[]>(...args: Q) => {
+
   const reduced = args.reduce(
     (acc, curr) => {
       const { exchange } = curr;
@@ -17,6 +18,8 @@ export const CreateComposite = <Q extends Flavor<any>[]>(...args: Q) => {
     },
     { functions: [] as Exchange[], exchange : () => {} }
   );
+
   reduced.exchange = () => reduced.functions.map((f) => f()).join(" ").trim();
+  
   return reduced;
 };
