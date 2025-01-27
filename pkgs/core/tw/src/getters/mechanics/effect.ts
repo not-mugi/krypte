@@ -1,5 +1,8 @@
-import { Effect, BlendMode, OpacityMeasurements, ShadowMeasurements } from "@mugijs/typescript";
-import { BACKGROUND_BLEND_MODE_MAP, MIX_BLEND_MODE_MAP, OPACITY_MAP, SHADOW_MAP } from "../../classes/effect";
+import { Effect, BlendMode, OpacityMeasurements, ShadowMeasurements } from "../../main";
+import { 
+    OPACITY_MAP, SHADOW_MAP,
+    BACKGROUND_BLEND_MODE_MAP, MIX_BLEND_MODE_MAP,
+} from "../../classes/effect";
 
 export const getShadowClass = (shadow? : ShadowMeasurements) => 
     shadow && shadow in SHADOW_MAP 

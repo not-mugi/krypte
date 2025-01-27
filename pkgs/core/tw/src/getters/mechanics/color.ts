@@ -1,5 +1,9 @@
 import { Colors } from "../../main";
-import { BACKGROUND_COLOR_MAP, BORDER_COLOR_MAP, COLOR_MAP, DECORATION_COLOR_MAP, OUTLINE_COLOR_MAP, RING_COLOR_MAP, SHADOW_COLOR_MAP } from "../../classes/color";
+import { 
+  COLOR_MAP, BACKGROUND_COLOR_MAP, 
+  BORDER_COLOR_MAP, DECORATION_COLOR_MAP, 
+  OUTLINE_COLOR_MAP, RING_COLOR_MAP, SHADOW_COLOR_MAP 
+} from "../../classes/color";
 
 /** @alpha */
 export const getTextColorClass = (color?: Colors) =>

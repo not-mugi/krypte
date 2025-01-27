@@ -1,6 +1,6 @@
 {
   "mainEntryPointFilePath": "lib/main.d.ts",
-  "bundledPackages": ["@mugijs/typescript"],
+  "bundledPackages": ["@mugijs/ts"],
   "apiReport": {
     "enabled": false
   },
@@ -16,7 +16,8 @@
       "compilerOptions": {
         "baseUrl": "../",
         "paths": {
-          "@mugijs/typescript": ["typescript/**"]
+          "@mugijs/ts/vanila": ["ts/lib/js/index.d.ts"],
+          "@mugijs/ts/tailwindcss": ["ts/lib/twcss/index.d.ts"]
         }
       }
     }

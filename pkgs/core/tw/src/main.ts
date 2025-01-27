@@ -1,9 +1,12 @@
-export * from "./closures/exports"
+export * from "./closures"
+
+/** @alpha */
+export type { Constructor } from "@mugijs/ts/vanila"
 
 /** @alpha */ 
 export type {
   /** utils */
-  Constructor, Keyof, CSSClass,
+  Keyof, CSSClass,
 
   /** alignment */
   Alignment, Justification, ContentAlignment, 
@@ -57,7 +60,7 @@ export type {
   LineHeightRelativeScales, TextDecoration, TextStyleMeasurementScales, 
   TextTransform, TextOverflow, TextWrap, 
   TextWhitespace, TextWordBreak, TextHyphen,
-} from "@mugijs/typescript";
+} from "@mugijs/ts/tailwindcss";
 
 /** @alpha */
 export type Exchange = () => string;

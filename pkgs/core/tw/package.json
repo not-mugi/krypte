@@ -1,5 +1,5 @@
 {
-  "name": "@mugijs/tailwind",
+  "name": "@mugijs/tw",
   "version": "0.0.1",
   "main": "./cjs/main.js",
   "module": "./esm/main.mjs",
@@ -23,19 +23,19 @@
     "./types" : "./dist/bundle.d.ts",
     "./mixins": {
       "import": {
-        "types": "./lib/mixins/exports.d.ts",
-        "default": "./esm/mixins/exports.mjs"
+        "types": "./lib/mixins/index.d.ts",
+        "default": "./esm/mixins/index.mjs"
       },
       "require": {
-        "types": "./lib/mixins/exports.d.ts",
-        "default": "./cjs/mixins/main.cjs"
+        "types": "./lib/mixins/index.d.ts",
+        "default": "./cjs/mixins/index.cjs"
       }
     }
   },
   "isCore" : true,
   "license": "Apache-2.0",
   "devDependencies": {
-    "@mugijs/typescript": "*"
+    "@mugijs/ts": "*"
   },
   "peerDependencies": {}
 }

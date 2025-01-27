@@ -2,7 +2,7 @@ import {
     BackgroundRepeat, BackgroundSize,
     Background, BackgroundAttachment, BackgroundClip, 
     BackgroundGradient, BackgroundOrigin, BackgroundPosition, 
-} from "@mugijs/typescript";
+} from "../../main";
 import { 
     BACKGROUND_POSITION_MAP, 
     BACKGROUND_REPEAT_MAP, BACKGROUND_SIZE_MAP,

@@ -8,7 +8,7 @@
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "resolveJsonModule": true,
@@ -18,7 +18,7 @@
     "composite": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@mugijs/typescript": ["../typescript/*"]
+      "@mugijs/ts": ["../ts/*"]
     }
   },
   "include": ["src"],

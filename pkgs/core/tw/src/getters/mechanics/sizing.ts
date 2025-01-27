@@ -1,12 +1,7 @@
 import type {
-  MeasurementScales,
-  MeasurementRatios,
-  SizeMeasurements,
-  DimensionMeasurements,
-  WidthMeasurements,
-  HeightMeasurements,
-  HeightMeasurementRatios,
-  Sizing,
+  Sizing, MeasurementScales,
+  HeightMeasurementRatios, MeasurementRatios, SizeMeasurements,
+  DimensionMeasurements, WidthMeasurements, HeightMeasurements,
 } from "../../main";
 import {
   FIXED_SIZE_MAP,
