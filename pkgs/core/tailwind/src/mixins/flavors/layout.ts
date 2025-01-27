@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Layout } from "../main";
-import { LayoutMechanics, layoutBlueprint } from "../getters/layout";
+import type { Constructor, Layout } from "../../main";
+import { LayoutMechanics, layoutBlueprint } from "../../getters/mechanics/layout";
 
 /** ---- layout flavor ---- */
 /** @beta */

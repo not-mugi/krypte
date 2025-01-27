@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Typography } from "../main";
-import { TypographyMechanics, typographyBlueprints  } from "../getters/typography";
+import type { Constructor, Typography } from "../../main";
+import { TypographyMechanics, typographyBlueprints  } from "../../getters/mechanics/typography";
 
 /** ---- typography flavor ---- */
 /** @beta */

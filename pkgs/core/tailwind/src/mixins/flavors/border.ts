@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Border } from "../main";
-import { BorderMechanics, borderBlueprint } from "../getters/border";
+import type { Constructor, Border } from "../../main";
+import { BorderMechanics, borderBlueprint } from "../../getters/mechanics/border";
 
 /** ---- border flavor ----- */
 /** @beta */

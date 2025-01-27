@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Effect } from "../main";
-import { EffectMechanics, effectBlueprint } from "../getters/effect";
+import type { Constructor, Effect } from "../../main";
+import { EffectMechanics, effectBlueprint } from "../../getters/mechanics/effect";
 
 /** ---- effect flavor ----- */
 /** @beta */

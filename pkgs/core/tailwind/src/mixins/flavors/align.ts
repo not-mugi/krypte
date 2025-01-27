@@ -1,9 +1,9 @@
 import { Quark } from "./mixin";
-import type { Constructor, Alignment, Justification, ContentAlignment } from "../main";
+import type { Constructor, Alignment, Justification, ContentAlignment } from "../../main";
 import {
   AlignmentMechanics, alignmentBlueprint, JustificationMechanics, 
   justificationBlueprint, ContentAlignmentMechanics, contentAlignmentBlueprint
-} from "../getters/align";
+} from "../../getters/mechanics/align";
 
 /** ---- alignment flavor ---- */
 /** @beta */

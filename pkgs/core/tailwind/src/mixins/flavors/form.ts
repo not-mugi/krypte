@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Form } from "../main";
-import { FormMechanics, formBlueprint } from "../getters/form";
+import type { Constructor, Form } from "../../main";
+import { FormMechanics, formBlueprint } from "../../getters/mechanics/form";
 
 /** ---- form flavor ---- */
 /** @beta */

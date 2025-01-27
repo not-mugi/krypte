@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Container } from "../main";
-import { ContainerMechanics, containerBlueprints, } from "../getters/container";
+import type { Constructor, Container } from "../../main";
+import { ContainerMechanics, containerBlueprints, } from "../../getters/mechanics/container";
 
 /** ---- container flavor ---- */
 /** @beta */

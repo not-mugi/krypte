@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Color } from "../main";
-import { ColorMechanics, colorBlueprint, } from "../getters/color";
+import type { Constructor, Color } from "../../main";
+import { ColorMechanics } from "../../getters/mechanics/color";
 
 /** ---- color flavor ---- */
 /** @beta */
@@ -9,7 +9,7 @@ export const ColorFlavor = <Q extends Constructor<Quark>>(BaseQuark: Q) => {
     constructor(...args: any[]) {
       const flavors = {
         ...args[0],
-        color: args[0]?.["color"] ?? colorBlueprint(),
+        color: args[0]?.["color"] ?? {},
       };
       const exchangeMechs = {
         ...args[1],

@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Background } from "../main";
-import { BackgroundMechanics, backgroundBlueprint } from "../getters/background";
+import type { Constructor, Background } from "../../main";
+import { BackgroundMechanics, backgroundBlueprint } from "../../getters/mechanics/background";
 
 /** ---- background flavor ----- */
 /** @beta */

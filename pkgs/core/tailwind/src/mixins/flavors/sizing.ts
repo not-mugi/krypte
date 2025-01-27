@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Sizing } from "../main";
-import { SizingMechanics, sizingBlueprints } from "../getters/sizing";
+import type { Constructor, Sizing } from "../../main";
+import { SizingMechanics, sizingBlueprints } from "../../getters/mechanics/sizing";
 
 /** ---- size flavor ---- */
 /** @beta */

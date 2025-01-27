@@ -1,6 +1,6 @@
 import { Quark } from "./mixin";
-import type { Constructor, Spacing } from "../main";
-import { SpacingMechanics, spacingBlueprints  } from "../getters/spacing";
+import type { Constructor, Spacing } from "../../main";
+import { SpacingMechanics, spacingBlueprints  } from "../../getters/mechanics/spacing";
 
 /** ---- spacing flavor ---- */
 /** @beta */
