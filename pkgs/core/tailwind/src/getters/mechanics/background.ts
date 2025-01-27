@@ -8,7 +8,7 @@ import {
     BACKGROUND_REPEAT_MAP, BACKGROUND_SIZE_MAP,
     BACKGROUND_ATTACTMENT_MAP, BACKGROUND_CLIP_MAP, 
     BACKGROUND_GRADIENT_MAP, BACKGROUND_ORIGIN_MAP, 
-} from "../classes/background";
+} from "../../classes/background";
 
 export const getBackgroundAttachmentClass = (attachment? : BackgroundAttachment) => 
     attachment && attachment in BACKGROUND_ATTACTMENT_MAP

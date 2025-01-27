@@ -4,14 +4,14 @@ import type {
   TextMeasurementScales, TextStyleMeasurementScales,
   LineHeightMeasurements, LineHeightScales, LineHeightRelativeScales,
   TextDecoration, TextTransform, TextOverflow, TextWrap, TextWhitespace,
-} from "../main";
+} from "../../main";
 import {
   TEXT_WHITESPACE_MAP, TEXT_LINE_CLAMP_MAP, 
   TEXT_UNDERLINE_OFFSET_MAP, FIXED_LINE_HEIGHT_MAP,
   RELATIVE_LINE_HEIGHT_MAP, TEXT_HORIZONTAL_ALIGN_MAP, 
   TEXT_VERTICAL_ALIGN_MAP, TEXT_DECORATION_MAP, TEXT_DECORATION_THINKNESS_MAP, 
   TEXT_WORD_BREAK_MAP, TEXT_WRAP_MAP, TEXT_HYPHENS_MAP, TEXT_OVERFLOW_MAP, TEXT_TRANSFORM_MAP,
-} from "../classes/typography";
+} from "../../classes/typography";
 import { getTextColorClass, getTextDecorationColorClass } from "./color";
 
 /** @alpha */

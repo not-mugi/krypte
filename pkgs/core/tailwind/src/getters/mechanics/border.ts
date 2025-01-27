@@ -4,14 +4,14 @@ import {
     BorderMeasurements, BorderRingMeasurements, 
     CornerBorderRadiusMeasurements, FullBorderRadiusMeasurements, 
     LogicalBorderRadiusMeasurements, SideBorderRadiusMeasurements, 
-} from "../main";
+} from "../../main";
 import { 
   BORDER_RING_WIDTH_MAP, BORDER_RING_OFFSET_MAP,
   BORDER_WIDTH_MAP, BORDER_STYLE_MAP, FULL_BORDER_RADIUS_MAP,
   BORDER_OUTLINE_STYLE_MAP, BORDER_OUTLINE_WIDTH_MAP, BORDER_OUTLINE_OFFSET_MAP,
   CORNER_BORDER_RADIUS_MAP, SIDE_BORDER_RADIUS_MAP, LOGICAL_CORNER_BORDER_RADIUS_MAP,
   BORDER_DIVIDER_REVERSE_MAP, BORDER_INLINE_DIVIDER_WIDTH_MAP, BORDER_CROSS_DIVIDER_WIDTH_MAP, 
-} from "../classes/border";
+} from "../../classes/border";
 import { getBorderColorClass, getBorderOutlineColorClass, getBorderRingColorClass } from "./color";
 
 /** @alpha */

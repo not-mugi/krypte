@@ -4,13 +4,13 @@ import type {
   SideMarginMeasurements, LogicalMarginMeasurements, NegativeAxisMarginMeasurements,
   NegativeSideMarginMeasurements, NegativeLogicalMarginMeasurements, PaddingMeasurements,
   AxisPaddingMeasurements, SidePaddingMeasurements, LogicalPaddingMeasurements, Spacing,
-} from "../main";
+} from "../../main";
 import {
   FIXED_SPACING_MAP, NEGATIVE_FIXED_SPACING_MAP, FIXED_MARGIN_MAP,
   FIXED_AXIS_MARGIN_MAP, FIXED_SIDES_MARGIN_MAP, FIXED_LOGICAL_MARGIN_MAP,
   NEGATIVE_FIXED_AXIS_MARGIN_MAP, NEGATIVE_FIXED_SIDES_MARGIN_MAP, NEGATIVE_FIXED_LOGICAL_MARGIN_MAP,
   FIXED_PADDING_MAP, FIXED_AXIS_PADDING_MAP, FIXED_SIDES_PADDING_MAP, FIXED_LOGICAL_PADDING_MAP,
-} from "../classes/spacing";
+} from "../../classes/spacing";
 
 /** @alpha */
 export const getSpacingClass = (spacing?: SpacingMeasurements) => {

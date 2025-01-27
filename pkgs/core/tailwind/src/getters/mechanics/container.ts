@@ -1,5 +1,5 @@
-import type { Container, Display, BoxSizing } from "../main";
-import { BOX_SIZING_MAP, BOX_DISPLAY_MAP } from "../classes/container";
+import type { Container, Display, BoxSizing } from "../../main";
+import { BOX_SIZING_MAP, BOX_DISPLAY_MAP } from "../../classes/container";
 
 /** @alpha */
 export const getBoxSizingClass = (boxSizing?: BoxSizing) =>

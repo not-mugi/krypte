@@ -2,12 +2,12 @@ import type {
   Layout, ContentClear, ContentFloat, 
   Overflow, Overscroll, Visibility, Stackorder, 
   Position, SidesPlacement, LogicalPlacement, ObjectFit, ObjectPosition
-} from "../main";
+} from "../../main";
 import { 
   OBJECT_FIT_MAP, OBJECT_POSITION_MAP, CONTENT_CLEAR_MAP, 
   CONTENT_FLOAT_MAP, OVERFLOW_MAP, OVERSCROLL_MAP, VISIBILITY_MAP, STACK_ORDER_MAP, 
   CONTENT_POSITION_MAP, SIDE_PLACEMENT_SCALE_MAP, LOGICAL_PLACEMENT_SCALE_MAP
-} from "../classes/layout";
+} from "../../classes/layout";
 
 /** @alpha */
 export const getContentClearClass = (clear?: ContentClear) => 

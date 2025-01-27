@@ -1,5 +1,5 @@
-import { Form, FormElement } from "../main";
-import { FORM_ELEMENT_MAP } from "../classes/form";
+import { Form, FormElement } from "../../main";
+import { FORM_ELEMENT_MAP } from "../../classes/form";
 
 /** @alpha */
 export const getFormElementClass = (element?: FormElement) =>

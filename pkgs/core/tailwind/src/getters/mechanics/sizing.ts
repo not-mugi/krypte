@@ -7,7 +7,7 @@ import type {
   HeightMeasurements,
   HeightMeasurementRatios,
   Sizing,
-} from "../main";
+} from "../../main";
 import {
   FIXED_SIZE_MAP,
   FIXED_HEIGHT_MAP,
@@ -15,7 +15,7 @@ import {
   PERCENTAGE_SIZE_MAP,
   PERCENTAGE_HEIGHT_MAP,
   PERCENTAGE_WIDTH_MAP,
-} from "../classes/sizing";
+} from "../../classes/sizing";
 
 /** @alpha */
 export const getSizeClass = (extent?: SizeMeasurements) => {
