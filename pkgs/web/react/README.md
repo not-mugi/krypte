@@ -16,7 +16,7 @@ This document will guide you through the structure of the project **Krypte React
 ```
 
 ## 🌌 quarks to be defined 
-- Up(visible properties) - color, effects, background
+- Up(visible properties) - color, effects
 - Down(structure) - container, spacing, sizing
 - Charm(decorative) - border, typo, transitions & animations
 - Strange(interactive) - cursor, hover/focus/active/..., user-select, form

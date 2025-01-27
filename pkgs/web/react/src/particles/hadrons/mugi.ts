@@ -1,29 +1,26 @@
-import { CreateComposite, Flavor } from '@mugijs/tailwind';
 import { JSX, HTMLProps, createElement } from 'react'
 
-export type Hadron = HTMLProps<HTMLElement> & { flavor?: Flavor | Flavor[] };
+export type Mugi = HTMLProps<HTMLElement> & { quarks?: string | string[] };
 
-export type HadronSignature = { [component: string]: ( props?: Hadron,) => JSX.Element }
+export type MugiSignature = { [component: string]: ( props?: Mugi ) => JSX.Element }
 
-export const mugi : HadronSignature = new Proxy(
-  {},
-  {
-    get(_, prop: string) {
-      return (p = {} as Hadron) => {
-        let { flavor, ...props } = p
-
-        let css = " ";
-        if (Array.isArray(flavor)) {
-            const cps = CreateComposite(...flavor)
-            css += cps.exchange();
-        } else if (flavor) {
-            css += flavor?.exchange();
-        }
-
-        props.className = (props.className || "" + css).trim();
-
-        return createElement(prop, props, props.children);
-      };
-    },
+export const mugi : MugiSignature = new Proxy({}, {
+  get(_, component : string) {
+    return (p = {} as Mugi) => {
+      let css = ""
+      let { quarks, ...props } = p
+      if (Array.isArray(quarks)){
+        css += quarks.join(" ").trim()
+      }
+      else if(typeof quarks === "string"){
+        css += quarks.trim()
+      }
+      props.className = (props.className || "" + css).trim();
+      return createElement(component, props, props?.children);
+    }
   }
-);
+})
+
+export function createMugiElement( component: string ) {
+  return (props: Mugi) => mugi[component](props)
+}
