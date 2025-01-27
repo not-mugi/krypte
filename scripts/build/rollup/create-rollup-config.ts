@@ -14,6 +14,10 @@ export function createTailwindConfig(pkgPath: string, entry : string = "main.css
       modules: { generateScopedName },
       minimize: true,
       plugins : [ 
+        require("tailwindcss")({
+          config : path.resolve(pkgPath, "tailwind.config.js")
+        }),
+        require("autoprefixer"),
         require("cssnano")({
           preset: 'default'
         })
@@ -44,7 +48,7 @@ export function createConfig(
   ];
 
   return {
-    external: externals,
+    external: ['react/jsx-runtime', 'react'],
     input: Object.fromEntries(
       globSync(`${input}/**/*.{ts,tsx}`, { ignore: [] }).map((file) => [
         relative(input, file.slice(0, file.length - extname(file).length)),
