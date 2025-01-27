@@ -4,12 +4,14 @@ function App() {
   return (
     <div className={"mugi"}>
       <Block
-        component="section"
-        className="mugi:bg-mugi-200"
-        boxConfig={{
-          display: "flex",
-          content: "content",
-          justification: "center",
+        component="button"
+        color={{
+          color : "emerald",
+          background : "rose"
+        }}
+        sizing={{
+          width : "1/2",
+          height : "xs"
         }}
       >
         Hello world
