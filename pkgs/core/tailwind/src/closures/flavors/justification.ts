@@ -1,9 +1,9 @@
-import type { Flavor, Justification  } from "../main";
+import type { Flavor, Justification  } from "../../main";
 import { 
   getMainJustificationClass as gm, 
   getInlineJustificationClass as gi, 
   getSelfInlineJustificationClass as gsi 
-} from "../getters/align";
+} from "../../getters/mechanics/align";
 
 /**
  * @alpha

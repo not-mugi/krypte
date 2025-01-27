@@ -1,8 +1,8 @@
-import type { Flavor, Container } from "../main";
+import type { Flavor, Container } from "../../main";
 import { 
     getBoxDisplayClass as gbd,
     getBoxSizingClass as gbs
-} from "../getters/container";
+} from "../../getters/mechanics/container";
 
 /**
  * @alpha

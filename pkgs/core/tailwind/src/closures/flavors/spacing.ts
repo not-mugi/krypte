@@ -1,9 +1,9 @@
-import type { Flavor, Spacing } from "../main";
+import type { Flavor, Spacing } from "../../main";
 import { 
     getMarginClass as gmc,
     getPaddingClass as gpc,
     getSpacingClass as gsc,
-} from "../getters/spacing";
+} from "../../getters/mechanics/spacing";
 
 /**
  * @alpha

@@ -1,9 +1,9 @@
-import type { Flavor, ContentAlignment } from "../main";
+import type { Flavor, ContentAlignment } from "../../main";
 import { 
   getContentPlacementClass as gcp,
   getContentItemsPlacementClass as gci,
   getContentSelfPlacementClass as gcs 
-} from "../getters/align";
+} from "../../getters/mechanics/align";
 
 /**
  * @alpha

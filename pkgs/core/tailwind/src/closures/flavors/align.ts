@@ -1,9 +1,9 @@
-import type { Flavor, Alignment } from "../main";
+import type { Flavor, Alignment } from "../../main";
 import { 
   getMainAlignmentClass as gm, 
   getCrossAlignmentClass as gc, 
   getSelfCrossAlignmentClass as gsc 
-} from "../getters/align";
+} from "../../getters/mechanics/align";
 
 /**
  * @alpha

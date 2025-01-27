@@ -1,10 +1,10 @@
-import type { Flavor, Sizing } from "../main";
+import type { Flavor, Sizing } from "../../main";
 import { 
     getSizeClass as gsc,
     getWidthClass as gwc,
     getHeightClass as ghc,
     getDimensionClass as gdc,
-} from "../getters/sizing";
+} from "../../getters/mechanics/sizing";
 
 /**
  * @alpha

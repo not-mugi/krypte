@@ -1,4 +1,4 @@
-import type { Flavor, Background } from "../main";
+import type { Flavor, Background } from "../../main";
 import {
   getBackgroundAttachmentClass as gba,
   getBackgroundClipClass as gbc,
@@ -7,7 +7,7 @@ import {
   getBackgroundRepeatClass as gbr,
   getBackgroundSizeClass as gbs,
   getBackgroundGradientClass as gbg,
-} from "../getters/background";
+} from "../../getters/mechanics/background";
 
 /** 
  * @alpha
