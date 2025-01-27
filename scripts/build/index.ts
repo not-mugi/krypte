@@ -24,14 +24,9 @@ yargs(hideBin(process.argv))
     type: "string",
     describe: "package name to build",
     choices: [
-      "all",
-      "core",
-      "core/react",
-      "core/tailwind",
-      "core/shared",
-      "web",
+      "core/tw",
+      "core/ts",
       "web/react",
-      "ami-mugi",
     ],
     demandOption: true,
   })
