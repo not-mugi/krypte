@@ -1,4 +1,6 @@
+import { JSX, ReactNode } from 'react'
+
 export interface Atom {
-    component : keyof React.JSX.IntrinsicElements,
-    children? : React.ReactNode | React.ReactNode[],
+    component : keyof JSX.IntrinsicElements,
+    children? : ReactNode | ReactNode[],
 }
