@@ -35,7 +35,7 @@ export const getShadowColorClass = (color?: Colors) =>
 
 /** @alpha */
 export const ColorMechanics = {
-  color: getTextColorClass,
+  text: getTextColorClass,
   background: getBackgroundColorClass,
   border: getBorderColorClass,
   outline: getBorderOutlineColorClass,

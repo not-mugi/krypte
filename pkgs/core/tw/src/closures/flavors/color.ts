@@ -21,7 +21,7 @@ export const ColorFlavor = ( color: Color = {}): Flavor => {
 
   const classExchange = () => {
     return [
-        gtc(color.color),
+        gtc(color.text),
         gbg(color.background),
         gbc(color.border),
         goc(color.outline),

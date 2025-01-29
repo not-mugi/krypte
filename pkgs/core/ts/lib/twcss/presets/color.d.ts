@@ -4,7 +4,7 @@ export type Colors = "mugi" | "hat" | "slate" | "gray" | "zinc" | "neutral" | "s
 export type ColorStrength = "slim" | "regular" | "bold" | "heavy";
 /** @alpha */
 export type Color = Partial<{ 
-    color : Colors,
+    text : Colors,
     background : Colors,
     border : Colors,
     outline : Colors,

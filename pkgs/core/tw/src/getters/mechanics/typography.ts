@@ -95,7 +95,7 @@ export const getTextHyphenClass = (hyphen?: TextHyphen) =>
 
 /** @alpha */
 export const typographyBlueprints = (): Typography => ({
-  color: { color: "mugi" },
+  color: { text: "mugi" },
   align: "center",
 });
 
